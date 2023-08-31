@@ -1,5 +1,69 @@
 <%- include('../partials/head.ejs') %>
+<style>
+  /* Reset default list styles */
+nav, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
+/* Main navigation styles */
+nav ul {
+    background-color: #f1f1f100;
+    padding: 10px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hover effect for anchor tags */
+nav ul li a:hover {
+ /* Change color on hover */
+    color: black;
+    scale: 1.1;
+}
+
+/* Hide submenus by default */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+}
+
+/* Show submenu on parent hover */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Adjust submenu styles */
+nav ul ul li {
+    width: 200px;
+}
+
+nav ul ul li a {
+    padding: 8px 12px;
+}
+
+/* Add hover effect to submenu items */
+nav ul ul li:hover > ul {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+
+
+</style>
     <!-- Navbar Start  -->
     <div class="navbar">
         <div class="logo">
@@ -8,23 +72,37 @@
         </div>
         <nav>
             <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Group companies</a></li>
+                <li><a href="#brands">Sustainability</a></li>
+                <li><a href="#brands">Careers</a></li>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="#">About us</a>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Company profile</a></li>
+                        <li>
+                            <a href="#">Corporate Governance</a>
+                            <ul>
+                                <li><a href="#">Directors</a></li>
+                                <li><a href="#">Management</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our Values</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="#brands">Brands</a>
-                </li>
-                <li>
-                    <a href="#services">Groups</a>
-                </li>
+                <li><a href="#brands">Contact us</a></li>
             </ul>
         </nav>
         <!-- dropdownBurger -->
         <div class="dropDownBurger" id="burdermenu">
-            <ul>
+            <ul class="main-menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="#brands">Brands</a></li>
-                <li><a href="">Groups</a></li>
+                <li><a href="">Group companies</a></li>
+                <li><a href="#brands">Sustainability</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="#brands">Careers</a></li>
+                <li><a href="#brands">Contact us</a></li>
 
             </ul>
         </div>
@@ -237,6 +315,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/javascript/main.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.main-menu > li');
+
+// Add click event listener to each menu item
+menuItems.forEach(item => {
+    const submenu = item.querySelector('ul');
+    
+    if (submenu) {
+        // Add click event listener to toggle submenu visibility
+        item.addEventListener('click', () => {
+            submenu.classList.toggle('show');
+        });
+    }
+});
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,242 @@
+<%- include('../partials/head.ejs') %>
+
+    <!-- Navbar Start  -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="/"><img class="logo-img" src="/images/logo1.png" alt=""></a>
+            <a href="/"><img class="logo-img-burder" src="/images/logo1.png" alt=""></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="#brands">Brands</a>
+                </li>
+                <li>
+                    <a href="#services">Groups</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- dropdownBurger -->
+        <div class="dropDownBurger" id="burdermenu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="">Groups</a></li>
+
+            </ul>
+        </div>
+        <!-- dropdownBurgerEnd -->
+        <button id="burgerbtn" class="burgerbtn" onclick="showburger()"><i class="fa fa-bars"></i></button>
+        <button id="closebtn" class="closebtn" onclick="closeburger()"><i class="fa fa-close"></i></button>
+
+    </div>
+    <!-- Navbar End  -->
+    <div class="herosection">
+        <div class="hearo-image">
+            <img src="/images/Untitled-5.png" class="css-selector" alt="">
+
+            <!-- <div class="responsive-image"></div> -->
+        </div>
+        <div class="textheader">
+
+            <p>Unveiling Your Inner Radiance, Naturally.</p>
+            <!-- <a class="button-discover" href="">Discover More!</a>  -->
+        </div>
+        <div class="textheader1">
+            <p>C<span class="companynameinside">ARE</span> G<span class="companynameinside">ROUP</span> </p>
+
+            <!-- <a class="button-discover" href="">Discover More!</a>  -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="column2">
+            <div class="box"><img class="hovereffect" src="/images/chainman.png" alt="Chairman">
+                <div class="overlay">My Name is John Snow</div>
+            </div>
+        </div>
+        <div class="column2">
+            <h1>Chairman's Statement</h1>
+            <div class="toGiveScroll">
+                <p style="width: 80%;">Care Group is a driving force behind Pakistan's economic growth and prosperity.
+                    Established in 1974 as a modest grocery store, we've grown into a versatile powerhouse, making a
+                    significant impact on the business and innovation landscape. With a spirit of innovation, we
+                    expanded
+                    into manufacturing and marketing, building an extensive range of personal care and cosmetic
+                    products.
+                    Our journey spans over fifty years, showcasing our unwavering dedication to excellence and
+                    advancement.
+                    Originating as a grocery store, we embarked on a transformative journey that led us to embrace
+                    various
+                    sectors, including manufacturing, real estate, and fashion. Today, Care Group stands as a pioneering
+                    enterprise, actively involved in producing and distributing high-quality plastics, essential
+                    personal
+                    care items, and cosmetics.
+                    We are not just reactive to change; we drive it. Our influence goes beyond products; we've entered
+                    the
+                    media industry with our reputable newspaper, introduced a clothing brand, and are soon launching a
+                    vibrant supermarket chain to cater to our valued customers' diverse needs.
+                    At Care Group, our legacy is characterized by innovation, resilience, and achievement. We've
+                    surpassed
+                    limitations, redefining possibilities in business and making substantial contributions to Pakistan's
+                    socio-economic landscape. As we continue to shape industries, pioneer new prospects, and foster
+                    growth,
+                    we remain steadfastly committed to our core values and the vision that ignited our journey more than
+                    five decades ago
+                </p>
+            </div>
+            <center>
+
+
+                <button class="btnpostion" id="linkId">Discover More!</button>
+                <button class="btnpostion" id="linkIdTwo">Hide!</button>
+
+            </center>
+
+
+        </div>
+    </div>
+    <% if(leadershipImages.length) {%>
+    <div class="w">
+        <h1 class="headingtop break">Our Leadership Team</h1>
+    </div>
+    <div class="container">
+        <div id="slide">
+            <% for (let image of leadershipImages) { %>
+                <div class="item" style="background-image: url(<%= image.imagePath %>);">
+                    <div class="content">
+                        <div class="name">
+                            <%= image.name %>
+                        </div>
+                        <div class="des">
+                            <%= image.description %>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <% } %>
+    <% if(visionSection.length) {%>
+    <div class="row rowtop">
+        <div class="column2-right width-40">
+            <% for (let image of visionSection) { %>
+
+                <h1 class="headingtop">
+                    <%= image.name %>
+                </h1>
+                <div class="toGiveScroll text-left">
+                <p class="ourvision">
+                    <%= image.description %>
+                </p></div>  
+              
+    
+        </div>
+        <div class="column2"> <img class="nocolor" src="<%= image.imagePath %>" alt="<%= image.name %>"> </div>
+        <% } %>
+    </div>
+    <% } %>
+   <% if(st.length) {%>
+    <div class="textcenter">
+        <% for (let description of st) { %>
+
+            <p class="center-text welcomefont">
+                <%= description.description %>
+            </p>
+
+            <% } %>
+    </div>
+    <% } %>
+    <% if(ValuesSections.length) {%>
+
+    <div class="row rowtop-1">
+        <div class="column2-right width-40" style="background-color: #f3f4f6;">
+            <% for (let image of ValuesSections) { %>
+                <h1 class="headingtop">
+                    <%= image.name %>
+                </h1>
+
+
+                <div class="toGiveScroll hoiyan w-value">
+                    <p class="values">
+                        <%= image.description %>
+                    </p>
+                </div>
+                <center>
+                    <button class="btnpostion" id="linkId1">Discover More!</button>
+                    <button class="btnpostion" id="linkIdTwo1">Hide!</button>
+                </center>
+
+
+        </div>
+        <div class="column2">
+            <img class="lady" src="<%= image.imagePath %>" alt="<%= image.name %>">
+        </div>
+        <% } %>
+
+    </div>
+    <% } %>
+   
+    <div id="brands">
+        <img class="img-width" src="/images/Layer_1.png" alt="">  <% if(logoImages.length) {%> <br>
+        <% for (let image of logoImages) { %>
+            <a style="color: white;" href="<%= image.link %>" target="_blank">
+                <img class="img-width" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
+            </a>
+            <% } %>
+    </div>
+    <% } %>
+    </div>
+    <div class="css-selector">
+        <div class="fotterDivB">
+            <ul role="list" class=" fotterUL link">
+                <li class="fotterLi ">
+                    <a href="/user/contactus" class=" footer-label footer-text">Home</a>
+                </li>
+                <li class="fotterLi">
+                    <a href="/user/contactus" class=" footer-label footer-text">About Us</a>
+                </li>
+                <li class="fotterLi">
+                    <a href="/user/contactus" class=" footer-label footer-text">Executive Board</a>
+                </li>
+                <li class="fotterLi">
+                    <a href="/user/contactus" class=" footer-label footer-text">Corporate Division</a>
+                </li>
+            </ul>
+        </div>
+        <div class="fotterDivB">
+            <ul role="list" class=" fotterUL">
+                <li class="fotterLi">
+                    <a href="https://linktr.ee/caregroup" target="_blank"><img src="/images/image.png"
+                            style="width: 30px;" alt=""></i></a>
+                </li>
+                <li class="fotterLi">
+                    <a href="#"><i class="fa-brands fa-youtube" style="color: #000000; font-size: 40px;"></i></a>
+
+                </li>
+                <li class="fotterLi">
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #000000; font-size: 40px;"></i></a>
+
+                </li>
+                <li class="fotterLi">
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #000000; font-size: 40px;"></i></a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="div-block-20"></div>
+        <p class="fotterCopyRight">Copyright &copy; 2016 All Rights Reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/javascript/main.js"></script>
+</body>
+
+</html>

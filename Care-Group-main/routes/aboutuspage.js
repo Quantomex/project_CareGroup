@@ -14,3 +14,4 @@ router.get('/corporategovernance',(req, res)=>{
     res.render('./homepage/corporategovernance');
 });
 
+module.exports = router;

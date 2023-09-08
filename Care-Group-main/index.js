@@ -38,6 +38,7 @@ const ManagementTeamRoutes = require('./routes/ManagementTeamRoutes');
 const policyRoutes = require('./routes/policyRoutes');
 const missionRoutes = require('./routes/missionRoutes');
 const ourstoryroutes = require('./routes/ourstoryroutes');
+const aboutuspage = require('./routes/aboutuspage');
 const {isAdmin} = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
@@ -124,6 +125,7 @@ app.use(ManagementTeamRoutes);
 app.use(policyRoutes);
 app.use(missionRoutes);
 app.use(ourstoryroutes);
+app.use(aboutuspage);
 // Listen for the port Number
 app.listen(PORT, () => {
   console.log(`App is listening onnnn http://localhost:${PORT}`);

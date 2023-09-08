@@ -23,7 +23,7 @@ router.post('/upload/MissionSection', upload.single('image'), isAdmin, async (re
       imagePath: req.file.path,
     });
     await newImage.save();
-    req.flash('success', 'Vision content added successfully');
+    req.flash('success', 'Mission content added successfully');
 
     res.redirect('/MissionSection');
   } catch (error) {
@@ -36,7 +36,7 @@ router.post('/deleteMission/:id', isAdmin, async (req, res) => {
   try {
     const deletedImage = await Mission.findByIdAndDelete(req.params.id);
     await uploader.destroy(deletedImage.imageFilename);
-    req.flash('success', 'Vision content deleted successfully');
+    req.flash('success', 'Mission content deleted successfully');
     res.redirect('/MissionSection');
   } catch (error) {
     console.error('Error deleting image:', error);

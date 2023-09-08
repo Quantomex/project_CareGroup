@@ -6,6 +6,7 @@ const Vision = require('../models/visionSection');
 const Statement = require('../models/MissionStatement');
 const ValuesSection = require ('../models/Values');
 const Chairman = require('../models/Chairman');
+const Mission= require('../models/Mission');
 const express = require('express');
 const router = express.Router();
 const { storage } = require('../cloudinary/index');
@@ -42,7 +43,8 @@ router.get('/', async (req, res) => {
   const st= await Statement.find();
   const ValuesSections = await ValuesSection.find();
   const ChairmanData = await Chairman.find();
-  res.render('./homepage/index' , { leadershipImages, logoImages , visionSection , st, ValuesSections , ChairmanData});
+  const MissionData = await Mission.find();
+  res.render('./homepage/index' , { leadershipImages, logoImages , visionSection , st, ValuesSections , ChairmanData, MissionData});
 });
 
 router.post('/delete/:id',isAdmin, async (req, res) => {

@@ -1688,6 +1688,389 @@ line-height: normal;
     clear: both;
   }
  
+/* Akram css  */
+.topHeading{
+  background: rgba(206, 153, 75, 0.12);
+  width: 100vw;
+  height: 25rem;
+  flex-shrink: 0;
+}
+
+.topHeadText{
+  color: #CE994B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+   display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%;
+
+}
+.secondDiv{
+  display: flex;
+   justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  margin-top: 115px;
+}
+.secondHeading{
+  color: #CE994B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  }
+
+.secondHeadingText{
+  color: #000;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.infoContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 134px;
+  justify-content: space-between;
+}
+.heythere{
+  margin-left: 115px;
+}
+.infoItem{
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+}
+.infoItemText{
+  padding-top: 15px;
+  margin-left:30px;
+}
+.itemHeading{
+  color: #000;
+
+font-family: 'Open Sans', sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.itemText{
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 390px;
+}
+.mapDiv{
+  border-radius: 20px;
+  border: 1px solid #CE994B;
+  width: 530px; 
+  height: 470px;
+  overflow: hidden;
+  margin-right: 75px;
+}
+.map{
+  height: 100%;
+  width: 100%;
+}
+.GetInTouch{
+  margin-top: 85px;
+}
+.inputSection
+{
+  padding-bottom: 30px;
+}
+.inputSection input {
+  border: none;
+  border-bottom: 1px solid#CE994B;
+  padding-bottom: 23px;
+  margin-bottom: 30px;
+  background-color: rgba(206, 153, 75, 0.12);
+  width: 453px;
+  height: 60px;
+  margin-bottom: 46px; 
+  margin-right: 50px;
+  font-size: 30px;
+  padding-left: 20px;
+
+}
+
+.inputSection textarea {
+  border: none;
+  border-bottom: 1px solid  #CE994B;
+  /* padding-bottom: 23px; */
+  width: 453px;
+  height: 115px;
+  background-color: rgba(206, 153, 75, 0.12);
+  resize: none;
+  font-size: 30px;
+  padding-left: 20px;
+  margin-bottom: 10px; 
+  margin-right: 50px;
+
+ 
+}
+.inputSection textarea:focus {
+  outline: none;
+}
+.companyTopDiv{
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.companyTopDiv p{
+  margin-right: 10px;
+  margin-left: 10px
+}
+
+.inputSection input:focus {
+  border-bottom: 2px solid #CE994B;
+  outline: none;
+}
+.GetInTouch{
+  margin-left: 115px;
+}
+.GetinToucHeading{
+  color: #CE994B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.GetinToucText{
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+::-webkit-input-placeholder { /* Edge */
+ color: #000;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 5px;
+padding-left: 5px;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #000;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 5px;
+padding-left: 5px;
+}
+
+::placeholder {
+ color: #000;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 5px;
+padding-left: 5px;
+
+}
+.GetInTouchText{
+  margin-bottom: 53px;
+}
+
+.buttonWraper {
+
+  margin-top: 10px;
+
+}
+
+.aboutUsSubmitBtn {
+  height: 43px;
+  width: 105px;
+  border-radius: 11px;
+  background-color: #CE994B;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.aboutUsSubmitBtn i {
+  margin-right: 7px;
+}
+.companyTopDiv{
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.companyTopDiv p{
+  margin-right: 10px;
+  margin-left: 10px
+
+}
+.hori{
+  display: flex;
+  flex-direction: column;
+}
+.companyDiv1Head{
+  color: #CE994B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 66px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 75px;
+}
+.companyDiv1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.subDivDiv1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 77PX;
+  margin-left: 40PX;
+}
+.subDivDiv1 P{
+  width: 647px;
+
+flex-shrink: 0;
+color: #000;
+font-family: Open Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 38px; 
+
+}
+.meaow{
+  width: 400px;
+height: 500px;
+transform: rotate(-29.698deg);
+flex-shrink: 0;
+border-radius: 20px;
+border: 42px solid #CE994B;
+position: absolute;
+right: -30PX;
+}
+.imageComp{
+  position: absolute;
+  right: 50px;
+  width: 519px;
+height: 504px;
+flex-shrink: 0;
+border-radius: 20px;
+background: url("COMPANYpAGE1.svg"), lightgray 50% / cover no-repeat;
+}
+.secondDivCompany{
+  margin-top: 134px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SecondDivHead{
+  
+}
+@media (max-width:1156px) {
+  .GetInTouch{
+      
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+  }
+  .inputSection{
+      
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+  }
+  
+.inputSection input {
+  width: 90%;
+  margin-left: 0;
+
+}
+
+.inputSection textarea {
+ width: 90%;
+ margin-left: 0;
+
+ 
+}
+.infoContainer{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.mapDiv{
+ 
+  width: 70%; 
+  margin-right: 0;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+@media (max-width:615px) {
+  .secondHeadingText{
+      width: 90%;
+  }
+  .itemText{
+      width: 90%;
+  }
+  .secondDiv{
+      text-align: center;
+  }
+  .heythere{
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .topHeadText{
+      text-align: center;
+  }
+}
+}
+
+/* Akram css end  */
 
   @media screen and (max-width: 600px) {
     .column3 {

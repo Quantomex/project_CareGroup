@@ -1131,6 +1131,7 @@ height: 90vh;
   .column2 p{
     width: 100% !important;
     margin-top: 0px;
+  
   }
   .column2 h1{
     line-height: 25px;
@@ -1158,6 +1159,13 @@ height: 90vh;
   }
   .width-150{
     width: 10px;
+  }
+  .column2-right p{
+    font-size: 1.3rem;
+    line-height: 38px;
+  }
+  .toGiveScroll{
+    height: 400px;
   }
 }
 

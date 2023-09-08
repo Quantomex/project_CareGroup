@@ -1,0 +1,114 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+<style>
+
+.navbar{
+  position: relative;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/styles.css" type="text/css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Careers</title>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <h1 class="headingText">Careers</h1>
+  </div>
+  <div class="imgNText">
+    <div class="textContent">
+      <h2 class="smallHeading">Working at Care group</h2>
+      <p class="subTitle">We welcome open minds and great ideas from everywhere.
+        Become a part of a legacy as we teach you how to push your
+        boundaries, strive for excellence and challenge yourself
+        every day.</p>
+      <button class="buttonStyle">Apply now</button>
+    </div>
+    <div class="imgContainer">
+      <img class="elipseImageSingle" src="images/image1.png" />
+    </div>
+  </div>
+  <div class="imgNTextReverse">
+    <div class="textContent">
+      <h2 class="smallHeading">People and culture</h2>
+      <p class="subTitle">We welcome open minds and great ideas from everywhere.
+        Become a part of a legacy as we teach you how to push your
+        boundaries, strive for excellence and challenge yourself
+        every day.</p>
+    </div>
+    <div class="imgContainer">
+      <img class="smallImageTop" src="images/image2.png" alt="image2">
+      <img class="elipseImageSingleReverse" src="images/image1.png" />
+      <img class="smallImageBottom" src="images/image3.png" alt="image3">
+    </div>
+  </div>
+  <div class="imgNText">
+    <div class="textContent">
+      <h2 class="smallHeading">Development & Training</h2>
+      <p class="subTitle">We welcome open minds and great ideas from everywhere.
+        Become a part of a legacy as we teach you how to push your
+        boundaries, strive for excellence and challenge yourself
+        every day.</p>
+    </div>
+    <div class="imgContainer">
+      <img class="smallImageTopRight" src="images/image2.png" alt="image2">
+      <img class="elipseImageSingle" src="images/image1.png" />
+    </div>
+  </div>
+  <div class="philosophyContainer">
+    <div class="pilosophyTextContainer">
+      <h3 class="philosophyHeading">Our Philosophy</h3>
+      <p class="subHeading">"Our People, Our Pride: The Heart of Our Success"</p>
+    </div>
+    <div class="linesContainer">
+      <div class="line"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
+    </div>
+  </div>
+  <div class="applyFormContainer">
+    <h2 class="formHeading">Opportunities For You</h2>
+    <form class="applyForm">
+      <p class="deatilsHeading">Enter your details</p>
+      <div class="halfNHalf">
+        <input type="text" name="firstName" class="inputStyles" placeholder="First name*" />
+        <input type="text" name="lastName" class="inputStyles" placeholder="Last name*" />
+      </div>
+      <div class="halfNHalf">
+        <input type="text" name="department" class="inputStyles" placeholder="Department of interest*" />
+        <input type="text" name="gender" class="inputStyles" placeholder="Gender*" />
+      </div>
+      <div class="halfNHalf">
+        <input type="email" name="email" class="inputStyles" placeholder="Email address*" />
+        <input type="tel" name="contact" class="inputStyles" placeholder="Contact number*" />
+      </div>
+      <div class="halfNHalf">
+        <input type="text" name="linkedIn" class="inputStyles" placeholder="Linkedin profile" />
+        <input type="text" name="currentEmployer" class="inputStyles" placeholder="Current employer" />
+      </div>
+      <div class="halfNHalf">
+        <input type="text" name="currentPosition" class="inputStyles" placeholder="Current position" />
+        <input type="text" name="experience" class="inputStyles" placeholder="Total years of experience*" />
+      </div>
+      <div class="halfNHalf">
+        <input type="text" name="noticePeriod" class="inputStyles" placeholder="Notice period*" />
+      </div>
+      <div class="attachmentContainer">
+        <label class="labelStyles" for="resume">Attach resume<i class='bx bx-paperclip'></i></label>
+        <input type="file" id="resume" class="fileInput">
+      </div>
+      <button class="submitBtn" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
+<%- include('../partials/footer.ejs') %>

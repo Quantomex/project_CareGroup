@@ -78,3 +78,24 @@
   
     <p class="fotterCopyRight">Copyright © 2023 Care group | All Rights Reserved</p>
   </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="/javascript/main.js"></script>
+<script>
+  const menuItems = document.querySelectorAll('.main-menu > li');
+
+  // Add click event listener to each menu item
+  menuItems.forEach(item => {
+    const submenu = item.querySelector('ul');
+
+    if (submenu) {
+      // Add click event listener to toggle submenu visibility
+      item.addEventListener('click', () => {
+        submenu.classList.toggle('show');
+      });
+    }
+  });
+</script>
+</body>
+
+</html>

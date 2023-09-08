@@ -742,7 +742,8 @@ letter-spacing: 1.56px;
   padding-top: 0px;
 }
 .img-width{
-  width: 250px;
+  padding: 10px 25px 65px 25px ;
+  width: 450px;
   height: auto;
 }
 .rowtop-1 {
@@ -753,7 +754,7 @@ letter-spacing: 1.56px;
   width: 150px;
 }
 .break{
-  height: 20vh;
+  height: 13vh;
 }
 .container3 {
   position: relative;
@@ -795,9 +796,7 @@ letter-spacing: 1.56px;
   text-align: center;
 }
 
-
 /* SLIDER  */
-
 .container{
   position: relative;
   left:50%;
@@ -1672,10 +1671,6 @@ line-height: normal;
     box-shadow: 1px 1px 8px rgba(45, 45, 45, 0.193);
   }
   .column3 h2{
-    margin-top: 22%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     align-items: center;
 
   }
@@ -2230,3 +2225,6 @@ line-height: normal;
       width: 100%;
     }
   }
+.ourvalues{
+
+}

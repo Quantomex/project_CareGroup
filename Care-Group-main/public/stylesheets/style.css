@@ -20,7 +20,7 @@ html{
 
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
 
@@ -79,8 +79,8 @@ body {
 }
 
 nav {
-  align-items: center;
-  text-align: center;
+  align-items: right;
+  text-align: right;
 
   flex: 1;
 }
@@ -97,15 +97,52 @@ nav ul li {
 
 }
 nav ul li a {
-  font-weight: 400;
-  text-decoration: none;
-  color: black;
+  
+text-decoration: none;
+color: #000000;
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
  
 }
+.active {
+  
+  text-decoration: none;
+  color: #CE994B;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.active:hover {
+  
+  text-decoration: none;
+  color: #CE994B;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.active::after {
+  content: "•"; /* Use the dot (•) character as content */
+  display: block;
+  position: absolute;
+  bottom: -12px; /* Adjust the vertical position of the dot as needed */
+  left: 50%; /* Center the dot horizontally */
+  transform: translateX(-50%); /* Center the dot horizontally */
+  font-size: 24px; /* Adjust the size of the dot as needed */
+  color: #CE994B; /* Change the dot color as needed */
+}
 nav ul li a:hover {
-  color: #555555;
+  color: #000000;
   transition: all 0.5s;
  
+}
+.xenter{
+  align-items: center;
+  text-align: center;
 }
 .width-40{
   width: 40%;
@@ -275,6 +312,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .column2 {
@@ -285,7 +323,7 @@ nav ul li a:hover {
 
 .column2 img {
   width: 100%;
-  height: auto;
+  height: 743px;
   object-fit: cover;
 }
 
@@ -305,14 +343,13 @@ nav ul li a:hover {
 } */
 
 .column2 h1 {
-  color: #D0A25C;
-  font-size: 67px;
+  padding-top: 56px;
+  padding-left: 25px;
+  color: #CE994B;
+  font-size: 64px;
+  font-style: normal;
   font-weight: 600;
-  align-items: right;
-  text-align: right;
-  padding-right: 30px;
-  padding-top: 64px;
-  line-height: 80px;
+  line-height: 104.688%;  
 }
 .lady {
   --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
@@ -333,54 +370,63 @@ nav ul li a:hover {
 }
 
 .column2 p {
-  float: right;
-  color: #000000;
-  font-size: 26px;
-  font-weight: 300;
-  text-align: right;
-  padding-right: 30px;
-  padding-top: 39px;
-  line-height: 36px;
+  padding-right: 25px;
+  padding-top: 29px;
+  padding-left: 25px;
+  align-items: left;
+  text-align: left;
+  width: 100%;
+  flex-shrink: 0;
+  color: #000;
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: 195.833%;
+letter-spacing: 0.48px;
 }
 .closebtn{
   display: none;
 }
+.dis{
 
+  margin-left: 25px;
+}
 .column2 a {
-  background: white;
+  color: white;
+  background: #CE994B;
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 30px;
-  float: right;
-  align-items: right;
-  text-align: right;
-  margin-right: 30px;
-  margin-top: 50px;
-  padding: 10px 20px;
-  border: #D0A25C solid 4px;
-  border-top-left-radius: 17px;
-  border-bottom-right-radius: 28px;
-
+  padding: 19px 32px; 
+  border: 1px solid #CE994B;
+  border-radius: 31.5px;
+  
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
 .column2 a:hover {
-  background: #D0A25C;
-  border: #D0A25C solid 4px;
-  color: white;
+ 
+  border: #CE994B solid 4px;
+
   transition: ease-in-out 0.5s;
 }
 
 .headingtop {
-  font-size: 67px;
-  line-height: 95px;
+
   align-items: center;
   text-align: center;
-  font-weight: 600;
-  color: #D0A25C;
+ 
+  color: #CE994B;
+font-size: 66px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
+.social-links{
+  text-decoration: none;
 
+}
 .headingtop-mid {
   margin-top: 60px;
   font-size: 24px;
@@ -512,16 +558,17 @@ nav ul li a:hover {
 }
 
 .textcenter {
-  text-align: center;
-  padding-top: 80px;
-  font-weight: 400;
-  font-size: 98px;
-  line-height: 108px;
   width: 100%;
 }
 .welcomefont{
-  font-family: 'Qwitcher Grypen', cursive !important;
-  text-align: center;
+  font-family: 'Arizonia', cursive !important;
+  text-align: justify;
+  color: #000;
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.56px;
 
 }
 .values{
@@ -576,7 +623,7 @@ nav ul li a:hover {
 }
 
 .css-selector {
-  background: linear-gradient(16deg, #FFFFFF, #CA9B27);
+  background: linear-gradient(16deg, #FFFFFF, #ffde89);
   background-size: 400% 400%;
   animation: AnimationName 5s ease infinite;
 }
@@ -660,12 +707,13 @@ nav ul li a:hover {
   padding: 0 1.5rem;
 }
 .fotterCopyRight {
+  color: #000;
+  padding: 20px;
   text-align: center;
-  margin-top: 10px;
-  font-size: 18px;
-  font-family: Lavolta;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .anchors {
@@ -694,7 +742,8 @@ nav ul li a:hover {
   padding-top: 0px;
 }
 .img-width{
-  margin-top: 40px;
+  width: 250px;
+  height: auto;
 }
 .rowtop-1 {
   background-color: #f3f4f6;
@@ -705,6 +754,45 @@ nav ul li a:hover {
 }
 .break{
   height: 20vh;
+}
+.container3 {
+  position: relative;
+  width: 50%;
+}
+
+.image3 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container3:hover .overlay3 {
+  opacity: 1;
+}
+
+.text3 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 
@@ -993,7 +1081,7 @@ height: 90vh;
     height: 60vh;
   }
   .img-width{
-    margin-top: 40px;
+    margin-top: 40px; 
   }
   .break{
     height: 20vh;
@@ -1544,8 +1632,88 @@ nav{
 height: 300px;
 width: 300px;
 }
+.emailenter{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CE994B;
+  outline: none;
+  color: #000;
+  padding-bottom: 10px;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
+.emailenter::placeholder{
+  color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.row3{
+  box-sizing: border-box;
+  padding: 0 64px;
+  
+  position: relative;
+  }
+  /* Create three equal columns that floats next to each other */
+  .column3 {
 
+    box-sizing: border-box;
+    display: block;
+    margin: 20px;
+    border-radius: 5px;
+    float: left;
+    width: 30.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    box-shadow: 1px 1px 8px rgba(45, 45, 45, 0.193);
+  }
+  .column3 h2{
+    margin-top: 22%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row3:after {
+  
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+
+  @media screen and (max-width: 600px) {
+    .column3 {
+      width: 100%;
+    }
+  }
+.spantext{
+  padding-left: 5px;
+  color: #000;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.subbtn{
+  border-radius: 31.5px;
+border: 1px solid #CE994B;
+background: #CE994B;
+padding: 9px 30px;
+text-decoration: none;
+color: #FFF;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
   /* STYLES FOR DUMMY PAGE */
   .custom-dummy-page {
     height: 200px;
@@ -1577,14 +1745,22 @@ width: 300px;
   .custom-footer .custom-col h1 {
     margin: 0;
     padding: 0;
-    font-family: inherit;
-    font-size: 12px;
-    line-height: 17px;
-    padding: 20px 0px 5px 0px;
-    color: rgb(0, 0, 0);
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.250em;
+    color: #CE994B;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    padding: 20px 0px 12px 0px;
+  }
+  .custom-footer .custom-col h2 {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0px 0px 13px 0px;
   }
 
   .custom-footer .custom-col ul {
@@ -1592,12 +1768,15 @@ width: 300px;
     margin: 0;
     padding: 0;
   }
-
+.color-bg{
+  background: rgba(206, 153, 75, 0.06);
+}
   .custom-footer .custom-col ul li {
-    color: #000000;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: bold;
+    color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
     padding: 5px 0px 5px 0px;
     cursor: pointer;
     transition: .2s;
@@ -1611,7 +1790,7 @@ width: 300px;
   }
 
   .custom-footer .custom-col ul li:hover {
-    color: #ffffff;
+    color: #CE994B;
     transition: .1s;
     -webkit-transition: .1s;
     -moz-transition: .1s;

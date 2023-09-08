@@ -166,17 +166,18 @@
 
     <!-- <div class="responsive-image"></div> -->
   </div>
-  <div class="textheader">
 
+  <div class="textheader">
     <p>Unveiling Your Inner Radiance, Naturally.</p>
     <!-- <a class="button-discover" href="">Discover More!</a>  -->
   </div>
+
   <div class="textheader1">
     <p>C<span class="companynameinside">ARE</span> G<span class="companynameinside">ROUP</span> </p>
-
     <!-- <a class="button-discover" href="">Discover More!</a>  -->
   </div>
 </div>
+
 <div class="row">
   <% for (let image of ChairmanData) {  %>
   <div class="column2">
@@ -188,24 +189,18 @@
   <div class="column2">
     <% for (let image of ChairmanData) {  %>
     <h1>Chairman's <br> Statement</h1>
-   
       <p>
         <%= image.description %>
-
       </p> <br> <br>
       <a class="dis" href="">Discover more</a>
       <% } %>
     <center>
-
-
       <button class="btnpostion" id="linkId">Discover More!</button>
       <button class="btnpostion" id="linkIdTwo">Hide!</button>
-
     </center>
-
-
   </div>
 </div>
+
 <% if(st.length) {%>
 <div class="textcenter">
   <% for (let description of st) { %>

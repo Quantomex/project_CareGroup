@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const Admin = require('../models/Admin');
+
 const {isAdmin} = require('../middleware/isAdmin');
 // Admin Signup
 router.get('/admin/signup', (req, res) => {
@@ -45,5 +46,6 @@ router.post('/admin/login', passport.authenticate('admin', {
   
   res.redirect('/uploadLogoform');
 });
+
 
 module.exports = router;

@@ -11,6 +11,9 @@ require('./models/Values');
 require('./models/BoardofDirectors');
 require('./models/ManagementTeam');
 require('./models/Policy');
+require('./models/Mission');
+require('./models/OurStory');
+
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
@@ -33,6 +36,8 @@ const chairmanRoute = require('./routes/chairmanRoute');
 const BoardofDirectorsRoutes = require('./routes/BoardofDirectorsRoutes');
 const ManagementTeamRoutes = require('./routes/ManagementTeamRoutes');
 const policyRoutes = require('./routes/policyRoutes');
+const missionRoutes = require('./routes/missionRoutes');
+const ourstoryroutes = require('./routes/ourstoryroutes');
 const {isAdmin} = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
@@ -117,6 +122,8 @@ app.use(chairmanRoute);
 app.use(BoardofDirectorsRoutes);
 app.use(ManagementTeamRoutes);
 app.use(policyRoutes);
+app.use(missionRoutes);
+app.use(ourstoryroutes);
 // Listen for the port Number
 app.listen(PORT, () => {
   console.log(`App is listening onnnn http://localhost:${PORT}`);

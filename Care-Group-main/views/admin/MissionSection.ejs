@@ -3,7 +3,7 @@
 
 <head>
   <link href="/stylesheets/stylepanel.css" rel="stylesheet type=" text/css">
-  <title>Leadership Section</title>
+  <title>Mission Section</title>
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,6 +26,7 @@
   <div class="container-fluid">
     <p class="text-xl-center fa-2x pt-2"><strong>Welcome to Admin Panel</strong></p>
 
+
     <%- include('../partials/flash.ejs') %>
   </div>
   <!-- Topbar End -->
@@ -41,6 +42,7 @@
 
             <li><a href="/uploadLogoform" class="nav-item nav-link ">Group of Companies</a></li>
             <li><a href="/uploadStatement" class="nav-item nav-link">Mission Statement</a></li>
+            <li><a href="/MissionSection" class="nav-item nav-link bg-active">Mission Section</a></li>
             <li><a href="/visionSection" class="nav-item nav-link">Vision Section</a></li>
             <li><a href="/ValuesSection" class="nav-item nav-link">Values Section</a></li>
             <li><a href="/chairmanform" class="nav-item nav-link ">Chairman Section</a></li>
@@ -61,12 +63,13 @@
           <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav mr-auto py-0">
               <div class="burger-menu">
-                <a class="nav-item nav-link active fa-2x"><strong> Add Leadership Section Images</strong></a>
+                <a class="nav-item nav-link active fa-2x"><strong> ALL Mission Section</strong></a>
               </div>
               <div class="burger-menu-tabs">
                 <li><a href="/uploadLogoform" class="nav-item nav-link ">Group of Companies</a></li>
                     <li><a href="/uploadStatement" class="nav-item nav-link">Mission Statement</a></li>
-                <li><a href="/visionSection" class="nav-item nav-link">Vision Section</a></li>
+                    <li><a href="/MissionSection" class="nav-item nav-link bg-active">Mission Section</a></li>
+                <li><a href="/visionSection" class="nav-item nav-link bg-active">Vision Section</a></li>
                 <li><a href="/ValuesSection" class="nav-item nav-link">Values Section</a></li>
                 <li><a href="/chairmanform" class="nav-item nav-link ">Chairman Section</a></li>
                 <li><a href="/bodform" class="nav-item nav-link ">Board of Directors Section</a></li>
@@ -80,7 +83,7 @@
 
           </div>
         </nav>
-        <form class="imageForm" action="/upload" method="post" enctype="multipart/form-data">
+        <form class="imageForm" action="/upload/MissionSection" method="post" enctype="multipart/form-data">
           <label for="name">Name:</label>
           <input type="text" class="form-control" id="name" name="name" required><br>
       
@@ -104,7 +107,7 @@
   <!-- Page Header Start -->
   <div class="container-fluid bg-secondary mb-0">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 20px">
-      <h1 class="font-weight-semi-bold text-uppercase mb-3">All Leadership Team</h1>
+      <h1 class="font-weight-semi-bold text-uppercase mb-3">All Mission Section</h1>
 
     </div>
   </div>
@@ -123,7 +126,7 @@
             </div>
           </div>
           <!-- Product Div Start  -->
-          <% for (let image of leadershipImages) { %>
+          <% for (let image of MissionSection) { %>
             <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
               <div class="card product-item border-0 mb-4">
                 <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
@@ -131,29 +134,22 @@
                   <img class="img-fluid w-100" src="<%= image.imagePath %>" alt="<%= image.name %>">
                 </div>
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-
                   <!-- title tag  -->
-
                   <h6 class="text-truncate mb-3">
-                      <%= image.name %>
+                    <%= image.name %>
                   </h6>
-
                   <!-- Price Tag  -->
 
                   <div class="d-flex justify-content-center" style="font-size: 12px; overflow-x: scroll;">
-                     
-                         
-                     
-                      
-                     
-                      <p><strong>Description:</strong> <%= image.description %></p>
+                    
+                      <p><strong>Description</strong> <%= image.description %></p>
                   
                   </div>
 
 
               </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
-                  <form action="/delete/<%= image._id %>" method="post">
+                  <form action="/deleteMission/<%= image._id %>" method="post">
                     <button type="submit" class="btn btn-sm text-dark p-0"><i
                         class="fas fa-trash trashcolor mr-1 "></i>Delete</button>
                   </form>
@@ -199,3 +195,5 @@
 </html>
 
 
+
+  

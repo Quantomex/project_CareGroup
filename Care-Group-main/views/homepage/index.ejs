@@ -20,18 +20,23 @@
   </div>
 </div>
 <div class="row">
+  <% for (let image of ChairmanData) {  %>
   <div class="column2">
-    <div class="box"><img class="hovereffect" src="/images/chainman.png" alt="Chairman">
-      <div class="overlay">My Name is John Snow</div>
+    <div class="box"><img class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
+      <div class="overlay"><%= image.name %></div>
+      <% } %>
     </div>
   </div>
   <div class="column2">
+    <% for (let image of ChairmanData) {  %>
     <h1>Chairman's <br> Statement</h1>
    
-      <p >Care Group is a driving force behind Pakistan's economic growth and prosperity. Established in 1974 as a modest grocery store, we've grown into a versatile powerhouse, making a significant impact on the business and innovation landscape. With a spirit of innovation, we expanded into manufacturing and marketing, building an extensive range of personal care and cosmetic products.
+      <p>
+        <%= image.description %>
+
       </p> <br> <br>
       <a class="dis" href="">Discover more</a>
-      
+      <% } %>
     <center>
 
 
@@ -116,7 +121,7 @@
 </div>
 <% } %>
 <div class="w">
-    <h1 class="headingtop break">Group of Copmpanies</h1>
+    <h1 class="headingtop break">Group of Companies</h1>
 </div>
 <% if(ValuesSections.length) {%>
 

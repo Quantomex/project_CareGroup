@@ -14,6 +14,8 @@ require('./models/Policy');
 require('./models/Mission');
 require('./models/OurStory');
 require('./models/CoreValues');
+require('./models/BusinessActivity');
+require('./models/Sustain');
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
@@ -41,6 +43,8 @@ const ourstoryroutes = require('./routes/ourstoryroutes');
 const aboutuspage = require('./routes/aboutuspage');
 const contactuspage = require('./routes/contactuspage');
 const corevalues = require('./routes/corevalues');
+const baRoute = require('./routes/baRoute'); 
+const sustainRoutes = require('./routes/sustainRoutes');
 const {isAdmin} = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
@@ -130,8 +134,8 @@ app.use(ourstoryroutes);
 app.use(aboutuspage);
 app.use(contactuspage);
 app.use(corevalues);
-
-
+app.use(baRoute);
+app.use(sustainRoutes);
 // Listen for the port Number
 app.listen(PORT, () => {
   console.log(`App is listening onnnn http://localhost:${PORT}`);

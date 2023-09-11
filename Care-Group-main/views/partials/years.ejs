@@ -15,7 +15,9 @@
   width: 0;
 }
 .tl-year-inner{
-  border: 1px solid #CE994B;
+  border: 3px solid #CE994B;
+  padding: 0 40px !important;
+  margin-bottom: 0;
 }
 .list li{
   list-style: disc !important;
@@ -25,7 +27,11 @@
  
   <style>
     /**/
-
+.tl-year{
+  width: 0.5px;
+  border-right: #CE994B dotted 4px;
+ 
+}
 
     /*css for body gradient*/
     .body.gradient-body {
@@ -47,6 +53,9 @@
     .timeline-right .slick-list {
       margin-right: -10px;
     }
+    .tr-inner-row{
+      margin-bottom: 0;
+    }
 
     .timeline-right .slick-list .slick-slide {
       margin-right: 10px;
@@ -57,6 +66,7 @@
       .timeline-right,
       .tr-inner-row {
         display: flex !important;
+        flex-direction: row !important;
       }
 
       .flex-2-image-row {
@@ -118,21 +128,21 @@
         <div class="timeline-right">
           <div id="2018" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2018</div>
+              <div class="tr-mobile-title">1947</div>
               <div class="tr-left-content">The company is founded as a grocery store.</div>
             </div>
             <div class="tr-image-wrapper" style="width: 0;"></div>
           </div>
           <div id="2019" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2019</div>
+              <div class="tr-mobile-title">1982</div>
               <div class="tr-left-content">Transition into distributors for several companies.</div>
             </div>
             <div class="tr-image-wrapper"></div>
           </div>
           <div id="2020" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2020</div>
+              <div class="tr-mobile-title">1984</div>
               <div class="tr-left-content">Establishment of Eskara Chemical Inventions, a cosmetics manufacturing plant
                 producing Care cosmetics products such as powders and lotions.</div>
             </div>
@@ -140,31 +150,29 @@
           </div>
           <div id="2021" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2021</div>
+              <div class="tr-mobile-title">1993</div>
               <div class="tr-left-content">The company sets up a plant in Swat.</div>
             </div>
             <div class="tr-image-wrapper"></div>
           </div>
           <div id="2022" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2022</div>
+              <div class="tr-mobile-title">2002</div>
               <div class="tr-left-content">Launch of a plastic  manufacturing unit in Multan, producing tubes and bottles used
                 in cosmetic products, including contract manufacturing for other companies.</div>
             </div>
             <div class="tr-image-wrapper"></div>
           </div>
-          <div id="2022" class="tr-inner-row">
+          <div id="2021" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2022</div>
-              <div class="tr-left-content">Closure of the Swat factory.</div>
-              
+              <div class="tr-mobile-title">2016</div>
+              <div class="tr-left-content">Closure of the Swat factory. Due to some maintainence issue.</div>
             </div>
             <div class="tr-image-wrapper"></div>
-            
           </div>
           <div id="2022" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2022</div>
+              <div class="tr-mobile-title">2017</div>
               <div class="tr-left-content">A significant year for the company: <ul  class="list"> <li>
                 Creation of the brand "Fresh N Joy," focusing on cosmetic products for the youth.
               </li><li>Formation  of  "Beauty  Experts,"  which  acquired  production  rights  from  Coslab
@@ -183,7 +191,7 @@
           </div>
           <div id="2022" class="tr-inner-row">
             <div class="tr-left">
-              <div class="tr-mobile-title">2022</div>
+              <div class="tr-mobile-title">2023</div>
               <div class="tr-left-content">Launch of Buzzazi's first physical store.</div>
             </div>
             <div class="tr-image-wrapper"></div>
@@ -200,12 +208,7 @@
 
 
 
-  <!-- Start of LinkedIn Insights tag -->
-  <script type="text/javascript">
-    _linkedin_partner_id = "3577162";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script>
+
   <script type="text/javascript">
     (function(l) {
       if (!l) {
@@ -222,11 +225,7 @@
       s.parentNode.insertBefore(b, s);
     })(window.lintrk);
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3577162&fmt=gif" />
-  </noscript>
-  <!-- End of LinkedIn Insights tag -->
-  <!-- jQuery for turning image grid into slider on mobile screens -->
+ 
   <script>
     if ($(window).width() < 768) {
       $('.timeline-right').slick({
@@ -246,7 +245,7 @@
     }
     if ($(window).width() > 767) {
       var rowHeight = $('.tr-inner-row').outerHeight();
-      var newHeight = rowHeight + 100;
+      var newHeight = rowHeight + 0;
       $('.tl-year').css('height', newHeight);
     }
   </script>

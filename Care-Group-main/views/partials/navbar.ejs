@@ -20,6 +20,7 @@ nav ul li {
 }
 
 nav ul li a {
+  text-align: center;
   display: block;
   padding: 8px 12px;
   border-bottom: 3px solid transparent;
@@ -62,7 +63,7 @@ nav ul ul li:hover>ul {
   display: block;
   left: 100%;
   top: 0;
-}
+}/* Existing CSS */
 .main-menu {
   position: relative;
 }
@@ -74,7 +75,6 @@ nav ul ul li:hover>ul {
   top: 0;
   left: 100%;
   width: 100%; /* Make submenus full-width */
-  display: none;
   z-index: 1; /* Ensure submenus appear above the main menu */
 }
 
@@ -96,9 +96,14 @@ nav ul ul li:hover>ul {
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .main-menu ul {
-    position: static;
     background-color: transparent;
     width: auto;
+    position: static;
+    display: none;
+  }
+
+  .main-menu ul.active {
+    display: block;
   }
 
   .main-menu ul li {
@@ -110,24 +115,19 @@ nav ul ul li:hover>ul {
     padding: 8px 12px;
   }
 
-  .main-menu ul ul {
-    top: 0;
-    left: 100%;
-    width: 100%;
+  .submenu1,
+  .submenu2,
+  .submenu3 {
+    display: none;
   }
 
-  .main-menu ul ul ul {
-    top: 0;
-    left: 100%;
-    width: 100%;
-  }
-
-  .main-menu li:hover ul,
-  .main-menu li:hover ul ul {
+  .main-menu ul li:hover .submenu1,
+  .main-menu ul li:hover .submenu2,
+  .submenu2 ul li:hover .submenu3 {
     display: block;
-    position: static;
   }
 }
+
   </style>
 <div class="navbar">
     <div class="logo">
@@ -192,10 +192,9 @@ nav ul ul li:hover>ul {
     <div class="dropDownBurger" id="burdermenu">
       <ul class="main-menu">
         <li><a href="/">Home</a></li>
-  
         <li>
           <a href="#">Sustainability</a>
-          <ul>
+          <ul class="submenu1">
             <li><a href="#">Sustainability at Care Group</a></li>
             <li><a href="#">Policies</a></li>
           </ul>
@@ -205,12 +204,12 @@ nav ul ul li:hover>ul {
         <li><a href="/">Careers</a></li>
         <li>
           <a href="#">About us</a>
-          <ul>
+          <ul class="submenu2">
             <li><a href="#">Our Story</a></li>
             <li><a href="#">Company profile</a></li>
             <li>
               <a href="#">Corporate Governance</a>
-              <ul>
+              <ul class="submenu3">
                 <li><a href="#">Directors</a></li>
                 <li><a href="#">Management</a></li>
               </ul>
@@ -224,4 +223,24 @@ nav ul ul li:hover>ul {
     <button id="closebtn" class="closebtn" onclick="closeburger()"><i class="fa fa-close"></i></button>
   
   </div>
+  <script>
+    const burgerMenu = document.getElementById("burdermenu");
+const mainMenu = document.querySelector(".main-menu");
+
+burgerMenu.addEventListener("click", () => {
+  mainMenu.classList.toggle("active");
+});
+
+const submenuItems = document.querySelectorAll(".main-menu li");
+
+submenuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    if (e.target.nextElementSibling && e.target.nextElementSibling.classList.contains("active")) {
+      e.target.nextElementSibling.classList.remove("active");
+    } else if (e.target.nextElementSibling) {
+      e.target.nextElementSibling.classList.add("active");
+    }
+  });
+});
+  </script>
   

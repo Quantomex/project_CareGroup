@@ -1696,44 +1696,48 @@ line-height: normal;
   }
  
 /* Akram css  */
+
+body{
+    overflow-x: hidden;    
+}
 .topHeading{
-  background: rgba(206, 153, 75, 0.12);
-  width: 100vw;
-  height: 25rem;
-  flex-shrink: 0;
+    background: rgba(206, 153, 75, 0.12);
+    width: 100vw;
+    height: 25rem;
+    flex-shrink: 0;
 }
 
 .topHeadText{
-  color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3.75rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100%;
-
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+     display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%;
+ 
 }
 .secondDiv{
-  display: flex;
-   justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column;
-  margin-top: 115px;
+    display: flex;
+     justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    margin-top: 115px;
 }
 .secondHeading{
-  color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  }
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
 
 .secondHeadingText{
-  color: #000;
+    color: #000;
 text-align: center;
 font-family: 'Open Sans', sans-serif;
 font-size: 1.5rem;
@@ -1742,25 +1746,25 @@ font-weight: 400;
 line-height: normal;
 }
 .infoContainer{
-  display: flex;
-  flex-direction: row;
-  margin-top: 134px;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 134px;
+    justify-content: space-between;
 }
 .heythere{
-  margin-left: 115px;
+    margin-left: 115px;
 }
 .infoItem{
-  display: flex;
-  flex-direction: row;
-  padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
 }
 .infoItemText{
-  padding-top: 15px;
-  margin-left:30px;
+    padding-top: 15px;
+    margin-left:30px;
 }
 .itemHeading{
-  color: #000;
+    color: #000;
 
 font-family: 'Open Sans', sans-serif;
 font-size: 24px;
@@ -1769,101 +1773,86 @@ font-weight: 600;
 line-height: normal;
 }
 .itemText{
-  color: #000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 width: 390px;
 }
 .mapDiv{
-  border-radius: 20px;
-  border: 1px solid #CE994B;
-  width: 530px; 
-  height: 470px;
-  overflow: hidden;
-  margin-right: 75px;
+    border-radius: 20px;
+    border: 1px solid #CE994B;
+    width: 530px; 
+    height: 470px;
+    overflow: hidden;
+    margin-right: 75px;
 }
-
 .map{
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 .GetInTouch{
-  margin-top: 85px;
+    margin-top: 85px;
 }
 .inputSection
 {
-  padding-bottom: 30px;
+    /* margin-right: 210px; */
 }
 .inputSection input {
-  border: none;
-  border-bottom: 1px solid#CE994B;
-  padding-bottom: 23px;
-  margin-bottom: 30px;
-  background-color: rgba(206, 153, 75, 0.12);
-  width: 453px;
-  height: 60px;
-  margin-bottom: 46px; 
-  margin-right: 50px;
-  font-size: 30px;
-  padding-left: 20px;
+    border: none;
+    border-bottom: 1px solid#CE994B;
+    padding-bottom: 23px;
+    margin-bottom: 30px;
+    background-color: rgba(206, 153, 75, 0.12);
+    width: 453px;
+    height: 60px;
+    margin-bottom: 46px; 
+    margin-right: 50px;
+    font-size: 30px;
+    padding-left: 20px;
 
 }
 
 .inputSection textarea {
-  border: none;
-  border-bottom: 1px solid  #CE994B;
-  /* padding-bottom: 23px; */
-  width: 453px;
-  height: 115px;
-  background-color: rgba(206, 153, 75, 0.12);
-  resize: none;
-  font-size: 30px;
-  padding-left: 20px;
-  margin-bottom: 10px; 
-  margin-right: 50px;
-
- 
+    border: none;
+    border-bottom: 1px solid  #CE994B;
+    /* padding-bottom: 23px; */
+    width: 453px;
+    height: 115px;
+    background-color: rgba(206, 153, 75, 0.12);
+    resize: none;
+    font-size: 30px;
+    padding-left: 20px;
+    margin-bottom: 46px; 
+    margin-right: 50px;
+  
+   
 }
 .inputSection textarea:focus {
-  outline: none;
-}
-.companyTopDiv{
-  color: #000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-.companyTopDiv p{
-  margin-right: 10px;
-  margin-left: 10px
+    outline: none;
 }
 
+
 .inputSection input:focus {
-  border-bottom: 2px solid #CE994B;
-  outline: none;
+    border-bottom: 2px solid #CE994B;
+    outline: none;
 }
 .GetInTouch{
-  margin-left: 115px;
+    margin-left: 115px;
 }
 .GetinToucHeading{
-  color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 .GetinToucText{
-  color: #000;
-  font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
@@ -1872,7 +1861,7 @@ line-height: normal;
 }
 
 ::-webkit-input-placeholder { /* Edge */
- color: #000;
+   color: #000;
 font-family: 'Open Sans', sans-serif;
 font-size: 18px;
 font-style: normal;
@@ -1881,10 +1870,10 @@ line-height: normal;
 padding-top: 5px;
 padding-left: 5px;
 
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #000;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #000;
 font-family: 'Open Sans', sans-serif;
 font-size: 18px;
 font-style: normal;
@@ -1892,10 +1881,10 @@ font-weight: 400;
 line-height: normal;
 padding-top: 5px;
 padding-left: 5px;
-}
-
-::placeholder {
- color: #000;
+  }
+  
+  ::placeholder {
+   color: #000;
 font-family: 'Open Sans', sans-serif;
 font-size: 18px;
 font-style: normal;
@@ -1904,76 +1893,79 @@ line-height: normal;
 padding-top: 5px;
 padding-left: 5px;
 
-}
-.GetInTouchText{
-  margin-bottom: 53px;
-}
-
+  }
+  .GetInTouchText{
+    margin-bottom: 53px;
+  }
+  
 .buttonWraper {
-
-  margin-top: 10px;
+  
+    margin-top: 20px;
 
 }
 
 .aboutUsSubmitBtn {
-  height: 43px;
-  width: 105px;
-  border-radius: 11px;
-  background-color: #CE994B;
-  border: none;
-  font-size: 18px;
-  font-weight: 500;
+    height: 43px;
+    width: 105px;
+    border-radius: 11px;
+    background-color: #CE994B;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+
+
 }
 
 .aboutUsSubmitBtn i {
-  margin-right: 7px;
+    margin-right: 7px;
 }
 .companyTopDiv{
-  color: #000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal; 
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
 }
 .companyTopDiv p{
-  margin-right: 10px;
-  margin-left: 10px
+    margin-right: 10px;
+    margin-left: 10px
 
 }
 .hori{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .companyDiv1Head{
-  color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 66px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  margin-top: 75px;
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 66px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 75px;
 }
 .companyDiv1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .subDivDiv1{
-  display: flex;
-  flex-direction: row;
-  margin-top: 77PX;
-  margin-left: 40PX;
+    display: flex;
+    flex-direction: row;
+    margin-top: 77PX;
+    margin-left: 40PX;
 }
 .subDivDiv1 P{
-  width: 647px;
+    width: 647px;
 
 flex-shrink: 0;
 color: #000;
+font-family: 'Open Sans', sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
@@ -1981,7 +1973,7 @@ line-height: 38px;
 
 }
 .meaow{
-  width: 400px;
+    width: 400px;
 height: 500px;
 transform: rotate(-29.698deg);
 flex-shrink: 0;
@@ -1989,92 +1981,355 @@ border-radius: 20px;
 border: 42px solid #CE994B;
 position: absolute;
 right: -30PX;
+overflow: hidden;
 }
 .imageComp{
-  position: absolute;
-  right: 50px;
-  width: 519px;
+    position: absolute;
+    right: 50px;
+    width: 519px;
 height: 504px;
 flex-shrink: 0;
 border-radius: 20px;
 background: url("COMPANYpAGE1.svg"), lightgray 50% / cover no-repeat;
 }
 .secondDivCompany{
-  margin-top: 134px;
+    margin-top: 134px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.SecondDivHead{
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+font-size: 66px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.divCoreValues{
+    width: 265.718px;
+height: 231.17px;
+flex-shrink: 0;
+border-radius: 20px;
+background: #FFF;
+box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 50px;
+margin-right: 90px;
+}
+.divCoreMain{
+margin-top: 60px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.coreValueTextMain{
+    width: 76.731px;
+height: 33.422px;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.coreValueLine{
+    width: 22.672px;
+height: 7.113px;
+flex-shrink: 0;
+border-radius: 40px;
+background: #CE994B;
+margin-top: 5px;
+}
+.sustanabilityHead{
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+font-size: 66px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-top: 70px;
+text-align: center;
+}
+.contentDivSus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sustanabilityDivs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-right: 25px;
+    margin-left: 77px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#sus , #policy{
+    accent-color:#CE994B
+}
+.radioDiv{
+    margin-right: 50px;
+    width: 340px;
+    height: 370px;
+}
+.radioDiv label{
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.radioDiv h3{
+    color: #000;
+    font-family: 'Open Sans', sans-serif;font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 30px;
+}
+input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+    outline: none;
+    border: none;
+  }
+  .normalDivSus{
+    width: 340px;
+    height: 370px;
+    flex-shrink: 0;
+    border-radius: 20px;
+background: #FFF;
+box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.12);
+margin-right: 25px;
+margin-bottom: 60px;
+  }
+  .normalDivSusImg{
+    width: 218px;
+    margin-right: 0;
+height: 137px;
+flex-shrink: 0;
+border-radius: 5px;
+background: url("img/image\ 12.svg"), lightgray 50% / cover no-repeat;
+  }
+  .setNormalMargins{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+  .normalDivSusText{
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.56px;
+  }
+  .normalDivSusText h3{
+    color: #CE994B;
+    font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+@media (max-width: 1270px) {
+    .subDivDiv1{
+        display: flex;
+        flex-direction: column;
+    }
+
+ .imageComp{
+    /* position: relative; */
+    /* left: 50%; */
+    width: 300px;
+    height: 300px;
+ }
+ .meaow{
+    /* position: relative; */
+    width: 200px;
+height: 300px;
+ }
+ 
+
+
+   
+ .subDivDiv1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .containerComp{
+    position: relative;
+    margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.SecondDivHead{
-  
-}
+ height: 400px;
+ width: 400px;
+  object-fit:cover ;
+
+ }
+  }
 @media (max-width:1156px) {
-  .GetInTouch{
-      
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      margin-left: 0;
-  }
-  .inputSection{
-      
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      width: 90%;
-  }
-  
+    .GetInTouch{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .inputSection{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    
 .inputSection input {
-  width: 90%;
-  margin-left: 0;
+    width: 90%;
+    margin-left: 0;
 
 }
 
 .inputSection textarea {
- width: 90%;
- margin-left: 0;
-
- 
+   width: 90%;
+   margin-left: 0;
+  
+   
 }
 .infoContainer{
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 .mapDiv{
- 
-  width: 70%; 
-  margin-right: 0;
-  overflow: hidden;
-  margin-top: 30px;
+   
+    width: 70%; 
+    margin-right: 0;
+    overflow: hidden;
+    margin-top: 30px;
 }
+@media (max-width:740px) {
+    .subDivDiv1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .subDivDiv1 P{
+        width: 90%;
+        
+        text-align: center;
+    
+    
+    }
+    .companyDiv1Head{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .companyDiv1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: Center;
+    }
+  
+    .subDivDiv1{
+        margin-left: 0px;
+    }
+    .divCoreMain{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+    .divCoreValues{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 
-@media (max-width:615px) {
-  .secondHeadingText{
-      width: 90%;
-  }
-  .itemText{
-      width: 90%;
-  }
-  .secondDiv{
-      text-align: center;
-  }
-  .heythere{
-      margin-left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
-  .topHeadText{
-      text-align: center;
-  }
+.SecondDivHead{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
 }
+        @media (max-width:615px) {
+            .secondHeadingText{
+                width: 90%;
+            }
+            .itemText{
+                width: 90%;
+            }
+            .secondDiv{
+                text-align: center;
+            }
+            .heythere{
+                margin-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .topHeadText{
+                text-align: center;
+            }
+            @media (max-width:455px) {
+                .sustanabilityHead {
+                    font-size: 30px;
+                }
+                .topHeadText{
+                    font-size: 3rem;
+                }
+                .radioDiv{
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+               
+                @media (max-width:380px) {
+                    body{
+                        overflow-x:hidden ;
+                    }
+                   .normalDivSus
+                   {
+                    
+                   }
+                   .sustanabilityHead {
+                    font-size: 20px;
+                }
+                .topHeadText{
+                    font-size: 3rem;
+                }
+                .divCoreValues{
+                    margin-right: 0px;
+                    margin-left: 0px;
+                }
+                }
+            }
+        }
+    
+}
+ 
+
 }
 
 /* Akram css end  */

@@ -3,7 +3,7 @@
 
 <head>
   <link href="/stylesheets/stylepanel.css" rel="stylesheet type=" text/css">
-  <title>Chairman</title>
+  <title>Sustainability Section</title>
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,15 +46,14 @@
 
             <li><a href="/visionSection" class="nav-item nav-link ">Vision Section</a></li>
             <li><a href="/ValuesSection" class="nav-item nav-link">Values Section</a></li>
-            <li><a href="/chairmanform" class="nav-item nav-link bg-active">Chairman Section</a></li>
+            <li><a href="/chairmanform" class="nav-item nav-link">Chairman Section</a></li>
             <li><a href="/bodform" class="nav-item nav-link ">Board of Directors Section</a></li>
             <li><a href="/managementTeamform" class="nav-item nav-link">Board of Management Section</a></li>
             <li><a href="/uploadPolicy" class="nav-item nav-link">Policies</a></li>
             <li><a href="/addOurStory" class="nav-item nav-link">Our Story</a></li>
             <li><a href="/corevalues" class="nav-item nav-link ">Core Values</a></li>
             <li><a href="/basection" class="nav-item nav-link">Business Activity</a></li>
-            <li><a href="/Sustainform" class="nav-item nav-link ">Sustainability Section</a></li>
-
+            <li><a href="/Sustainform" class="nav-item nav-link bg-active">Sustainability Section</a></li>
           </div>
         </nav>
       </div>
@@ -67,7 +66,7 @@
           <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav mr-auto py-0">
               <div class="burger-menu">
-                <a class="nav-item nav-link active fa-2x"><strong> Chairman Section</strong></a>
+                <a class="nav-item nav-link active fa-2x"><strong> Sustainability Section</strong></a>
               </div>
               <div class="burger-menu-tabs">
                 <li><a href="/uploadLogoform" class="nav-item nav-link ">Group of Companies</a></li>
@@ -76,14 +75,14 @@
 
                 <li><a href="/visionSection" class="nav-item nav-link ">Vision Section</a></li>
                 <li><a href="/ValuesSection" class="nav-item nav-link">Values Section</a></li>
-                <li><a href="/chairmanform" class="nav-item nav-link bg-active">Chairman Section</a></li> 
+                <li><a href="/chairmanform" class="nav-item nav-link">Chairman Section</a></li> 
                 <li><a href="/bodform" class="nav-item nav-link ">Board of Directors Section</a></li>
                 <li><a href="/managementTeamform" class="nav-item nav-link">Board of Management Section</a></li>
                 <li><a href="/uploadPolicy" class="nav-item nav-link">Policies</a></li>
                 <li><a href="/addOurStory" class="nav-item nav-link">Our Story</a></li>
                 <li><a href="/corevalues" class="nav-item nav-link ">Core Values</a></li>
                 <li><a href="/basection" class="nav-item nav-link">Business Activity</a></li>
-                            <li><a href="/Sustainform" class="nav-item nav-link ">Sustainability Section</a></li>
+                <li><a href="/Sustainform" class="nav-item nav-link bg-active">Sustainability Section</a></li>
 
             </div>
 
@@ -91,7 +90,7 @@
 
           </div>
         </nav>
-        <form class="imageForm" action="/chairmanUpload" method="post" enctype="multipart/form-data">
+        <form class="imageForm" action="/SustainUpload" method="post" enctype="multipart/form-data">
           <label for="name">Name:</label>
           <input type="text" class="form-control" id="name" name="name" required><br>
       
@@ -115,7 +114,7 @@
   <!-- Page Header Start -->
   <div class="container-fluid bg-secondary mb-0">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 20px">
-      <h1 class="font-weight-semi-bold text-uppercase mb-3">Chairman Details Section</h1>
+      <h1 class="font-weight-semi-bold text-uppercase mb-3">Sustainability Section</h1>
 
     </div>
   </div>
@@ -134,7 +133,7 @@
             </div>
           </div>
           <!-- Product Div Start  -->
-          <% for (let image of chairmanData) { %>
+          <% for (let image of sData) { %>
             <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
               <div class="card product-item border-0 mb-4">
                 <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
@@ -164,7 +163,7 @@
 
               </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
-                  <form action="/deleteChairman/<%= image._id %>" method="post">
+                  <form action="/deleteSustain/<%= image._id %>" method="post">
                     <button type="submit" class="btn btn-sm text-dark p-0"><i
                         class="fas fa-trash trashcolor mr-1 "></i>Delete</button>
                   </form>

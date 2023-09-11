@@ -13,7 +13,7 @@ require('./models/ManagementTeam');
 require('./models/Policy');
 require('./models/Mission');
 require('./models/OurStory');
-
+require('./models/CoreValues');
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
@@ -40,6 +40,7 @@ const missionRoutes = require('./routes/missionRoutes');
 const ourstoryroutes = require('./routes/ourstoryroutes');
 const aboutuspage = require('./routes/aboutuspage');
 const contactuspage = require('./routes/contactuspage');
+const corevalues = require('./routes/corevalues');
 const {isAdmin} = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
@@ -128,6 +129,9 @@ app.use(missionRoutes);
 app.use(ourstoryroutes);
 app.use(aboutuspage);
 app.use(contactuspage);
+app.use(corevalues);
+
+
 // Listen for the port Number
 app.listen(PORT, () => {
   console.log(`App is listening onnnn http://localhost:${PORT}`);

@@ -16,5 +16,8 @@ router.get('/companyprofile',(req, res)=>{
 router.get('/corporategovernance',(req, res)=>{
     res.render('./homepage/corporategovernance');
 });
+router.get('/careers', (req, res) => {
+    res.render('./homepage/career');
+});
 
 module.exports = router;

@@ -3,28 +3,29 @@ const cloudinary = require('cloudinary').v2;
 const express = require('express');
 const router = express.Router();
 const { storage } = require('../cloudinary/index');
-const Logo = require('../models/Logo');
+const CoreValues = require('../models/CoreValues');
 const upload = multer({ storage });
 const { uploader } = require('cloudinary').v2;
 const {isAdmin} = require('../middleware/isAdmin');
-router.get('/uploadLogoform', isAdmin, async (req, res) => {
-  const logoImages = await Logo.find();
-  res.render('./admin/logoForm' , { logoImages });
+
+router.get('/corevalues', isAdmin, async (req, res) => {
+  const cv = await CoreValues.find();
+  res.render('./admin/corevaluesForm' , { cv });
 });
 // Route to handle image uploads
-router.post('/uploadLogo', upload.single('image'),isAdmin,  async (req, res) => {
+router.post('/uploadCV', upload.single('image'),isAdmin,  async (req, res) => {
   try {
     const { imageFilename, path: imagePath } = req.file;
-    const { link } = req.body; 
+    const { name } = req.body; 
 
-    const newImage = new Logo({
+    const newCV = new CoreValues({
       imageFilename,
       imagePath,
-      link, 
+      name, 
     });
-    await newImage.save();
-    req.flash('success', 'Logo added successfully');
-    res.redirect('/uploadLogoform');
+    await newCV.save();
+    req.flash('success', 'Core Values added successfully');
+    res.redirect('/corevalues');
   } catch (error) {
     console.error('Error uploading image:', error);
       req.flash('error', 'Error uploading image'); 
@@ -34,12 +35,12 @@ router.post('/uploadLogo', upload.single('image'),isAdmin,  async (req, res) => 
 
 
 
-router.post('/delLogo/:id',  isAdmin, async (req, res) => {
+router.post('/delCV/:id',  isAdmin, async (req, res) => {
   try {
-    const deletedImage = await Logo.findByIdAndDelete(req.params.id);
-    await uploader.destroy(deletedImage.imagePath);
-    req.flash('success', 'Logo Deleted successfully');
-    res.redirect('/uploadLogoform');
+    const deletedCV = await CoreValues.findByIdAndDelete(req.params.id);
+    await uploader.destroy(deletedCV.imagePath);
+    req.flash('success', 'Core Value Deleted successfully');
+    res.redirect('/corevalues');
   } catch (error) {
     console.error('Error deleting image:', error);
     res.status(500).json({ message: 'Error deleting image', error: error.message });

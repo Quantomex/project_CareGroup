@@ -57,39 +57,47 @@
 <div class="w">
     <h1 class="headingtop break">Our Values</h1>
 </div>
+<!-- OUR VALUES START  -->
+<div id="box-bor">
+  <div class="v-container">
+    <% for (let image of ValuesSections) { %>
+      <div class="v-card">
+          <div class="v-content">
 
-<div class="row3">
-    <div class="column3">
-      <% for (let image of ValuesSections) { %>
-
-      <h2><img style="width: 50px; height: 50px;" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>"><span style="padding-left: 20px; padding-top: -50rem;"><%= image.name %></span> </h2>
-     
-      <div> 
-        <%= image.description %>
+              <h2>Values</h2>
+              <p><%= image.description %></p>
+           
+          </div>
+          <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
       </div>
       <% } %>
-    </div>
-    <div class="column3">
       <% for (let image of MissionData) { %>
-
-      <h2><img style="width: 50px; height: 50px;" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>"><span style="padding-left: 20px; padding-top: -50rem;"><%= image.name %></span> </h2>
+        <div class="v-card">
+            <div class="v-content">
+  
+                <h2>Mission</h2>
+                <p><%= image.description %></p>
+             
+            </div>
+            <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
+        </div>
+        <% } %>
+        <% for (let image of visionSection) { %>
+          <div class="v-card">
+              <div class="v-content">
+    
+                  <h2>Vision</h2>
+                  <p><%= image.description %></p>
+               
+              </div>
+              <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
+          </div>
+          <% } %>
+ 
      
-      <div> 
-        <%= image.description %>
-      </div>
-      <% } %>
-    </div>
-    <div class="column3">
-      <% for (let image of visionSection) { %>
+  </div>
+</div>
 
-      <h2><img style="width: 50px; height: 50px;" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>"><span style="padding-left: 20px; padding-top: -50rem;"><%= image.name %></span> </h2>
-     
-      <div> 
-        <%= image.description %>
-      </div>
-      <% } %>
-    </div>
-    </div>
 <div class="w">
     <h1 class="headingtop break">Group of Companies</h1>
 </div>

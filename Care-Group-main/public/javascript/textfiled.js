@@ -69,6 +69,8 @@ function saveintovar(){
     let divElement = document.getElementById('content');
     let divText = divElement.textContent;
     let showelemtn = document.getElementById('showmytext');
+    let showelemtn1 = document.getElementById('showmytext1');
+    showelemtn1.innerHTML=divText;
     showelemtn.value=divText;
 
 }

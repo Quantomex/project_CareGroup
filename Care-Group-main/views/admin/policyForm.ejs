@@ -8,6 +8,24 @@
 	<title>Text Editor</title>
 </head>
 <body>
+  <div class="navbar">
+    <ul class="navbar-list">
+        <li><a href="/uploadLogoform" class="navbar-item">Group of Companies</a></li>
+        <li><a href="/uploadStatement" class="navbar-item">Mission Statement</a></li>
+        <li><a href="/MissionSection" class="navbar-item">Mission Section</a></li>
+        <li><a href="/visionSection" class="navbar-item">Vision Section</a></li>
+        <li><a href="/ValuesSection" class="navbar-item">Values Section</a></li>
+        <li><a href="/chairmanform" class="navbar-item">Chairman Section</a></li>
+        <li><a href="/bodform" class="navbar-item">Board of Directors Section</a></li> 
+        <li><a href="/managementTeamform" class="navbar-item">Board of Management Section</a></li>
+        <li><a href="/uploadPolicy" class="navbar-item">Policies</a></li>
+        <li><a href="/addOurStory" class="navbar-item">Our Story</a></li>
+        <li><a href="/corevalues" class="navbar-item">Core Values</a></li>
+        <li><a href="/basection" class="navbar-item">Business Activity</a></li>
+        <li><a href="/Sustainform" class="navbar-item">Sustainability Section</a></li>
+    </ul>
+</div>
+
 
 	<div class="container">
 		<div class="toolbar">
@@ -71,9 +89,12 @@
 			Lorem, ipsum.
 		</div>
 	</div>
+  <div id="showmytext1">
+    
+  </div>
   <form class="imageForm" action="/Policy" method="post">
-	  <label for="description">Policy Name</label>
-          <input type="text" placeholder="1.0 Purpose and Commitment" class="form-control" id="name" name="name" required></input>
+	  
+          <input type="hidden" placeholder="1.0 Purpose and Commitment" class="form-control" id="name" name="name" required></input>
         
     <input type="hidden" id="showmytext" name="description">
   <input type="submit" value="Submit">

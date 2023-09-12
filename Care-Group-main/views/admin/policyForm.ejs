@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="/stylesheets/textfield.css">
-	<title>Text Editor</title>
+	<title>Policy Editor</title>
 </head>
 <body>
   <div class="navbar">
@@ -81,23 +81,21 @@
 				<button onclick="formatDoc('insertUnorderedList')"><i class='bx bx-list-ul' ></i></button>
 				<button onclick="addLink()"><i class='bx bx-link' ></i></button>
 				<button onclick="formatDoc('unlink')"><i class='bx bx-unlink' ></i></button>
-				<button id="show-code" data-active="false">&lt;/&gt;</button>
-                <button id="save-code-var" onclick="saveintovar()">Save</button>
+				<button id="show-code" style="display: none;" data-active="false"></button>
+              
 			</div>
 		</div>
 		<div id="content" contenteditable="true" spellcheck="false">
-			Lorem, ipsum.
+			Add policy here. (Remove it first)
 		</div>
 	</div>
-  <div id="showmytext1">
-
-  </div>
-  <form class="imageForm" action="/Policy" method="post">
+ 
+  <form id="myForm" class="imageForm" action="/Policy" method="post">
 	  
-          <input type="text" placeholder="Policy Name" class="form-control" id="name" name="name" required></input>
+          <input type="text" placeholder="Enter Policy Name" class="form-control" id="name" name="name" required></input>
         
     <input type="hidden" id="showmytext" name="description">
-  <input type="submit" value="Submit">
+  <input type="submit" class="btn-primary" value="Submit">
   </form>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="/javascript/textfiled.js"></script>

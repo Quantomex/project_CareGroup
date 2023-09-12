@@ -105,6 +105,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+background: transparent;
  
 }
 .active {
@@ -623,6 +624,9 @@ letter-spacing: 1.56px;
 }
 
 .css-selector {
+  position: relative;
+  left: 0;
+  right: 0;
   background: linear-gradient(16deg, #FFFFFF, #ffde89);
   background-size: 400% 400%;
   animation: AnimationName 5s ease infinite;
@@ -634,8 +638,7 @@ letter-spacing: 1.56px;
 }
 
 .fotter {
-
-  position: static;
+position: fixed;
   margin-top: 0px;
   padding-top: 50px;
   padding-bottom: 25px;
@@ -856,6 +859,7 @@ height: 90vh;
   top:50%;
   left:100px;
   width:300px;
+  height: calc(100%);
   text-align: left;
   padding:0;
   color:#eee;
@@ -952,13 +956,7 @@ height: 90vh;
   }
   .dropDownBurger ul li {
     padding: 0.7rem;
-    display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  .dropDownBurger .signupDiv {
-    width: 100%;
-    display: flex;
     justify-content: center;
   }
   
@@ -1703,8 +1701,10 @@ line-height: normal;
  
 /* Akram css  */
 
-body{
-    overflow-x: hidden;    
+#specialID{
+
+        overflow-x: hidden;
+  
 }
 .topHeading{
     background: rgba(206, 153, 75, 0.12);
@@ -1911,7 +1911,9 @@ padding-left: 5px;
 }
 
 .aboutUsSubmitBtn {
-    height: 43px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  height: 43px;
     width: 105px;
     border-radius: 11px;
     background-color: #CE994B;
@@ -2152,6 +2154,319 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
   }
+
+  /* Corpurateeeeee */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* position: relative;  */
+  }
+  .cf:before,
+  .cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .cf:after {
+    clear: both;
+  }
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  
+  .cf {
+    zoom: 1;
+  }
+  /* Generic styling */
+  
+
+  .content {
+    width: 100%;
+    max-width: 1142px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  a:focus {
+    outline: 2px dashed #f7f7f7;
+  }
+  @media all and (max-width: 767px) {
+    .content {
+      padding: 0 20px;
+    }
+  }
+ 
+  /*
+   
+   */
+  
+  .administration > li > a {
+    margin-bottom: 25px;
+  }
+  .director > li > a {
+    width: 50%;
+    margin: 0 auto 0px auto;
+  }
+  .subdirector:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 130px;
+ 
+    border-left: 2px solid #000000;
+    left: 45.45%;
+    position: relative;
+  }
+  .subdirector,
+  .departments {
+    position: absolute;
+    width: 100%;
+  }
+  .salam{
+    width: 69px;
+height: 69px;
+flex-shrink: 0;
+border-radius: 69px;
+position: absolute;
+top: -40px;
+left: 50%;
+transform: translate(-50%,0);
+z-index: 1200;
+  }
+  .specialmine {
+padding-top: 30px;
+  }
+  .subdirector > li:first-child,
+  .departments > li:first-child {
+    width: 18.59894921190893%;
+    height: 64px;
+    margin: 0 auto 92px auto;
+    padding-top: 25px;
+    border-bottom: 2px solid #000000;
+    z-index: 1;
+  }
+  .subdirector > li:first-child {
+    float: right;
+    right: 27.2%;
+    border-left: 2px solid #000000;
+  }
+  .departments > li:first-child {
+    float: left;
+    left: 27.2%;
+    border-right: 2px solid #000000;
+  }
+  .subdirector > li:first-child a,
+  .departments > li:first-child a {
+    width: 100%;
+  }
+  .subdirector > li:first-child a {
+    left: 25px;
+  }
+  @media all and (max-width: 767px) {
+    .subdirector > li:first-child,
+    .departments > li:first-child {
+      width: 40%;
+    }
+    .subdirector > li:first-child {
+      right: 10%;
+      margin-right: 2px;
+    }
+    .subdirector:after {
+      left: 49.8%;
+    }
+    .departments > li:first-child {
+      left: 10%;
+      margin-left: 2px;
+    }
+  }
+  .departments > li:first-child a {
+    right: 25px;
+    margin-top: 20px;
+  }
+  .department:first-child,
+  .departments li:nth-child(2) {
+    margin-left: 0;
+    clear: left;
+    
+  }
+  .departments:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 81.1%;
+    height: 22px;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;;
+    border-left: 2px solid #000000;
+    margin: 0 auto;
+    top: 130px;
+    left: 9.1%
+  }
+  @media all and (max-width: 767px) {
+    .departments:after {
+      border-right: none;
+      left: 0;
+      width: 49.8%;
+    }
+    .department:first-child,
+  .departments li:nth-child(2) {
+    margin-left: 0;
+    clear: left;
+    padding-top: 20px;
+  }
+
+  }
+  @media all and (min-width: 768px) {
+    .department:first-child:before,
+    .department:last-child:before {
+      border: none;
+    }
+  }
+  .department:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 22px;
+    border-left: 2px solid #000000;
+    z-index: 1;
+    top: -22px;
+    left: 50%;
+    margin-left: -4px;
+  }
+  .department {
+    border-left: 2px solid #000000;
+    width: 18.59894921190893%;
+    float: left;
+    margin-left: 1.751313485113835%;
+    margin-bottom: 60px;
+  }
+  
+  .lt-ie8 .department {
+    width: 18.25%;
+  }
+  .midgap{
+    padding-bottom: 100px;
+  }
+  @media all and (max-width: 767px) {
+    .department {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 85px;
+
+    }
+    .department:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 60px;
+      border-left: 2px solid #000000;
+      z-index: 1;
+      top: -60px;
+      left: 0%;
+      margin-left: -4px;
+    }
+    .department:nth-child(2):before {
+      display: none;
+    }
+  }
+  .department > a {
+    margin: 0 0 -26px -4px;
+    z-index: 1;
+  }
+  .department > a:hover {
+    height: 80px;
+  }
+  .department > ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .department li {
+    padding-left: 25px;
+    border-bottom: 2px solid #000000;
+    height: 80px;
+  }
+  .department li a {
+    background: #fff;
+    top: 48px;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    height: 60px;
+    vertical-align: middle;
+    right: -1px;
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#40000000', endColorstr='#00000000', GradientType=1);
+  }
+  .department li a:hover {
+    box-shadow: 8px 8px 9px -4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    width: 95%;
+    top: 39px;
+    background-image: none!important;
+  }
+  /* Department/ section colors */
+  
+  .department.dep-a a {
+    background: #F5EEC9;
+  }
+  .department.dep-b a {
+    background: #F5EEC9;
+  }
+  .department.dep-c a {
+    background:#F5EEC9;
+  }
+  .department.dep-d a {
+    background: #F5EEC9;
+  }
+  .department.dep-e a {
+    background: #F5EEC9;
+  }
+  /* corpurate end */
+  /* swiper */
+    .swiper {
+        width: 100%;
+        height: 500px;;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 300px;
+        height: 300px; */
+      }
+      .swiper-slide a{
+        text-decoration: none;
+        color: #000;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 100px 0px;
+      }
+      .swiperHeading{
+        color: #CE994B;
+        font-family: 'Open Sans', sans-serif;
+font-size: 66px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+margin-top: 75px;
+margin-bottom: 75px;
+      }
+  /* swiper end */
 @media (max-width: 1270px) {
     .subDivDiv1{
         display: flex;
@@ -2303,6 +2618,14 @@ height: 300px;
                 .sustanabilityHead {
                     font-size: 30px;
                 }
+                .sustanabilityDivs{
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .normalDivSus
+                   {
+                    margin-right: 0;
+                   }
                 .topHeadText{
                     font-size: 3rem;
                 }
@@ -2310,7 +2633,18 @@ height: 300px;
                     margin-right: 0;
                     margin-left: 0;
                 }
-               
+                .departments li:nth-child(2) {
+                  margin-left: 0;
+                  clear: left;
+                  padding-top: 70px;
+                }
+                .departments > li:first-child a {
+                  right: 0;
+                  margin-top: 20px;
+                } 
+                .swiperHeading{
+                  font-size: 40px;
+                }
                 @media (max-width:380px) {
                     body{
                         overflow-x:hidden ;
@@ -2329,6 +2663,48 @@ height: 300px;
                     margin-right: 0px;
                     margin-left: 0px;
                 }
+                @media (max-width:300px) {
+                  .department:first-child,
+  
+                    .normalDivSusText{
+                        color: #000;
+                        font-family: 'Open Sans', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.56px;
+                      }
+                      .normalDivSusText h3{
+                        color: #CE994B;
+                        font-family: 'Open Sans', sans-serif;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                      }
+                      .normalDivSus{
+                        width: 100%;
+                        height:auto;
+                     
+                      }
+                      .normalDivSusImg{
+                        width:100%;
+                       
+                      }
+                      .radioDiv{
+                        
+                        width: auto;
+                       margin-right: auto;
+                       margin-left: auto;
+                      }
+                      .topHeadText{
+                        font-size: 2.5rem;
+                      }
+                      .sustanabilityHead{
+                       font-size: 30px;
+                      }
+                }
                 }
             }
         }
@@ -2337,6 +2713,8 @@ height: 300px;
  
 
 }
+
+
 
 /* Akram css end  */
 

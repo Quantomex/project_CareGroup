@@ -65,12 +65,33 @@ function fileHandle(value) {
 	}
 }
 
-function saveintovar(){
+// Define the saveintovar function
+function saveintovar() {
     let divElement = document.getElementById('content');
     let divText = divElement.textContent;
     let showelemtn = document.getElementById('showmytext');
     let showelemtn1 = document.getElementById('showmytext1');
-    showelemtn1.innerHTML=divText;
-    showelemtn.value=divText;
-
+    showelemtn1.value = divText; // Use 'value' to set the hidden input's value
+    showelemtn.value = divText;
 }
+
+// Function to simulate a button click
+function clickSaveButton() {
+    const saveButton = document.getElementById('show-code');
+    saveButton.click(); // Trigger a click event on the button
+}
+
+// Simulate clicking the "Save" button before the saveintovar function
+
+
+// Add an event listener to the form's submit event
+const myForm = document.getElementById('myForm');
+myForm.addEventListener('submit', function (event) {
+    clickSaveButton();
+    // Call the saveintovar function before submitting the form
+    saveintovar();
+    
+    // Optionally, you can prevent the default form submission behavior
+    // if you want to control the submission through AJAX or other means.
+    // event.preventDefault();
+});

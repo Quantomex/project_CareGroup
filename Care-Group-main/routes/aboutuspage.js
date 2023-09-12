@@ -19,5 +19,7 @@ router.get('/corporategovernance',(req, res)=>{
 router.get('/careers', (req, res) => {
     res.render('./homepage/career');
 });
-
+router.get('/sustainability', (req, res) => {
+    res.render('./homepage/sustainability');
+});
 module.exports = router;

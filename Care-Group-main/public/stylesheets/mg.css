@@ -1,0 +1,33 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  ul a {
+    display: block;
+    background: #F5EEC9;
+    border: none;
+    border-bottom: 4px solid #CE994B;
+    text-align: center;
+    position: relative;
+    font-size: .7em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    /* height: 70px; */
+    margin-bottom: -26px;
+    /* box-shadow: 4px 4px 9px -4px rgba(0, 0, 0, 0.4); */
+    -webkit-transition: all linear .1s;
+    -moz-transition: all linear .1s;
+    transition: all linear .1s;
+  }
+  @media all and (max-width: 767px) {
+    ul a {
+      font-size: 1em;
+    }
+  }
+  ul a span {
+    top: 50%;
+    margin-top: -0.7em;
+    display: block;
+  }

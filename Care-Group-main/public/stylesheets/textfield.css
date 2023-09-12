@@ -24,6 +24,37 @@ a {
 }
 
 
+/* Style the navbar */
+.navbar {
+    height: 200px;
+    width: 100%;
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style the list items (inline-block) */
+.navbar li {
+
+    display: inline-flex;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Add spacing between list items (adjust as needed) */
+}
+
+/* Style the links */
+.navbar li a {
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding around the links */
+    background-color: #333; /* Background color for links */
+    color: #fff; /* Text color for links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Style the links on hover */
+.navbar li a:hover {
+    background-color: #555; /* Background color on hover */
+}
 
 
 .container {

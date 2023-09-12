@@ -1296,6 +1296,12 @@ height: 90vh;
   border-radius: 50px;
 }
 @media (max-width: 450px) {
+  .dis{
+    display: none;
+  }
+  .v-container{
+    display: initial !important;
+  }
   .welcomefont{
     text-align: center;
   }
@@ -2514,6 +2520,7 @@ line-height: normal;
   justify-content: center;
   align-items: center;
 }
+
 .v-container .v-card{
   position: relative;
   width: 359px;

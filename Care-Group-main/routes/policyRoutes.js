@@ -8,7 +8,10 @@ router.get('/uploadPolicy',isAdmin,  async (req , res) => {
  const policy = await Policy.find();
  res.render('./admin/policyForm', {policy});
 });
-
+router.get('/editPolicy',isAdmin,  async (req , res) => {
+    const policy = await Policy.find();
+    res.render('./admin/policyedit', {policy});
+   });
 router.post('/Policy', isAdmin, async (req, res) => {
     try{
         const newpolicy= new Policy ({

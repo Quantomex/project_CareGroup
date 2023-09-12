@@ -42,14 +42,14 @@
 }
 </style>
 <% if(success && success.length){ %>
-    <div class="text-center alert alert-success alert-dismissible fade show w-100" role="alert">
+    <div class="text-center alert alert-success alert-dismissible fade show " style="width: 100% !important;" role="alert">
       <%= success %>
       <button type="button" style="float: right;" class="btn btn-sm text-dark p-0"><i class="fas fa-times " data-bs-dismiss="alert"></i></button> 
    
     </div>
     <% } %>
     <% if(error && error.length){ %>
-    <div class="text-center alert alert-danger alert-dismissible fade show w-100" role="alert">
+    <div class="text-center alert alert-danger alert-dismissible fade show " style="width: 100% !important;" role="alert">
       <%= error %>
       <button type="button" style="float: right;" class="btn btn-sm text-dark p-0"><i class="fas fa-times " data-bs-dismiss="alert"></i></button> 
 

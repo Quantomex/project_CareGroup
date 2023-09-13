@@ -1,45 +1,125 @@
-<select name="policy1" id="policy1">
-    <% policies.forEach((policy, i) => { %>
-        <option value="<%= i %>"><%= policy.name %></option>
-    <% }) %>
-</select>
-<% policies.forEach((policy, i) => { %>
-    <div class="policy" data-description="<%= policy.description %>"></div>
-    <div id="showtext<%= i %>" class="showtext"></div>
-<% }) %>
-<script>
-    const policyDivs = document.querySelectorAll(".policy");
-    const selectElement = document.getElementById("policy1");
-    let lastSelectedOptionIndex = -1; // Initialize with an invalid index
-
-    selectElement.addEventListener("change", function () {
-        const selectedOptionIndex = parseInt(this.value);
-        const selectedPolicyDiv = policyDivs[selectedOptionIndex];
-        const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
-
-        // Clear the previous selection if it's different
-        if (selectedOptionIndex !== lastSelectedOptionIndex) {
-            if (lastSelectedOptionIndex !== -1) {
-                const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
-                lastShowtext.innerHTML = "";
+<%- include('../partials/head.ejs') %>
+    <%- include('../partials/navbar.ejs') %>
+        <style>
+            .navbar {
+                position: relative;
             }
-            lastSelectedOptionIndex = selectedOptionIndex;
-        }
+        </style>
 
-        // Hide all policy descriptions
-        policyDivs.forEach((div) => {
-            div.style.display = "none";
-        });
+        <body>
+            <div class="topHeading">
 
-        // Display the selected policy description
-        selectedPolicyDiv.style.display = "block";
+                <h1 class="topHeadText hori">Sustainability<div class="companyTopDiv">
+                        <p>Sustainability </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="19"
+                            viewBox="0 0 9 14" fill="none">
+                            <path d="M0 12.355L5.56275 7L0 1.645L1.71255 0L9 7L1.71255 14L0 12.355Z" fill="black" />
+                        </svg>
+                        <p> Sustainability at Care Group</p>
+                    </div>
+                </h1>
+                <div class="contentDivSus">
+                    <h2 class="sustanabilityHead">Sustainability at Care Group</h2>
+                    <div class="sustanabilityDivs" style="display: flex; flex-direction: row; width: 100%;">
+                        <div class="radioDiv">
+                            <h3>More Pages</h3>
+                            <input type="radio" id="sus" name="what" value="sus" checked="checked">
+                            <label for="sus">Sustainability at Care Group</label><br>
+                            <input type="radio" id="policy" name="what" value="policy">
+                            <label for="policy">Policies</label> <br>
+                            <select name="policy1" id="policy1">
+                                <% policies.forEach((policy, i)=> { %>
+                                    <option value="<%= i %>">
+                                        <%= policy.name %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                        </div>
 
-        // Set the selected description in showtext innerHTML
-        showtext.innerHTML = selectedPolicyDiv.getAttribute("data-description");
-    });
+                      
 
-    // Trigger the "change" event manually for the initial option (index 0)
-    selectElement.dispatchEvent(new Event("change"));
-    // Trigger the "change" event manually for the initial option (index 0)
 
-</script>
+                            <% policies.forEach((policy, i)=> { %>
+                                <div class="policy" data-description="<%= policy.description %>"></div>
+                                <div style="width: 70%;" id="showtext<%= i %>" class="showtext"></div>
+                                <% }) %>
+
+
+
+
+                       
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            </div>
+
+            <script>
+                // Get references to the radio buttons and the "sustain" div
+                const susRadioButton = document.getElementById("sus");
+                const policyRadioButton = document.getElementById("policy");
+                const sustainDiv = document.getElementById("sustain");
+
+                // Add event listeners to the radio buttons
+                susRadioButton.addEventListener("change", () => {
+                    // Check if the "Sustainability" radio button is selected
+                    if (susRadioButton.checked) {
+                        // Show the "sustain" div
+                        sustainDiv.style.display = "block";
+                    } else {
+                        // Hide the "sustain" div if "Policy" is selected
+                        sustainDiv.style.display = "none";
+                    }
+                });
+
+                policyRadioButton.addEventListener("change", () => {
+                    // Check if the "Policy" radio button is selected
+                    if (policyRadioButton.checked) {
+                        // Hide the "sustain" div if "Policy" is selected
+                        sustainDiv.style.display = "none";
+                    }
+                });
+            </script>
+
+
+
+
+            <script>
+                const policyDivs = document.querySelectorAll(".policy");
+                const selectElement = document.getElementById("policy1");
+                let lastSelectedOptionIndex = -1; // Initialize with an invalid index
+
+                selectElement.addEventListener("change", function () {
+                    const selectedOptionIndex = parseInt(this.value);
+                    const selectedPolicyDiv = policyDivs[selectedOptionIndex];
+                    const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
+
+                    // Clear the previous selection if it's different
+                    if (selectedOptionIndex !== lastSelectedOptionIndex) {
+                        if (lastSelectedOptionIndex !== -1) {
+                            const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
+                            lastShowtext.innerHTML = "";
+                        }
+                        lastSelectedOptionIndex = selectedOptionIndex;
+                    }
+
+                    // Hide all policy descriptions
+                    policyDivs.forEach((div) => {
+                        div.style.display = "none";
+                    });
+
+                    // Display the selected policy description
+                    selectedPolicyDiv.style.display = "block";
+
+                    // Set the selected description in showtext innerHTML
+                    showtext.innerHTML = selectedPolicyDiv.getAttribute("data-description");
+                });
+
+                // Trigger the "change" event manually for the initial option (index 0)
+                selectElement.dispatchEvent(new Event("change"));
+                // Trigger the "change" event manually for the initial option (index 0)
+
+            </script>

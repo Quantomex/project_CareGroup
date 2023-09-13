@@ -8,12 +8,15 @@
 </style>
 <body >
     <div class="topHeading" >
+
+      
        
         <h1 class="topHeadText hori">Sustainability<div class="companyTopDiv"> <p>Sustainability  </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="19" viewBox="0 0 9 14" fill="none">
             <path d="M0 12.355L5.56275 7L0 1.645L1.71255 0L9 7L1.71255 14L0 12.355Z" fill="black"/>
-          </svg><p> Sustainability at Care Group</p></div></h1>
+          </svg><p> Sustainability at Care Group</p></div></h1>   </div>
        <div class="contentDivSus">
         <h2 class="sustanabilityHead">Sustainability at Care Group</h2>
+      
         <div class="sustanabilityDivs">
             <div class="radioDiv">
                 <h3>More Pages</h3>
@@ -74,23 +77,39 @@
        
         </div>
        </div>
-   
-    </div>
+     
+ 
+    
+      <%- include('../partials/footer.ejs') %>
+    
+    
     <script>
         // Get references to the radio buttons and the "sustain" div
         const susRadioButton = document.getElementById("sus");
         const policyRadioButton = document.getElementById("policy");
-        const sustainDiv = document.getElementById("sustain");
+        // Get all elements with the class name "my-class"
+
+
+
       
         // Add event listeners to the radio buttons
         susRadioButton.addEventListener("change", () => {
           // Check if the "Sustainability" radio button is selected
           if (susRadioButton.checked) {
             // Show the "sustain" div
-            sustainDiv.style.display = "block";
+           
+            var elements = document.querySelectorAll('.normalDivSus');
+     
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.display = 'block';
+}
           } else {
-            // Hide the "sustain" div if "Policy" is selected
-            sustainDiv.style.display = "none";
+            var elements = document.querySelectorAll('.normalDivSus');
+     
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.display = 'none';
+}
+
           }
         });
       
@@ -98,7 +117,12 @@
           // Check if the "Policy" radio button is selected
           if (policyRadioButton.checked) {
             // Hide the "sustain" div if "Policy" is selected
-            sustainDiv.style.display = "none";
+          
+            var elements = document.querySelectorAll('.normalDivSus');
+     
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.display = 'none';
+}
           }
         });
       </script>

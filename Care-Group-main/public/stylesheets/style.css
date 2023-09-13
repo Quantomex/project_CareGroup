@@ -1713,6 +1713,7 @@ line-height: normal;
     flex-shrink: 0;
 }
 
+
 .topHeadText{
     color: #CE994B;
     font-family: 'Open Sans', sans-serif;
@@ -1944,6 +1945,7 @@ padding-left: 5px;
 
 }
 .hori{
+  margin-top: 0 !important;
     display: flex;
     flex-direction: column;
 }
@@ -2073,6 +2075,7 @@ text-align: center;
     flex-direction: column;
 }
 .sustanabilityDivs{
+  height: auto;
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
@@ -2124,7 +2127,7 @@ margin-right: 25px;
 margin-bottom: 60px;
   }
   .normalDivSusImg{
-    width: 218px;
+
     margin-right: 0;
 height: 137px;
 flex-shrink: 0;
@@ -2897,6 +2900,7 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .v-container .v-card{

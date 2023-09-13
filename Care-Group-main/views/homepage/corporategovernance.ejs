@@ -35,32 +35,16 @@
      <h2 class="swiperHeading">Board of Directors</h2>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="veeeee.jpg" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="veeeee.jpg" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="veeeee.jpg" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="veeeee.jpg" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="veeeee.jpg" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
       
+        <% directors.map((d)=>{ %>
+            <div class="swiper-slide"><img src="<%=d.imagePath %>" alt="">  
+                <h3><%=d.name%></h3>
+                <p><%=d.description%></p>
+                <a href="<%=d.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
+            </div>
+       <% }) %>
+       
+ 
 
       
     </div>
@@ -70,31 +54,14 @@
     <h2 class="swiperHeading">Management</h2>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="IMG_5191.png" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="IMG_5191.png" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="IMG_5191.png" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="IMG_5191.png" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
-    <div class="swiper-slide"><img src="IMG_5191.png" alt="">
-        <h3>Tabish waheed</h3>
-        <p>Chairman & Co-Founder</p>
-        <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
-    </div>
+        
+        <% teams.map((t)=>{ %>
+            <div class="swiper-slide"><img src="<%=t.imagePath %>" alt="">  
+                <h3><%=t.name%></h3>
+                <p><%=t.description%></p>
+                <a href="<%=t.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
+            </div>
+       <% }) %>
       
 
       
@@ -109,87 +76,28 @@
             <ul class="administration">
                 <li class="midgap">
                     <ul class="director">
-                        <li >
-                            <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
+                        <li> 
+                            <a href="#"><img class="salam" src="<%=structures[0].image.path%>" alt=""><div class="specialmine"><h2><%=structures[0].name%></h2><p><%=structures[0].title%> </p></div></a>
                             <ul class="subdirector">
                                 <!-- <li><a href="#"><span>Assistante Director</span></a>
                                 </li> -->
                             </ul>
                             <ul class="departments cf ">
-                                <li><a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
+                                <li><a href="#"><img class="salam" src="<%=structures[1].image.path%>" alt=""><div class="specialmine"><h2 ><%=structures[1].name%></h2><p><%=structures[1].title%> </p></div></a>
                                 </li>
-
-                                <li class="department dep-a">
-                                    <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
-                                    <ul class="sections">
-                                        <!-- <li class="section"><a href="#"><span>Section A1</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section A2</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section A3</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section A4</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section A5</span></a>
-                                        </li> -->
-                                    </ul>
-                                </li>
-                                <li class="department dep-b">
-                                    <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
-                                    <ul class="sections">
-                                        <!-- <li class="section"><a href="#"><span>Section B1</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section B2</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section B3</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section B4</span></a>
-                                        </li> -->
-                                    </ul>
-                                </li>
-                                <li class="department dep-c">
-                                    <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
-                                    <!-- <ul class="sections">
-                                        <li class="section"><a href="#"><span>Section C1</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section C2</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section C3</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section C4</span></a>
-                                        </li>
-                                    </ul> -->
-                                </li>
-                                <li class="department dep-d">
-                                    <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
-                                    <ul class="sections">
-                                        <!-- <li class="section"><a href="#"><span>Section D1</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section D2</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section D3</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section D4</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section D5</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section D6</span></a>
-                                        </li> -->
-                                    </ul>
-                                </li>
-                                <li class="department dep-e">
-                                    <a href="#"><img class="salam" src="IMG_5191.png" alt=""><div class="specialmine"><h2 >Tabish waheed</h2><p>Chief executive officer </p></div></a>
-                                    <ul class="sections">
-                                        <!-- <li class="section"><a href="#"><span>Section E1</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section E2</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section E3</span></a>
-                                        </li>
-                                        <li class="section"><a href="#"><span>Section E4</span></a>
-                                        <li class="section"><a href="#"><span>Section E5</span></a> -->
-
-                                        </li>
+                                <% structures.map((e, i)=>{ %>
+                                <%    if(i>1){%>
+                                    <li class="department dep-a">
+                                        <a href="#"><img class="salam" src="<%=e.image.path%>" alt=""><div class="specialmine"><h2><%=e.name %></h2><p><%=e.title%> </p></div></a>
+                                        <ul class="sections">
+    
+                                        </ul>
+                                    </li>
+                                    <%   } %>
+                              
+                             
+                                <%   }) %>
+                            
                                     </ul>
                                 </li>
                             </ul>

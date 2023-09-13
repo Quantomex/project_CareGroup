@@ -1944,6 +1944,9 @@ padding-left: 5px;
     margin-left: 10px
 
 }
+.showtext{
+  display: none;
+}
 .hori{
   margin-top: 0 !important;
     display: flex;

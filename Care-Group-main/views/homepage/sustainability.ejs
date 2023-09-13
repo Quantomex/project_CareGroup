@@ -24,55 +24,34 @@
                 <label for="sus">Sustainability at Care Group</label><br>
                 <input type="radio" id="policy" name="what" value="policy">
                 <label for="policy">Policies</label><br>
-                
+                <select name="policy1" id="policy1">
+                  <% policies.forEach((policy, i)=> { %>
+                      <option value="<%= i %>">
+                          <%= policy.name %>
+                      </option>
+                      <% }) %>
+              </select>
             </div>
-           
-                
+            <% policies.forEach((policy, i)=> { %>
+              <div class="policy" data-description="<%= policy.description %>"></div>
+              <div style="width: 70%;" id="showtext<%= i %>" class="showtext"></div>
+              <% }) %>
+
+              
+                <%sustainabilities.map((j)=>{%>
+
+               
             <div class="normalDivSus" id="sustain">
                 <div class="setNormalMargins">
                 <div class="normalDivSusImg"></div>
                 <div class="normalDivSusText">
-                    <h3>Our Employees</h3>
-                    Our policies and procedures cover our employees and suppliers, including a child and forced labor avoidance, freedom of association, non-discrimination, working hours, and occupational health and safety. We respect the right to collective bargaining and freedom of association and prohibit discrimination
+                    <h3><%=j.name%></h3>
+                    <%=j.description %>
                 </div>
             </div>
             </div>
-            <div class="normalDivSus" id="sustain">
-                <div class="setNormalMargins">
-                <div class="normalDivSusImg"></div>
-                <div class="normalDivSusText">
-                    <h3>Our Employees</h3>
-                    Our policies and procedures cover our employees and suppliers, including a child and forced labor avoidance, freedom of association, non-discrimination, working hours, and occupational health and safety. We respect the right to collective bargaining and freedom of association and prohibit discrimination
-                </div>
-            </div>
-            </div>
-            <div class="normalDivSus" id="sustain">
-                <div class="setNormalMargins">
-                <div class="normalDivSusImg"></div>
-                <div class="normalDivSusText">
-                    <h3>Our Employees</h3>
-                    Our policies and procedures cover our employees and suppliers, including a child and forced labor avoidance, freedom of association, non-discrimination, working hours, and occupational health and safety. We respect the right to collective bargaining and freedom of association and prohibit discrimination
-                </div>
-            </div>
-            </div>
-            <div class="normalDivSus" id="sustain">
-                <div class="setNormalMargins">
-                <div class="normalDivSusImg"></div>
-                <div class="normalDivSusText">
-                    <h3>Our Employees</h3>
-                    Our policies and procedures cover our employees and suppliers, including a child and forced labor avoidance, freedom of association, non-discrimination, working hours, and occupational health and safety. We respect the right to collective bargaining and freedom of association and prohibit discrimination
-                </div>
-            </div>
-            </div>
-            <div class="normalDivSus" id="sustain">
-                <div class="setNormalMargins">
-                <div class="normalDivSusImg"></div>
-                <div class="normalDivSusText">
-                    <h3>Our Employees</h3>
-                    Our policies and procedures cover our employees and suppliers, including a child and forced labor avoidance, freedom of association, non-discrimination, working hours, and occupational health and safety. We respect the right to collective bargaining and freedom of association and prohibit discrimination
-                </div>
-            </div>
-            </div>
+            <% })%>
+            
             
        
         </div>
@@ -81,8 +60,46 @@
  
     
       <%- include('../partials/footer.ejs') %>
-    
-    
+ 
+
+
+
+    <script>
+        const policyDivs = document.querySelectorAll(".policy");
+        const selectElement = document.getElementById("policy1");
+        let lastSelectedOptionIndex = -1; // Initialize with an invalid index
+
+        selectElement.addEventListener("change", function () {
+            const selectedOptionIndex = parseInt(this.value);
+            const selectedPolicyDiv = policyDivs[selectedOptionIndex];
+            const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
+
+            // Clear the previous selection if it's different
+            if (selectedOptionIndex !== lastSelectedOptionIndex) {
+                if (lastSelectedOptionIndex !== -1) {
+                    const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
+                    lastShowtext.innerHTML = "";
+                }
+                lastSelectedOptionIndex = selectedOptionIndex;
+            }
+
+            // Hide all policy descriptions
+            policyDivs.forEach((div) => {
+                div.style.display = "none";
+            });
+
+            // Display the selected policy description
+            selectedPolicyDiv.style.display = "block";
+
+            // Set the selected description in showtext innerHTML
+            showtext.innerHTML = selectedPolicyDiv.getAttribute("data-description");
+        });
+
+        // Trigger the "change" event manually for the initial option (index 0)
+        selectElement.dispatchEvent(new Event("change"));
+        // Trigger the "change" event manually for the initial option (index 0)
+
+    </script>
     <script>
         // Get references to the radio buttons and the "sustain" div
         const susRadioButton = document.getElementById("sus");
@@ -97,13 +114,26 @@
           // Check if the "Sustainability" radio button is selected
           if (susRadioButton.checked) {
             // Show the "sustain" div
-           
-            var elements = document.querySelectorAll('.normalDivSus');
+            var e1=document.getElementById("policy1");
+     e1.style.display = "none";
+     var elements1 = document.querySelectorAll('.showtext');
      
+     for (var i = 0; i < elements1.length; i++) {
+       elements1[i].style.display = 'none';
+     }
+            var elements = document.querySelectorAll('.normalDivSus');
+         
 for (var i = 0; i < elements.length; i++) {
   elements[i].style.display = 'block';
 }
           } else {
+            var elements1 = document.querySelectorAll('.showtext');
+     
+     for (var i = 0; i < elements1.length; i++) {
+       elements1[i].style.display = 'block';
+     }
+            let e1=document.getElementById("policy1");
+     e1.style.display = "block";
             var elements = document.querySelectorAll('.normalDivSus');
      
 for (var i = 0; i < elements.length; i++) {
@@ -117,9 +147,15 @@ for (var i = 0; i < elements.length; i++) {
           // Check if the "Policy" radio button is selected
           if (policyRadioButton.checked) {
             // Hide the "sustain" div if "Policy" is selected
-          
-            var elements = document.querySelectorAll('.normalDivSus');
+            let e1=document.getElementById("policy1");
+     e1.style.display = "block";
+     var elements1 = document.querySelectorAll('.showtext');
      
+     for (var i = 0; i < elements1.length; i++) {
+       elements1[i].style.display = 'block';
+     }
+            var elements = document.querySelectorAll('.normalDivSus');
+   
 for (var i = 0; i < elements.length; i++) {
   elements[i].style.display = 'none';
 }

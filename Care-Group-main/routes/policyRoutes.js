@@ -38,9 +38,4 @@ router.post('/deletePolicy/:id', isAdmin, async (req, res) => {
     }
 });
 
-router.get('/our-policies', async (req, res) => {
-    const policies = await Policy.find({});
-    res.render('./homepage/policies', { policies });
-})
-
 module.exports = router;

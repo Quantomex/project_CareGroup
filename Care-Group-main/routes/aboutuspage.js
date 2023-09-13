@@ -2,6 +2,8 @@ const express = require('express');
 const BoardofDirectors = require('../models/BoardofDirectors');
 const ManagementTeam = require('../models/ManagementTeam');
 const OrganizationStructure = require('../models/organizationStructure');
+const Policy = require('../models/Policy');
+const Sustain = require('../models/Sustain');
 const router = express.Router();
 
 router.get('/aboutus', (req, res) => {
@@ -25,7 +27,9 @@ router.get('/corporategovernance', async (req, res) => {
 router.get('/careers', (req, res) => {
     res.render('./homepage/career');
 });
-router.get('/sustainability', (req, res) => {
-    res.render('./homepage/sustainability');
+router.get('/sustainability', async (req, res) => {
+    const policies = await Policy.find({});
+    const sustainabilities = await Sustain.find({})
+    res.render('./homepage/sustainability', { policies, sustainabilities });
 });
 module.exports = router;

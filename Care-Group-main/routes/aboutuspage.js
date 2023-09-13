@@ -1,6 +1,7 @@
 const express = require('express');
 const BoardofDirectors = require('../models/BoardofDirectors');
 const ManagementTeam = require('../models/ManagementTeam');
+const OrganizationStructure = require('../models/organizationStructure');
 const router = express.Router();
 
 router.get('/aboutus', (req, res) => {
@@ -18,7 +19,8 @@ router.get('/companyprofile', (req, res) => {
 router.get('/corporategovernance', async (req, res) => {
     const directors = await BoardofDirectors.find({});
     const teams = await ManagementTeam.find({});
-    res.render('./homepage/corporategovernance', { directors, teams });
+    const structures = await OrganizationStructure.find({})
+    res.render('./homepage/corporategovernance', { directors, teams, structures });
 });
 router.get('/careers', (req, res) => {
     res.render('./homepage/career');

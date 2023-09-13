@@ -16,11 +16,12 @@ require('./models/OurStory');
 require('./models/CoreValues');
 require('./models/BusinessActivity');
 require('./models/Sustain');
+require('./models/organizationStructure');
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
 const multer = require('multer');
-const Admin= mongoose.model('Admin')
+const Admin = mongoose.model('Admin')
 const passport = require('passport');
 const localStrategy = require('passport-local');
 const path = require('path');
@@ -43,9 +44,10 @@ const ourstoryroutes = require('./routes/ourstoryroutes');
 const aboutuspage = require('./routes/aboutuspage');
 const contactuspage = require('./routes/contactuspage');
 const corevalues = require('./routes/corevalues');
-const baRoute = require('./routes/baRoute'); 
+const baRoute = require('./routes/baRoute');
 const sustainRoutes = require('./routes/sustainRoutes');
-const {isAdmin} = require('./middleware/isAdmin');
+const organizationStructure = require('./routes/organizationStructure');
+const { isAdmin } = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
 const mongoURi = 'mongodb://0.0.0.0:27017/caregroup';
@@ -70,16 +72,16 @@ app.engine('ejs', ejsMate);
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.set(path.join(__dirname, 'views'));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
-    res.locals.success = req.flash('success');
-    res.locals.error = req.flash('error');
-    next();
+  res.locals.success = req.flash('success');
+  res.locals.error = req.flash('error');
+  next();
 });
 // initializing Mongoose
 mongoose.connect(mongoURi, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
@@ -91,11 +93,11 @@ mongoose.connect(mongoURi, { useNewUrlParser: true, useUnifiedTopology: true }).
 const db = mongoose.connection;
 
 db.on('error', err => {
-console.error('MongoDB connection error:', err);
+  console.error('MongoDB connection error:', err);
 });
 
 db.once('open', () => {
-console.log('Connected to MongoDB');
+  console.log('Connected to MongoDB');
 });
 
 app.use(express.json());
@@ -103,20 +105,20 @@ app.use(express.json());
 passport.use('admin', new localStrategy(Admin.authenticate()));
 passport.serializeUser((user, done) => {
   if (user instanceof Admin) {
-      done(null, { type: 'admin', id: user.id });
+    done(null, { type: 'admin', id: user.id });
   }
 });
 passport.deserializeUser(async (data, done) => {
   try {
-      let user;
-     if (data.type === 'admin') {
-          user = await Admin.findById(data.id);
-      }
+    let user;
+    if (data.type === 'admin') {
+      user = await Admin.findById(data.id);
+    }
 
-      // Save the user object in the session regardless of its type
-      done(null, user);
+    // Save the user object in the session regardless of its type
+    done(null, user);
   } catch (err) {
-      done(err, null);
+    done(err, null);
   }
 });
 app.use(leadershipRoutes);
@@ -136,6 +138,7 @@ app.use(contactuspage);
 app.use(corevalues);
 app.use(baRoute);
 app.use(sustainRoutes);
+app.use(organizationStructure);
 // Listen for the port Number
 app.listen(PORT, () => {
   console.log(`App is listening onnnn http://localhost:${PORT}`);

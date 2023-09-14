@@ -50,7 +50,7 @@ const organizationStructure = require('./routes/organizationStructure');
 const { isAdmin } = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
-const mongoURi = 'mongodb://0.0.0.0:27017/caregroup';
+const mongoURi = process.env.MONGO_URI || 'mongodb://0.0.0.0:27017/caregroup';
 const secret = 'thisisnotagoodsecret';
 
 const store = new MongoDBStore({

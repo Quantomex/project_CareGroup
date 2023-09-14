@@ -5,6 +5,13 @@
 .navbar{
   position: relative;
 }
+.showtext{
+  font-size: 18px;
+}
+.showtext ul li{
+  margin: 0 35px;
+  list-style: disc !important;
+}
 </style>
 <body >
     <div class="topHeading" >
@@ -24,7 +31,7 @@
                 <label for="sus">Sustainability at Care Group</label><br>
                 <input type="radio" id="policy" name="what" value="policy">
                 <label for="policy">Policies</label><br>
-                <select name="policy1" id="policy1">
+                <select class="sekector" name="policy1" id="policy1">
                   <% policies.forEach((policy, i)=> { %>
                       <option value="<%= i %>">
                           <%= policy.name %>
@@ -32,9 +39,9 @@
                       <% }) %>
               </select>
             </div>
-            <% policies.forEach((policy, i)=> { %>
-              <div class="policy" data-description="<%= policy.description %>"></div>
-              <div style="width: 70%;" id="showtext<%= i %>" class="showtext"></div>
+            <% policies.forEach((policys, k)=> { %>
+              <div class="policy" data-description="<%= policys.description %>"></div>
+              <div style="width: 70%;" id="showtext<%=k %>" class="showtext"></div>
               <% }) %>
 
               
@@ -43,7 +50,7 @@
                
             <div class="normalDivSus" id="sustain">
                 <div class="setNormalMargins">
-                <div class="normalDivSusImg"></div>
+                <div class="normalDivSusImg"><img src="<%-j.imagePath %>" alt=""></div>
                 <div class="normalDivSusText">
                     <h3><%=j.name%></h3>
                     <%=j.description %>
@@ -70,6 +77,7 @@
         let lastSelectedOptionIndex = -1; // Initialize with an invalid index
 
         selectElement.addEventListener("change", function () {
+        
             const selectedOptionIndex = parseInt(this.value);
             const selectedPolicyDiv = policyDivs[selectedOptionIndex];
             const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
@@ -78,13 +86,15 @@
             if (selectedOptionIndex !== lastSelectedOptionIndex) {
                 if (lastSelectedOptionIndex !== -1) {
                     const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
-                    lastShowtext.innerHTML = "";
+                    lastShowtext.innerHTML = "1";
+                 
                 }
                 lastSelectedOptionIndex = selectedOptionIndex;
             }
 
             // Hide all policy descriptions
             policyDivs.forEach((div) => {
+          
                 div.style.display = "none";
             });
 

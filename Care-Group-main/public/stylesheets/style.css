@@ -1766,6 +1766,9 @@ line-height: normal;
     flex-direction: row;
     padding-top: 60px;
 }
+.infoItem img{
+  padding-left: 20px;
+}
 .infoItemText{
     padding-top: 15px;
     margin-left:30px;
@@ -1944,8 +1947,19 @@ padding-left: 5px;
     margin-left: 10px
 
 }
+.sekector{
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: 3px dotted #CE994B;
+  border-radius: 5px;
+  background-color: transparent;
+
+  display: none;
+}
 .showtext{
   display: none;
+  padding-bottom: 100px;
 }
 .hori{
   margin-top: 0 !important;
@@ -1996,6 +2010,7 @@ position: absolute;
 right: -30PX;
 overflow: hidden;
 }
+
 .imageComp{
     position: absolute;
     right: 50px;
@@ -2003,7 +2018,6 @@ overflow: hidden;
 height: 504px;
 flex-shrink: 0;
 border-radius: 20px;
-background: url("COMPANYpAGE1.svg"), lightgray 50% / cover no-repeat;
 }
 .secondDivCompany{
     margin-top: 134px;
@@ -2020,6 +2034,9 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
+.core-discription{
+  display: none;
+}
 .divCoreValues{
     width: 265.718px;
 height: 231.17px;
@@ -2033,7 +2050,9 @@ align-items: center;
 justify-content: center;
 margin-bottom: 50px;
 margin-right: 90px;
+transition: all  0.5s;
 }
+
 .divCoreMain{
 margin-top: 60px;
 display: flex;
@@ -2042,7 +2061,7 @@ align-items: center;
 justify-content: center;
 }
 .coreValueTextMain{
-    width: 76.731px;
+    width: auto;
 height: 33.422px;
 flex-shrink: 0;
 color: #000;
@@ -2061,6 +2080,21 @@ border-radius: 40px;
 background: #CE994B;
 margin-top: 5px;
 }
+
+/* .divCoreValues:hover .core-image{
+  display: none;
+}
+.divCoreValues:hover .coreValueLine{
+  display: none;
+}
+.divCoreValues:hover .coreValueTextMain{
+  display: none;
+}
+.divCoreValues:hover .core-discription{
+  display: block;
+  opacity: 1;
+} */
+
 .sustanabilityHead{
     color: #CE994B;
     font-family: 'Open Sans', sans-serif;
@@ -2089,7 +2123,9 @@ text-align: center;
 }
 
 #sus , #policy{
-    accent-color:#CE994B
+    accent-color:#CE994B;
+    scale: 0.7;
+    border: none;
 }
 .radioDiv{
     margin-right: 50px;
@@ -2099,7 +2135,7 @@ text-align: center;
 .radioDiv label{
     color: #000;
     font-family: 'Open Sans', sans-serif;
-font-size: 24px;
+font-size: 23px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -2614,7 +2650,7 @@ height: 300px;
                 margin-left: 0;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                /* align-items: center;  */
                 justify-content: center;
             }
             .topHeadText{

@@ -70,9 +70,9 @@ function saveintovar() {
     let divElement = document.getElementById('content');
     let divText = divElement.textContent;
     let showelemtn = document.getElementById('showmytext');
-    let showelemtn1 = document.getElementById('showmytext1');
-    showelemtn1.value = divText; // Use 'value' to set the hidden input's value
     showelemtn.value = divText;
+	let e= showelemtn.value;
+	console.log(e);
 }
 
 // Function to simulate a button click

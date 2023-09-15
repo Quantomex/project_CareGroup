@@ -41,10 +41,15 @@
     position: absolute;
     top: 100%;
     left: -20%;
-    background: rgb(255, 255, 255);
+    background: #e8b466f0;
     border-radius: 10px;
     box-shadow: 1px 1px 8px #D0A25C;
   }
+  nav ul li a:active,
+nav ul li a:focus {
+  outline: none !important; /* Remove the default focus outline */
+  border-bottom: 3px solid transparent !important; /* Remove the border on click */
+}
   
   /* Show submenu on parent hover */
   nav ul li:hover>ul {
@@ -53,12 +58,18 @@
   
   /* Adjust submenu styles */
   nav ul ul li {
-    width: 200px;
+    width: 220px;
   }
   
   nav ul ul li a {
+    color: rgba(255, 255, 255, 0.858);
+    font-weight: 600;
+    font-size: 17px;
     text-align: center;
     padding: 8px 10px;
+  }
+  nav ul li a:active{
+    border: none !important;
   }
   
   /* Add hover effect to submenu items */
@@ -132,7 +143,7 @@
       </div>
       <nav>
         <ul>
-          <li><a class="active" href="/">Home</a></li>
+          <li><a class="active1" href="/">Home</a></li>
           <li>
             <a href="#">About us <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
                 <path d="M1.645 0L7 5.56275L12.355 0L14 1.71255L7 9L0 1.71255L1.645 0Z" fill="black" />
@@ -155,6 +166,7 @@
               </svg></a>
             <ul>
               <li><a href="/sustainability">Sustainability at Care Group</a></li>
+              <li><a href="/sustainability">Policies</a></li>
             
             </ul>
           </li>
@@ -173,6 +185,7 @@
             <a href="#">Sustainability <i class="fas fa-chevron-down"></i></a>
             <ul class="submenu1"> <!-- Add unique class -->
               <li><a href="/sustainability">Sustainability at Care Group</a></li>
+              <li><a href="/sustainability">Policies</a></li>
         
             </ul>
           </li>

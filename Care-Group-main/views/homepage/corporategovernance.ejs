@@ -1,86 +1,174 @@
 <%- include('../partials/head.ejs') %>
-<%- include('../partials/navbar.ejs') %>
-<style>
-
-.navbar{
-  position: relative;
-}
-</style>
+  <%- include('../partials/navbar.ejs') %>
+    <style>
+      .navbar {
+        position: relative;
+      }
+    </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/stylesheets/mg.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/mg.css">  -->
 
 
-</head>
+    </head>
 
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <div class="topHeading">
+    <body style="height: auto !important;">
+    
+      <div class="topHeading">
 
         <h1 class="topHeadText hori">About Company<div class="companyTopDiv">
-                <p>About </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="19" viewBox="0 0 9 14"
-                    fill="none">
-                    <path d="M0 12.355L5.56275 7L0 1.645L1.71255 0L9 7L1.71255 14L0 12.355Z" fill="black" />
-                </svg>
-                <p>Corporate Governance</p>
-            </div>
+            <p>About </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="28" viewBox="0 0 9 14" fill="none">
+              <path d="M0 12.355L5.56275 7L0 1.645L1.71255 0L9 7L1.71255 14L0 12.355Z" fill="black" />
+            </svg>
+            <p>Corporate Governance</p>
+          </div>
         </h1>
 
 
-    </div>
+      </div>
 
 
-     <!-- Swiper -->
-     <h2 class="swiperHeading">Board of Directors</h2>
-  <div id="director" class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      
-        <% directors.map((d)=>{ %>
-            <div class="swiper-slide"><img src="<%=d.imagePath %>" alt="">  
-                <h3><%=d.name%></h3>
-                <p><%=d.description%></p>
-                <a href="<%=d.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
+      <!-- Swiper -->
+      <h2 class="swiperHeading">Board of Directors</h2>
+      <div id="director" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <% directors.map((d)=>{ %>
+            <div class="swiper-slide"><img src="<%=d.imagePath %>" alt="">
+              <h3>
+                <%=d.name%>
+              </h3>
+              <p>
+                <%=d.description%>
+              </p>
+              <a href="<%=d.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
             </div>
-       <% }) %>
-       
- 
+            <% }) %>
 
-      
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-    <!-- SecondSlider -->
-    <h2 class="swiperHeading">Management</h2>
-  <div id="managment-1" class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        
-        <% teams.map((t)=>{ %>
-            <div class="swiper-slide"><img src="<%=t.imagePath %>" alt="">  
-                <h3><%=t.name%></h3>
-                <p><%=t.description%></p>
-                <a href="<%=t.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
+
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- SecondSlider -->
+      <h2 class="swiperHeading">Management</h2>
+      <div id="managment-1" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <% teams.map((t)=>{ %>
+            <div class="swiper-slide"><img src="<%=t.imagePath %>" alt="">
+              <h3>
+                <%=t.name%>
+              </h3>
+              <p>
+                <%=t.description%>
+              </p>
+              <a href="<%=t.link%>"><i class="fa-brands fa-linkedin-in" style="color: #ce994b;"></i> View bio</a>
             </div>
-       <% }) %>
-      
+            <% }) %>
 
-      
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-    <!-- Herarchiey -->
 
-    <div class="myorganizationcontent">
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Herarchiey -->
+
         <h2 class="swiperHeading">Organization Structure</h2>
-        <figure class="org-chart cf">
+        <img src="/images/lines.png" style="width: 250px; margin-left: 42%;" class="organ-img" alt="">
+        <div class="organ-s" style="top: -48rem;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p> <br>
+          <div style="height: 110px; margin-left: 50% !important; border-left: 2px solid black; text-align: center; align-items: center;">
+            <i class="fa-solid fa-angle-down" style="color: #000000; margin-top: 110px; margin-left: -0.5rem; margin-right: 80rem;"></i>
+          </div>
+        </div>
+
+        <div class="organ-s" style="top: -39rem;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="organ-s" style="top: -80rem; left: 60%;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="organ-s" style="top: -77rem; left: 60%;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="organ-s" style="top: -73rem; left: 60%;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="organ-s" style="top: -69rem; left: 60%;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="organ-s" style="top: -65rem; left: 60%;">
+          <img src="/images/image2.png" style="width: 80px;" alt="">
+          <div class="organbg"></div>
+          <h2>Mujtaba</h2>
+          <p>Chief executive officer </p>
+        </div>
+        <div class="main-div-1">
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+          <div class="inside-divs">
+            <img src="/images/image2.png" style="width: 80px;" alt="">
+            <div class="organbg"></div>
+            <h2>Mujtaba</h2>
+            <p>Chief executive officer </p>
+          </div>
+        </div>
+        <!-- <figure class="org-chart cf">
             <ul class="administration">
                 <li class="midgap">
                     <ul class="director">
                         <li> 
                             <a href="#"><img class="salam" src="<%=structures[0].image.path%>" alt=""><div class="specialmine"><h2><%=structures[0].name%></h2><p><%=structures[0].title%> </p></div></a>
                             <ul class="subdirector">
-                                <!-- <li><a href="#"><span>Assistante Director</span></a>
-                                </li> -->
+                           
                             </ul>
                             <ul class="departments cf ">
                                 <li><a href="#"><img class="salam" src="<%=structures[1].image.path%>" alt=""><div class="specialmine"><h2 ><%=structures[1].name%></h2><p><%=structures[1].title%> </p></div></a>
@@ -105,36 +193,36 @@
                     </ul>
                 </li>
             </ul>
-        </figure>
-    </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        </figure> -->
+      
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <div style="margin-top: 200px;">
- <%- include('../partials/footer.ejs') %>
-</div>
-   <!-- Initialize Swiper -->
-   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-      },
-    });
-    </script>
+      <div class="footer-position">
+        <%- include('../partials/footer.ejs') %>
+      </div>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          },
+        });
+      </script>

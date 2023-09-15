@@ -18,7 +18,7 @@
 
       
        
-        <h1 class="topHeadText hori">Sustainability<div class="companyTopDiv"> <p>Sustainability  </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="19" viewBox="0 0 9 14" fill="none">
+        <h1 class="topHeadText hori">Sustainability<div class="companyTopDiv"> <p>Sustainability  </p> <svg xmlns="http://www.w3.org/2000/svg" width="9" height="28" viewBox="0 0 9 14" fill="none">
             <path d="M0 12.355L5.56275 7L0 1.645L1.71255 0L9 7L1.71255 14L0 12.355Z" fill="black"/>
           </svg><p> Sustainability at Care Group</p></div></h1>   </div>
        <div class="contentDivSus">
@@ -72,6 +72,7 @@
 
 
     <script>
+     
         const policyDivs = document.querySelectorAll(".policy");
         const selectElement = document.getElementById("policy1");
         let lastSelectedOptionIndex = -1; // Initialize with an invalid index
@@ -86,7 +87,7 @@
             if (selectedOptionIndex !== lastSelectedOptionIndex) {
                 if (lastSelectedOptionIndex !== -1) {
                     const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
-                    lastShowtext.innerHTML = "";
+                    lastShowtext.style.display = "none";
                  
                 }
                 lastSelectedOptionIndex = selectedOptionIndex;
@@ -171,6 +172,7 @@ for (var i = 0; i < elements.length; i++) {
 }
           }
         });
+ 
       </script>
       
   

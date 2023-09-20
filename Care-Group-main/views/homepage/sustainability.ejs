@@ -70,46 +70,70 @@
  
 
 
-
-    <script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () { 
+    // Function to activate the "policy" tab and perform radio button change
+    function activatePolicyTabAndChangeRadioButton() {
      
-        const policyDivs = document.querySelectorAll(".policy");
-        const selectElement = document.getElementById("policy1");
-        let lastSelectedOptionIndex = -1; // Initialize with an invalid index
+        // Activate the "policy" tab (you should adjust this code according to your tab system)
+        const policyTab = document.getElementById("policy");
+        if (policyTab) {
+            policyTab.click(); // Simulate a click to activate the tab
+        }
 
-        selectElement.addEventListener("change", function () {
+        // Perform the radio button change action (adjust this code as needed)
+        const radioButton = document.getElementById("policy");
+        if (radioButton) {
+            radioButton.checked = true; // Set the radio button to checked
+            // Trigger any event or action associated with the radio button change here
+        }
+    }
+
+    // Check the URL hash
+    if (window.location.hash === "#policy") {
+        // If the hash is "#policy," activate the tab and change the radio button
+        activatePolicyTabAndChangeRadioButton();
+    }
+});
+
+</script>
+    <script>
+    const policyDivs = document.querySelectorAll(".policy");
+      const selectElement = document.getElementById("policy1");
+      let lastSelectedOptionIndex = -1; // Initialize with an invalid index
+      
+      selectElement.addEventListener("change", function () {
+          const selectedOptionIndex = parseInt(this.value);
+          const selectedPolicyDiv = policyDivs[selectedOptionIndex];
+          const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
+          const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
+      
+          // Clear the previous selection if it's different
+          if (selectedOptionIndex !== lastSelectedOptionIndex) {
+              if (lastSelectedOptionIndex !== -1) {
+                  // Hide the previous policy description, don't remove it
+                  lastShowtext.innerHTML="";
+                  lastShowtext.style.display = "none";
+                  
+                  showtext.style.display = "block";
+              }
+      
+              // Show the selected policy description
+              selectedPolicyDiv.style.display = "block";
+      
+              // Set the selected description in showtext innerHTML
+              showtext.innerHTML = selectedPolicyDiv.getAttribute("data-description");
+      
+              // Display the showtext div
         
-            const selectedOptionIndex = parseInt(this.value);
-            const selectedPolicyDiv = policyDivs[selectedOptionIndex];
-            const showtext = document.querySelector(`#showtext${selectedOptionIndex}`);
-
-            // Clear the previous selection if it's different
-            if (selectedOptionIndex !== lastSelectedOptionIndex) {
-                if (lastSelectedOptionIndex !== -1) {
-                    const lastShowtext = document.querySelector(`#showtext${lastSelectedOptionIndex}`);
-                    lastShowtext.style.display = "none";
-                 
-                }
-                lastSelectedOptionIndex = selectedOptionIndex;
-            }
-
-            // Hide all policy descriptions
-            policyDivs.forEach((div) => {
-          
-                div.style.display = "none";
-            });
-
-            // Display the selected policy description
-            selectedPolicyDiv.style.display = "block";
-
-            // Set the selected description in showtext innerHTML
-            showtext.innerHTML = selectedPolicyDiv.getAttribute("data-description");
-        });
-
-        // Trigger the "change" event manually for the initial option (index 0)
-        selectElement.dispatchEvent(new Event("change"));
-        // Trigger the "change" event manually for the initial option (index 0)
-
+      
+              lastSelectedOptionIndex = selectedOptionIndex;
+          }
+      });
+      
+      // Trigger the "change" event manually for the initial option (index 0)
+      selectElement.dispatchEvent(new Event("change"));
+      
     </script>
     <script>
         // Get references to the radio buttons and the "sustain" div

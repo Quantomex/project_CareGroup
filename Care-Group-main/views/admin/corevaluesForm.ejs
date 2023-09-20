@@ -102,6 +102,9 @@
               required>
 
           </div>
+          <label for="description">Description:</label>
+          <input type="text" class="form-control" id="description" name="description" required></input><br>
+      
           <div class="col"> <label for="link">Add Core Value Image: </label>
             <input type="file" id="image" name="image" class="form-control" accept="image/*" required>
 
@@ -143,6 +146,15 @@
                   <img class="img-fluid w-100" src="<%= image.imagePath %>" alt="<%= image.name %>">
                 </div>
                 <p class="text-center mt-2"><%= image.name %></p>
+                <div class="d-flex justify-content-center" style="font-size: 12px; overflow-x: scroll;">
+                     
+                         
+                     
+                      
+                     
+                  <p><strong>Description</strong> <%= image.description %></p>
+              
+              </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
                   <form action="/delCV/<%= image._id %>" method="post">
                     <button type="submit" class="btn btn-sm text-dark p-0"><i

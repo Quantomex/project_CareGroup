@@ -37,24 +37,7 @@
             <h2 class="SecondDivHead">Core Values</h2>
 
         </span>
-        <div class="divCoreMain">
-          <% for (let images of ca) { %>
-
-            <div class="divCoreValues">
-              <div class="core-discription">
-                The central value, reflected in the group name and guiding the business philosophy. This implies 
-a genuine concern for various stakeholders, including customers, employees, communities, and the 
-environment.
-
-               </div>
-               <img class="core-image" src="<%= images.imagePath %>" alt="">
-                <div class="coreValueLine"></div>
-                 <p class="coreValueTextMain">  <%= images.name %></p>
-              
-            </div>
-            <% } %>
       
-        </div>
         </div>
 
 <%- include('../partials/footer.ejs') %>

@@ -70,8 +70,6 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-right: 100px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(255, 255, 255);
   transition: background-color 0.3s ease;
   /* Adding transition for smooth color change */
   position: fixed;
@@ -122,7 +120,7 @@ nav ul li a {
 .active1 {
 
   text-decoration: none;
-  color: #CE994B;
+  color: #CE994B !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -132,7 +130,7 @@ nav ul li a {
 .active1:hover {
 
   text-decoration: none;
-  color: #CE994B;
+  color: #CE994B !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -152,15 +150,10 @@ nav ul li a {
   /* Center the dot horizontally */
   font-size: 24px;
   /* Adjust the size of the dot as needed */
-  color: #CE994B;
+  color: #CE994B !important;
   /* Change the dot color as needed */
 }
 
-nav ul li a:hover {
-  color: #000000;
-  transition: all 0.5s;
-
-}
 
 .xenter {
   align-items: center;
@@ -190,40 +183,37 @@ nav ul li a:hover {
 
 .textheader {
   position: absolute;
-  top: 85%;
+  top: 50%;
   /* Center vertically */
   left: 50%;
   /* Center horizontally */
   transform: translate(-50%, -50%);
   /* Center the element precisely */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 20px;
+  align-items: center;
   text-align: center;
-  font-size: 39px;
-  font-weight: 400;
-  line-height: 30px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 70px;
   /* text-shadow: 2px 2px #D0A25C; */
   width: 80%;
 }
 
 .textheader1 {
-  opacity: 90%;
-  position: absolute;
-  top: 70%;
+
   /* Center vertically */
-  left: 50%;
   /* Center horizontally */
-  transform: translate(-50%, -50%);
   /* Center the element precisely */
   color: rgb(0, 0, 0);
   padding: 20px;
   font-family: Bond;
   text-align: center;
-  font-size: 250px;
+  font-size: 55px;
   font-weight: 400;
   line-height: 30px;
   /* text-shadow: 2px 2px #D0A25C; */
-  width: 80%;
+  
 }
 
 .textheader1 p {
@@ -232,11 +222,10 @@ nav ul li a:hover {
 }
 
 .toGiveScroll {
-  height: 500px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  direction: rtl;
+  height: 450px;
+  overflow-y: hidden;
   transition: height 0.3s ease-in-out;
+  margin-bottom: 50px;
 }
 
 #linkIdTwo {
@@ -369,6 +358,8 @@ nav ul li a:hover {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 300px;
 }
 
 .hovereffect:hover {
@@ -431,10 +422,42 @@ nav ul li a:hover {
 }
 
 .dis {
-
+  cursor: pointer;
   margin-left: 25px;
 }
+.showdis1{
+  color: white;
+  background: #CE994B;
+  text-decoration: none;
+  padding: 19px 32px;
+  border: 1px solid #CE994B;
+  border-radius: 31.5px;
 
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 20px;
+  cursor: pointer;
+  margin-top: -20px;
+
+}
+.hideme{
+  color: white;
+  background: #CE994B;
+  text-decoration: none;
+  padding: 19px 32px;
+  border: 1px solid #CE994B;
+  border-radius: 31.5px;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
 .column2 a {
   color: white;
   background: #CE994B;
@@ -662,16 +685,15 @@ nav ul li a:hover {
 
 .overlay {
   position: relative;
-  bottom: 5rem;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
+  bottom: 5.5rem;
   /* Black see-through */
   color: #000000;
   width: 100%;
   transition: .5s ease;
   opacity: 0;
   color: white;
-  font-size: 20px;
+  font-size: 40px;
+  font-weight: 600;
   padding: 40px;
   text-align: center;
 }
@@ -808,7 +830,7 @@ nav ul li a:hover {
 }
 
 .companynameinside {
-  font-size: 150px;
+  font-size: 25px;
 }
 
 .text-left {
@@ -995,7 +1017,9 @@ nav ul li a:hover {
     filter: blur(0);
   }
 }
-
+.logos{
+  width: 250px;
+}
 .buttons {
   position: absolute;
   bottom: 30px;
@@ -1304,12 +1328,24 @@ nav ul li a:hover {
 }
 
 @media (max-width: 1098px) {
+  .logos{
+    width: 200px;
+
+  }
+  .navbar{
+    padding-right: 20px;
+    
+  }
+  .v-container .v-card {
+    width: 90% !important;
+}
   .responsive-image {
     height: 68vh;
   }
 }
 
 @media (max-width: 945px) {
+  
   .textheader1 {
     font-size: 180px;
   }
@@ -1387,6 +1423,12 @@ nav ul li a:hover {
 }
 
 @media (max-width: 650px) {
+  .v-container{
+    flex-direction: column;
+  }
+  .v-container .v-card {
+    width: 90% !important;
+}
   .textheader1 {
     top: 65%;
     font-size: 70px;
@@ -1432,6 +1474,30 @@ nav ul li a:hover {
 }
 
 @media (max-width: 450px) {
+  .linktree{
+    margin-top: 0;
+    margin-left: 0 !important;
+    width: 70%;
+  }
+  .v-container .v-card {
+    width: 90% !important;
+  }
+  .subbtn {
+    border-radius: 31.5px;
+    border: 1px solid #CE994B;
+    background: #CE994B;
+    margin-left: 20px !important;
+    padding: 9px 20px !important;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .showdis1{
+    display: none;
+  }
   .dis {
     display: none;
   }
@@ -1920,7 +1986,7 @@ nav ul li a:hover {
 .topHeading {
   background: rgba(206, 153, 75, 0.12);
   width: 100vw;
-  height: 25rem;
+  height: 12rem;
   flex-shrink: 0;
 }
 
@@ -2115,7 +2181,6 @@ nav ul li a:hover {
   padding-left: 5px;
 
 }
-
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000;
@@ -2284,9 +2349,18 @@ nav ul li a:hover {
 }
 
 .core-discription {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 0px 12px;
+  font-weight: 400;
+  font-family: open sans;
   display: none;
 }
-
+.linktree{
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
+  width: 85%;
+}
 .divCoreValues {
   width: 265.718px;
   height: 231.17px;
@@ -2299,7 +2373,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  margin-right: 90px;
+  margin-right: 30px;
 }
 
 .divCoreMain {
@@ -2387,6 +2461,11 @@ nav ul li a:hover {
 }
 .footer-position{
   margin-top: -55rem;
+}
+@media (max-width:1491px){
+  .organ-s{
+    left: 10%;
+  }
 }
 @media (max-width:555px){
   .footer-position{

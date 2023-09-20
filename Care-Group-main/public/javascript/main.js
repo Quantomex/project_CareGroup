@@ -1,12 +1,124 @@
+
+let var1 = document.getElementById("index-navbar");
+if (var1 !== null) {
+  
+var links3 = document.querySelectorAll("nav ul ul");
+// Loop through the elements and change the color
+for (var i = 0; i < links3.length; i++) {
+  links3[i].style.background = "#0000001f";
+}
 window.addEventListener("scroll", function() {
-    var navbar = document.querySelector(".navbar");
+    var navbar = document.querySelector(".index-nav");
     if (window.scrollY > 0) {
-        navbar.style.backgroundColor = "white";
+      var navbar1 = document.querySelector(".navbar");
+        navbar1.style.backgroundColor = "white";
+        // Select all matching elements
+var links = document.querySelectorAll("nav ul li a");
+// Loop through the elements and change the color
+for (var i = 0; i < links.length; i++) {
+  links[i].style.color = "black";
+}
+var links3 = document.querySelectorAll("nav ul ul");
+// Loop through the elements and change the color
+for (var i = 0; i < links3.length; i++) {
+  links3[i].style.background = "#e8b466f0";
+}
+var links2 = document.querySelectorAll("nav ul li ul li a");
+// Loop through the elements and change the color
+for (var i = 0; i < links2.length; i++) {
+  links2[i].style.color = "white";
+}
+
+var tag = document.getElementById("svg1");
+
+  tag.style.fill = "black";
+  var tag1 = document.getElementById("svg2");
+
+  tag1.style.fill = "black";
+
+// Get a reference to the image element by its id
+var logoImage = document.getElementById("logo_image");
+
+// Set the new image source (replace with the new image path)
+var newImageSrc = "/images/logo.png"; // Replace with the path to the new image
+
+// Change the src attribute of the image element
+logoImage.src = newImageSrc;
+
+
+
     } else {
-        navbar.style.backgroundColor = "transparent";
+      // Get a reference to the image element by its id
+var logoImage = document.getElementById("logo_image");
+
+// Set the new image source (replace with the new image path)
+var newImageSrc = "/images/logow.png"; // Replace with the path to the new image
+
+// Change the src attribute of the image element
+logoImage.src = newImageSrc;
+
+      var tag = document.getElementById("svg1");
+
+      tag.style.fill = "white";
+      var tag1 = document.getElementById("svg2");
+    
+      tag1.style.fill = "white";
+    
+      var links = document.querySelectorAll("nav ul li a");
+
+// Loop through the elements and change the color
+for (var i = 0; i < links.length; i++) {
+    links[i].style.color = "white";
+}
+var links3 = document.querySelectorAll("nav ul ul");
+// Loop through the elements and change the color
+for (var i = 0; i < links3.length; i++) {
+  links3[i].style.background = "#0000001f";
+}
+var navbar1 = document.querySelector(".navbar");
+        navbar1.style.backgroundColor = "transparent";
     }
-});
-document.getElementById('next').onclick = function(){
+    
+  });
+}
+else{
+  var navbar1 = document.querySelector(".navbar");
+  navbar1.style.backgroundColor = "white";
+  // Select all matching elements
+var links = document.querySelectorAll("nav ul li a");
+// Loop through the elements and change the color
+for (var i = 0; i < links.length; i++) {
+links[i].style.color = "black";
+}
+
+var links2 = document.querySelectorAll("nav ul li ul li a");
+// Loop through the elements and change the color
+for (var i = 0; i < links2.length; i++) {
+  links2[i].style.color = "white";
+}
+
+
+var tag = document.getElementById("svg1");
+
+tag.style.fill = "black";
+var tag1 = document.getElementById("svg2");
+
+tag1.style.fill = "black";
+
+// Get a reference to the image element by its id
+var logoImage = document.getElementById("logo_image");
+
+// Set the new image source (replace with the new image path)
+var newImageSrc = "/images/logo.png"; // Replace with the path to the new image
+
+// Change the src attribute of the image element
+logoImage.src = newImageSrc;
+
+
+}
+
+
+  document.getElementById('next').onclick = function(){
   let lists = document.querySelectorAll('.item');
   document.getElementById('slide').appendChild(lists[0]);
 }

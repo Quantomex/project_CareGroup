@@ -1,10 +1,13 @@
 <%- include('../partials/head.ejs') %>
-
+<div class="index-nav" id="index-navbar">
+  
 <%- include('../partials/navbar.ejs') %>
+
+</div>
 <!-- Navbar End  -->
 <div class="herosection">
   <div class="hearo-image">
-    <img src="/images/Untitled-5.png" class="css-selector" alt="">
+    <img src="/images/Untitled-5.png" class="css-selector" alt=""> 
 
     <!-- <div class="responsive-image"></div> -->
   </div>
@@ -14,16 +17,13 @@
     <!-- <a class="button-discover" href="">Discover More!</a>  -->
   </div>
 
-  <div class="textheader1">
-    <p>C<span class="companynameinside">ARE</span> G<span class="companynameinside">ROUP</span> </p>
-    <!-- <a class="button-discover" href="">Discover More!</a>  -->
-  </div>
+  <!--  -->
 </div>
 
 <div class="row">
   <% for (let image of ChairmanData) {  %>
   <div class="column2">
-    <div class="box"><img class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
+    <div class="box"><img  class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
       <div class="overlay"><%= image.name %></div>
       <% } %>
     </div>
@@ -31,18 +31,44 @@
   <div class="column2">
     <% for (let image of ChairmanData) {  %>
     <h1>Chairman's <br> Statement</h1>
+    <div id="toGiveScroll" class="toGiveScroll">
       <p>
         <%= image.description %>
-      </p> <br> <br>
-      <a class="dis" href="">Discover more</a>
+      </p>  <button id="hidebtn" onclick="hidedes()" class="hideme">Hide</button>
+    
+    </div>  
+    <button id="dis" onclick="showdes()" class="showdis1">Discover More</button>
+      <!-- <a class="dis" id="dis" onclick="showdes()" >Discover more</a> -->
       <% } %>
     <center>
-      <button class="btnpostion" id="linkId">Discover More!</button>
-      <button class="btnpostion" id="linkIdTwo">Hide!</button>
+      <button class="btnpostion" onclick="mobile_show()" id="linkId">Discover More!</button>
+      <button class="btnpostion" onclick="mobile_hide()" id="linkIdTwo">Hide!</button>
     </center>
   </div>
 </div>
+<% if(visionSection.length) {%>
+  <% for (let vision of visionSection) { %>
+<div class="row rowtop" >
 
+  <div class="column2-right" style="width: 40%; padding: 0 0 0 40px;">
+      <h1>OUR VISION</h1>
+
+
+
+      <p>  <%= vision.description %></p>
+      <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
+          customer expectations. We
+          are committed to cultivating a supportive and enriching work environment that empowers our employees.
+          Upholding a strong ethical foundation, we conduct our business processes with integrity and
+          transparency.</p> -->
+
+
+  </div>
+  <div class="column2"><img src="<%=vision.imagePath %>" alt=""></div>
+
+</div>
+<% } %>
+<% } %>
 <% if(st.length) {%>
 <div class="textcenter">
   <% for (let description of st) { %>
@@ -54,48 +80,27 @@
   <% } %>
 </div>
 <% } %>
-<div class="w">
-    <h1 class="headingtop break">Our Values</h1>
-</div>
-<!-- OUR VALUES START  -->
-<div id="box-bor">
-  <div class="v-container">
-    <% for (let image of ValuesSections) { %>
-      <div class="v-card">
-          <div class="v-content">
+<div class=secondDivCompany>
+  <span >
+  <h2 class="SecondDivHead">Core Values</h2>
 
-              <h2>Values</h2>
-              <p><%= image.description %></p>
-           
-          </div>
-          <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
-      </div>
-      <% } %>
-      <% for (let image of MissionData) { %>
-        <div class="v-card">
-            <div class="v-content">
-  
-                <h2>Mission</h2>
-                <p><%= image.description %></p>
-             
-            </div>
-            <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
-        </div>
-        <% } %>
-        <% for (let image of visionSection) { %>
-          <div class="v-card">
-              <div class="v-content">
+</span>
+<div class="divCoreMain">
+<% for (let images of ce) { %>
+
+  <div class="divCoreValues">
+    <div class="core-discription">
+   <%= images.description %>
+
+     </div>
+     <img class="core-image" src="<%= images.imagePath %>" alt="">
+      <div class="coreValueLine"></div>
+       <p class="coreValueTextMain">  <%= images.name %></p>
     
-                  <h2>Vision</h2>
-                  <p><%= image.description %></p>
-               
-              </div>
-              <img src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
-          </div>
-          <% } %>
- 
-     
   </div>
+  <% } %>
+
+</div>
 </div>
 
 <div class="w">
@@ -116,3 +121,38 @@
 
 <%- include('../partials/footer.ejs') %>
 
+<script>
+  function showdes(){
+    let myshow = document.getElementById("toGiveScroll");
+    let showmy = document.getElementById("dis");
+    let hidemy = document.getElementById("hidebtn");
+    showmy.style.display="none";
+    hidemy.style.display="block";
+    myshow.style.height = "auto";
+  }
+  function hidedes(){
+    let myshow = document.getElementById("toGiveScroll");
+    let showmy = document.getElementById("dis");
+    let hidemy = document.getElementById("hidebtn");
+    showmy.style.display="block";
+    hidemy.style.display="none";
+    myshow.style.height = "450px";
+  }
+  
+  function mobile_show(){
+    let myshow = document.getElementById("toGiveScroll");
+    let showmy = document.getElementById("linkId");
+    let hidemy = document.getElementById("linkIdTwo");
+    myshow.style.height = "auto"; 
+    hidemy.style.display = "block";
+    showmy.style.display = "none";
+}
+  function mobile_hide(){
+    let myshow = document.getElementById("toGiveScroll");
+    let showmy = document.getElementById("linkId");
+    let hidemy = document.getElementById("linkIdTwo");
+    myshow.style.height = "450px"; 
+    hidemy.style.display = "none";
+    showmy.style.display = "block";
+}
+</script>

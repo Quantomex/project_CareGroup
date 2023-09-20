@@ -16,12 +16,13 @@ router.get('/corevalues', isAdmin, async (req, res) => {
 router.post('/uploadCV', upload.single('image'),isAdmin,  async (req, res) => {
   try {
     const { imageFilename, path: imagePath } = req.file;
-    const { name } = req.body; 
+    const { name, description } = req.body; 
 
     const newCV = new CoreValues({
       imageFilename,
       imagePath,
-      name, 
+      name,
+      description, 
     });
     await newCV.save();
     req.flash('success', 'Core Values added successfully');

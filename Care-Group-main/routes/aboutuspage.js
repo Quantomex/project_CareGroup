@@ -5,7 +5,6 @@ const OrganizationStructure = require('../models/organizationStructure');
 const Policy = require('../models/Policy');
 const Sustain = require('../models/Sustain');
 const BusinessActivity = require('../models/BusinessActivity');
-const CoreValues = require('../models/CoreValues');
 const OurStory = require('../models/OurStory');
 const router = express.Router();
 
@@ -20,9 +19,9 @@ router.get('/ourstory', async (req, res) => {
     res.render('./homepage/ourstory',{story});
 });
 router.get('/companyprofile', async (req, res) => {
-    const ca = await CoreValues.find();
+
     const ba = await BusinessActivity.find();
-    res.render('./homepage/companyprofile',{ba, ca});
+    res.render('./homepage/companyprofile',{ba});
 });
 router.get('/corporategovernance', async (req, res) => {
     const directors = await BoardofDirectors.find({});

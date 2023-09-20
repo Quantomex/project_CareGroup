@@ -26,7 +26,9 @@ body {
   overflow-x: hidden;
 
 }
-
+.row-reverse{
+  flex-direction: row-reverse !important;
+}
 .responsive-image {
   width: 100vw;
   height: 100vh;

@@ -69,16 +69,29 @@
 </div>
 <% } %>
 <% } %>
+
 <% if(st.length) {%>
-<div class="textcenter">
   <% for (let description of st) { %>
+<div class="row rowtop row-reverse" >
 
-  <p class="center-text welcomefont">
-    <%= description.description %>
-  </p>
+  <div class="column2-right" style="width: 44%; padding: 0 40px 0 0;">
+      <h1>OUR Mission</h1>
 
-  <% } %>
+
+
+      <p>  <%= description.description %></p>
+      <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
+          customer expectations. We
+          are committed to cultivating a supportive and enriching work environment that empowers our employees.
+          Upholding a strong ethical foundation, we conduct our business processes with integrity and
+          transparency.</p> -->
+
+
+  </div>
+  <div class="column2"><img src="/images/mission.png" alt=""></div>
+
 </div>
+<% } %>
 <% } %>
 <div class=secondDivCompany>
   <span >

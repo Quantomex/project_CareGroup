@@ -576,6 +576,9 @@ nav ul li a {
   padding-top: 64px;
   line-height: 80px;
 }
+.widthclass{
+  width: 40%; 
+}
 
 .ourvision {
   padding-left: 60px;
@@ -2105,6 +2108,9 @@ nav ul li a {
 
 .inputSection {
   /* margin-right: 210px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .inputSection input {
@@ -2147,7 +2153,51 @@ nav ul li a {
   border-bottom: 2px solid #CE994B;
   outline: none;
 }
+.inputSection input:focus::placeholder {
 
+color: transparent;
+}
+.placeholderEffect{
+  /* position: absolute; */
+}
+/* .placeholderEffect::placeholder{
+  color: transparent;  } */
+  /* .formLable{
+    display: block;
+    color: #000;
+    top: 0;
+    font-size: 30px;
+    transition: 0.2s;
+  }
+.placeholderEffect::placeholder ~ .formLable
+{
+  top: 20px;
+  cursor: text;
+  font-size: 35px;
+
+} */
+/* input:focus ~ .formLable,
+input:not(:focus):valid ~ .formLable{
+  top: 78px;
+  bottom: 110px;
+  left: 20px;
+  font-size: 30px;
+  opacity: 1;
+} */
+
+/* .inputText {
+  font-size: 30px;
+  width: 200px;
+  height: 35px;
+} */
+/* 
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 118px;
+  transition: 0.2s ease all;
+} */
 .GetInTouch {
   margin-left: 115px;
 }
@@ -3056,6 +3106,7 @@ a:focus {
 
 
   }
+ 
 
   .infoContainer {
     flex-direction: column;
@@ -3151,7 +3202,9 @@ a:focus {
         .sustanabilityHead {
           font-size: 30px;
         }
-
+.widthclass{
+  width: 80%;
+}
         .sustanabilityDivs {
           margin-left: 0;
           margin-right: 0;
@@ -3204,6 +3257,35 @@ a:focus {
             margin-right: 0px;
             margin-left: 0px;
           }
+          .column2-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0 !important;
+          }
+          .column2-right p{
+            text-align: center;
+          }
+          .column2 p{
+            font-size: 20px;
+            width: 80%;
+          }
+          .column2 h1{
+            font-size: 35px;
+            line-height: 30px ;
+          }
+          .column2 img {
+            height: auto;
+           
+        }
+        .hovereffect {
+         
+          border-top-left-radius: 103px;
+          border-bottom-right-radius: 122px;
+      }
 
           @media (max-width:300px) {
             .department:first-child,

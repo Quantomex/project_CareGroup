@@ -50,15 +50,43 @@
 
         </div>
         <div class="inputSection">
-            <input type="text" name="firstname" id="firstname" placeholder="Fist Name">
-            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-            <input type="email" name="email" id="email" placeholder="Email address">
-            <input type="text" name="contactnumber" id="contactnumber" placeholder="Contact Number">
-            <textarea name="message" id="message" placeholder="Message/query"></textarea>
-            <div class="buttonWraper">
-                <button type="submit" class="aboutUsSubmitBtn"><i class='bx bxl-telegram'></i>Submit</button>
+            <div>
+                 <input class="placeholderEffect" type="text" name="firstname" id="firstname" placeholder="Fist Name" required>
+       
+       <!-- <label for="firstname" class="formLable">First Name</label> -->
             </div>
-        </div>
+            <div>
+                <input class="placeholderEffect"  type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+     
+         <!-- <label for="lastname" class="formLable">Last Name</label> -->
+    
+            </div>
+            <div>
+                <input class="placeholderEffect" type="email" name="email" id="email" placeholder="Email address" required>
 
+                <!-- <label for="email" class="formLable">Email</label> -->
+            </div>
+            <div>
+                <input class="placeholderEffect" type="text" name="contactnumber" id="contactnumber" placeholder="Contact Number" required>
+           
+ <!-- <label for="contactnumber" class="formLable">Phone Number</label> -->
+            </div>
+            <div>
+                <textarea class="placeholderEffect" name="message" id="message" placeholder="Message/query"></textarea>
+         
+      <!-- <label for="message" class="formLable">Message/query</label> -->
+            </div>
+           
+           
+           
+
+         
+            
+           
+        </div>
+        <div class="buttonWraper">
+            <button type="submit" class="aboutUsSubmitBtn"><i class='bx bxl-telegram'></i>Submit</button>
+        </div>
     </div>
+    
     <%- include('../partials/footer.ejs') %>

@@ -340,32 +340,38 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 200px;
 
 }
 
 .column2 {
+  
   width: 50%;
   height: auto;
   overflow: hidden;
 }
 
 .column2 img {
+  scale: 0.7;
   width: 100%;
-  height: 743px;
+  height: auto;
   object-fit: cover;
 }
 
 
 .hovereffect {
-  width: 100%;
+  scale: 0.8;
+  width: 80%;
   height: auto;
   object-fit: cover;
   border-top-left-radius: 200px;
   border-bottom-right-radius: 300px;
+  
+  box-shadow: 1px 1px 10px black;
 }
 
 .hovereffect:hover {
-  scale: 1.1;
+  scale: 1;
   transition: all ease 1s;
 }
 
@@ -1462,7 +1468,9 @@ nav ul li a {
   border: white solid 1px;
   border-radius: 50px;
 }
-
+.footerlogo{
+  width: 220px;
+}
 .btn-discover {
   display: none;
 }
@@ -2475,7 +2483,7 @@ input:not(:focus):valid ~ .formLable{
 .linktree{
   margin-top: 2.5rem;
   margin-left: 2.5rem;
-  width: 85%;
+  width: 70%;
 }
 .divCoreValues {
   width: 265.718px;

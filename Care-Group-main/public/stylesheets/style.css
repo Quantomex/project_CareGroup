@@ -2151,10 +2151,74 @@ nav ul li a {
   border-bottom: 2px solid #CE994B;
   outline: none;
 }
-.inputSection input:focus::placeholder {
+/* .inputSection input:focus::placeholder {
 
 color: transparent;
-}
+} */
+.group {
+  position: relative;
+ }
+ 
+ .input {
+  /* font-size: 16px; */
+  /* padding: 10px 10px 10px 5px;
+  display: block; */
+  /* width: 200px;
+  border: none; */
+  /* border-bottom: 1px solid #515151; */
+  /* background: transparent; */
+ }
+ 
+ .input:focus {
+  outline: none;
+ }
+ 
+ label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ 
+ .input:focus ~ label, .input:valid ~ label {
+  top: -20px;
+  font-size: 20px;
+  color: #D0A25C;
+ }
+ 
+
+
+ 
+ .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+ }
+ 
+ .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+ }
+ 
+ @keyframes inputHighlighter {
+  from {
+   background: #5264AE;
+  }
+ 
+  to {
+   width: 0;
+   background: transparent;
+  }
+ }
 .placeholderEffect{
   /* position: absolute; */
 }

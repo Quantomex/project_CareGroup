@@ -2175,7 +2175,7 @@ color: transparent;
   outline: none;
  }
  
- label {
+ .formLable {
   color: #999;
   font-size: 18px;
   font-weight: normal;
@@ -2188,7 +2188,7 @@ color: transparent;
   -webkit-transition: 0.2s ease all;
  }
  
- .input:focus ~ label, .input:valid ~ label {
+ .input:focus ~ .formLable, .input:valid ~ .formLable {
   top: -20px;
   font-size: 20px;
   color: #D0A25C;
@@ -2221,9 +2221,7 @@ color: transparent;
    background: transparent;
   }
  }
-.placeholderEffect{
-  /* position: absolute; */
-}
+
 /* .placeholderEffect::placeholder{
   color: transparent;  } */
   /* .formLable{

@@ -2189,7 +2189,7 @@ color: transparent;
  }
  
  .input:focus ~ .formLable, .input:valid ~ .formLable {
-  top: -20px;
+  top: -25px;
   font-size: 20px;
   color: #D0A25C;
  }

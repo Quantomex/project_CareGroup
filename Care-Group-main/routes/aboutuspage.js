@@ -8,6 +8,7 @@ const BusinessActivity = require('../models/BusinessActivity');
 const OurStory = require('../models/OurStory');
 const router = express.Router();
 
+
 router.get('/aboutus', (req, res) => {
     res.render('./homepage/aboutus');
 });

@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
   const ChairmanData = await Chairman.find();
   const ce = await CoreValues.find();
   const MissionData = await Mission.find();
-  res.render('./homepage/index' , { leadershipImages, logoImages , visionSection , st, ValuesSections , ChairmanData, ce, MissionData});
+  res.render('./homepage/index' , { leadershipImages, logoImages , visionSection , st, ValuesSections , ChairmanData, ce, MissionData });
 });
 
 router.post('/delete/:id',isAdmin, async (req, res) => {

@@ -230,6 +230,12 @@ nav ul li a {
   margin-bottom: 50px;
 }
 
+.toGiveScroll22 {
+  height: 450px;
+  overflow-y: scroll;
+  transition: height 0.3s ease-in-out;
+  margin-bottom: 50px;
+}
 #linkIdTwo {
   display: none;
 }
@@ -267,7 +273,7 @@ nav ul li a {
   transition: ease-in-out 0.5s;
 }
 
-.toGiveScroll::-webkit-scrollbar {
+.toGiveScroll22::-webkit-scrollbar {
   display: none;
   /* Hide scrollbar for Webkit browsers (Chrome, Safari, etc.) */
 }
@@ -340,32 +346,38 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 200px;
 
 }
 
 .column2 {
+  
   width: 50%;
   height: auto;
   overflow: hidden;
 }
 
 .column2 img {
+  scale: 0.8;
   width: 100%;
-  height: 743px;
+  height: auto;
   object-fit: cover;
 }
 
 
 .hovereffect {
-  width: 100%;
+  scale: 0.9;
+  width: 80%;
   height: auto;
   object-fit: cover;
   border-top-left-radius: 200px;
   border-bottom-right-radius: 300px;
+  
+  box-shadow: 1px 1px 10px black;
 }
 
 .hovereffect:hover {
-  scale: 1.1;
+  scale: 1;
   transition: all ease 1s;
 }
 
@@ -523,7 +535,7 @@ nav ul li a {
 }
 
 .dropDownBurger ul li a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -690,7 +702,7 @@ nav ul li a {
 
 .overlay {
   position: relative;
-  bottom: 5.5rem;
+  bottom: 7rem;
   /* Black see-through */
   color: #000000;
   width: 100%;
@@ -848,8 +860,7 @@ nav ul li a {
 
 .img-width {
   padding: 10px 25px 65px 25px;
-  width: 450px;
-  height: auto;
+  width: 300px;
 }
 
 .rowtop-1 {
@@ -1052,7 +1063,7 @@ nav ul li a {
   right: 2rem;
   top: -100px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ce994b;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
@@ -1069,7 +1080,7 @@ nav ul li a {
 }
 
 .dropDownBurger.appear {
-  top: 55px;
+  top: 94px;
   /* Final position at the top */
   opacity: 1;
   /* Fade in */
@@ -1425,6 +1436,10 @@ nav ul li a {
   .toGiveScroll {
     height: 400px;
   }
+  
+  .toGiveScroll22 {
+    height: 400px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1462,7 +1477,9 @@ nav ul li a {
   border: white solid 1px;
   border-radius: 50px;
 }
-
+.footerlogo{
+  width: 220px;
+}
 .btn-discover {
   display: none;
 }
@@ -1542,10 +1559,13 @@ nav ul li a {
   .btnpostion {
     display: block;
   }
-
+.row-reverse{
+  flex-direction: column !important;
+}
   .row {
     display: flex;
     flex-direction: column-reverse;
+    padding: 0 0;
 
   }
 
@@ -1755,6 +1775,9 @@ nav ul li a {
   }
 
   .toGiveScroll {
+    overflow-y: hidden;
+  }
+  .toGiveScroll22 {
     overflow-y: hidden;
   }
 
@@ -2473,7 +2496,7 @@ input:not(:focus):valid ~ .formLable{
 .linktree{
   margin-top: 2.5rem;
   margin-left: 2.5rem;
-  width: 85%;
+  width: 70%;
 }
 .divCoreValues {
   width: 265.718px;

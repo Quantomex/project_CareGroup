@@ -50,12 +50,16 @@
   <% for (let vision of visionSection) { %>
 <div class="row rowtop" >
 
-  <div class="column2-right widthclass" style="padding: 0 0 0 40px;">
+  <div class="column2">
       <h1>OUR VISION</h1>
 
 
 
-      <p>  <%= vision.description %></p>
+      <div id="toGiveScroll" class="toGiveScroll">
+        <p>
+          <%= vision.description %>
+      
+      </div>  
       <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
           customer expectations. We
           are committed to cultivating a supportive and enriching work environment that empowers our employees.
@@ -74,17 +78,17 @@
   <% for (let description of st) { %>
 <div class="row rowtop row-reverse" >
 
-  <div class="column2-right" style="width: 44%; padding: 0 40px 0 0;">
+  <div class="column2">
       <h1>OUR Mission</h1>
 
 
 
-      <p>  <%= description.description %></p>
-      <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
-          customer expectations. We
-          are committed to cultivating a supportive and enriching work environment that empowers our employees.
-          Upholding a strong ethical foundation, we conduct our business processes with integrity and
-          transparency.</p> -->
+   
+      <div id="toGiveScroll" class="toGiveScroll22">
+        <p>
+          <%= description.description %> </p>
+      
+      </div>  
 
 
   </div>
@@ -120,6 +124,7 @@
     <h1 class="headingtop break">Group of Companies</h1>
 </div>
 <div id="brands">
+
   <% if(logoImages.length) {%>
   <% for (let image of logoImages) { %>
   <a style="color: white;" href="<%= image.link %>" target="_blank">

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Vision Section</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+
+</head>
+<body>
+    <div class="container"> 
+    <form action="/editVision/<%= vision._id %>" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= vision.name %>" required>
+    
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" rows="4" required><%= vision.description %></textarea>
+    
+        <input type="submit" value="Update Vision Section">
+      </form>
+    </div>
+     
+    </body>
+    </html>

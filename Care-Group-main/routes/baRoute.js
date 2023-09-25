@@ -32,6 +32,52 @@ router.post('/upload/baSection', upload.single('image'), isAdmin, async (req, re
     res.status(500).json({ message: 'Error uploading image', error: error.message });
   }
 });
+// Edit Business Activity Form Route
+router.get('/editBa/:id', isAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const baData = await ba.findById(id);
+
+    if (!baData) {
+      req.flash('error', 'Business Activity not found');
+      return res.redirect('/basection');
+    }
+
+    res.render('./admin/editBaForm', { baData });
+  } catch (error) {
+    console.error('Error retrieving Business Activity:', error);
+    res.status(500).json({ message: 'Error retrieving Business Activity', error: error.message });
+  }
+});
+// Update Business Activity Route
+router.post('/editBa/:id', isAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const baData = await ba.findById(id);
+
+    if (!baData) {
+      req.flash('error', 'Business Activity not found');
+      return res.redirect('/basection');
+    }
+
+    const { imageFilename, path: imagePath } = req.file;
+    const { name, description } = req.body;
+
+    baData.imageFilename = imageFilename;
+    baData.imagePath = imagePath;
+    baData.name = name;
+    baData.description = description;
+
+    await baData.save();
+
+    req.flash('success', 'Business Activity updated successfully');
+    res.redirect('/basection');
+  } catch (error) {
+    console.error('Error updating Business Activity:', error);
+    res.status(500).json({ message: 'Error updating Business Activity', error: error.message });
+  }
+});
+
 router.post('/deleteBa/:id', isAdmin, async (req, res) => {
   try {
     const deletedImage = await ba.findByIdAndDelete(req.params.id);

@@ -30,6 +30,51 @@ router.post('/SustainUpload', upload.single('image'), isAdmin, async (req, res) 
         res.status(500).json({ message: 'Error uploading image', error: error.message });
       }
 });
+// Edit Sustain Form Route
+router.get('/editSustain/:id', isAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const sustainData = await Sustain.findById(id);
+
+    if (!sustainData) {
+      req.flash('error', 'Sustain not found');
+      return res.redirect('/Sustainform');
+    }
+
+    res.render('./admin/editSustainForm', { sustainData });
+  } catch (error) {
+    console.error('Error retrieving Sustain:', error);
+    res.status(500).json({ message: 'Error retrieving Sustain', error: error.message });
+  }
+});
+// Update Sustain Route
+router.post('/editSustain/:id', isAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const sustainData = await Sustain.findById(id);
+
+    if (!sustainData) {
+      req.flash('error', 'Sustain not found');
+      return res.redirect('/Sustainform');
+    }
+
+    const { imageFilename, path: imagePath } = req.file;
+    const { name, description } = req.body;
+
+    sustainData.imageFilename = imageFilename;
+    sustainData.imagePath = imagePath;
+    sustainData.name = name;
+    sustainData.description = description;
+
+    await sustainData.save();
+
+    req.flash('success', 'Sustain updated successfully');
+    res.redirect('/Sustainform');
+  } catch (error) {
+    console.error('Error updating Sustain:', error);
+    res.status(500).json({ message: 'Error updating Sustain', error: error.message });
+  }
+});
 
 router.post('/deleteSustain/:id', isAdmin, async (req, res) => {
   try {

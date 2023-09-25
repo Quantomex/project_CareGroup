@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Board of Directors Content</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+
+</div>
+</head>
+<body>
+<div class="container"> 
+  
+  <form action="/editBod/<%= bod._id %>" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= bod.name %>" required>
+    
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4" required><%= bod.description %></textarea>
+    
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link" value="<%= bod.link %>">
+    
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image">
+    
+    <input type="submit" value="Update Board of Directors Content">
+  </form>
+</div>  
+  
+</body>
+</html>

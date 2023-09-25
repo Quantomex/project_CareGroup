@@ -137,37 +137,27 @@
             <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
               <div class="card product-item border-0 mb-4">
                 <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                  <!-- image Tag  -->
-               
+                  <!-- image Tag  --> 
                 </div>
                 <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
 
-                  <!-- title tag  -->
-
                   <h6 class="text-truncate mb-3">
-                      
                   </h6>
-
-                  <!-- Price Tag  -->
-
                   <div class="d-flex justify-content-center" style="font-size: 12px; overflow-x: scroll;">
-                     
-                         
-                     
-                      
                      <p><strong>Date</strong> <%= description.date %></p></p>
                       <p><strong>Description</strong> <%= description.description %></p>
-                  
                   </div>
-
-
               </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
-                  
-         <form action="/deleteOurStory/<%= description._id  %>" method="post">
+                  <form action="/deleteOurStory/<%= description._id  %>" method="post">
                     <button type="submit" class="btn btn-sm text-dark p-0"><i
                         class="fas fa-trash trashcolor mr-1 "></i>Delete</button>
                   </form>
+                  <form action="/editOurStory/<%= description._id  %>" method="get">
+                    <button type="submit" class="btn btn-sm text-dark p-0"><i
+                      class="fas fa-pen pencolor mr-1 fa-1x"></i>Edit</button>
+                  </form>
+
                 </div>
               </div>
             </div>

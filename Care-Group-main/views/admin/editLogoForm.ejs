@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Logo</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+</head>
+<body>
+  <div class="container">
+  <form action="/editLogo/<%= logo._id %>" method="POST" enctype="multipart/form-data">
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image">
+    
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link" value="<%= logo.link %>">
+    
+    <input type="submit" value="Update Logo">
+  </form>
+</div>
+</body>
+</html>

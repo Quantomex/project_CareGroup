@@ -23,7 +23,7 @@ for (var i = 0; i < links.length; i++) {
 var links3 = document.querySelectorAll("nav ul ul");
 // Loop through the elements and change the color
 for (var i = 0; i < links3.length; i++) {
-  links3[i].style.background = "#e8b466f0";
+  links3[i].style.background = "#d7b467";
   links3[i].style.borderRadius = "0px";
   links3[i].style.boxShadow = "none";
   

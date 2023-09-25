@@ -20,7 +20,7 @@
   }
   
   nav ul li a {
-    text-align: center;
+    text-align: center !important;
     display: block;
     padding: 8px 12px;
     border-bottom: 3px solid transparent;
@@ -45,9 +45,9 @@
     position: absolute;
     top: 100%;
     left: -20%;
-    background: #e8b466f0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #D0A25C;
+    background: #e8b466;
+    /* border-radius: 20px; */
+    /* box-shadow: 1px 1px 6px #D0A25C; */
   }
   nav ul li a:active,
 nav ul li a:focus {
@@ -66,14 +66,16 @@ nav ul li a:focus {
   
   /* Adjust submenu styles */
   nav ul ul li {
-    width: 220px;
+    width: 230px;
+    margin: 0 20px;
   }
   
   nav ul ul li a {
     color: rgba(255, 255, 255, 0.858);
     font-weight: 600;
-    font-size: 17px;
-    text-align: center;
+    font-size: 16px;
+    text-align: left !important;
+    margin-left: 12px !important;
     padding: 8px 10px;
   }
   nav ul li a:active{
@@ -83,12 +85,16 @@ nav ul li a:focus {
   /* Add hover effect to submenu items */
   nav ul ul li:hover>ul {
     display: block;
-    left: 100%;
+    left: 112%;
+    z-index: 999;
     top: 0;
   }/* Existing CSS *//* Mobile responsive styles */
 /* Mobile responsive styles */
 .svg-fill{
   fill: white;
+}
+.active2{
+  fill: #ce994b !important;
 }
 @media (max-width: 768px) {
   .main-menu{
@@ -130,21 +136,21 @@ nav ul li a:focus {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <div class="navbar">
       <div class="logo">
-        <a href="/"><img src="/images/logow.png" id="logo_image" style="width: 270px;" alt=""></a>
+        <a href="/"><img src="/images/logow.png" id="logo_image" style="width: 230px;" alt=""></a>
     
       </div>
       <nav>
         <ul>
-          <li><a class="active1" href="/">Home</a></li>
+          <li><a id="homeLink" class="<%= (currentPage === 'home') ? 'active1' : '' %>" href="/">Home</a></li>
           <li>
-            <a href="#"  >About us <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" >
-                <path d="M1.645 0L7 5.56275L12.355 0L14 1.71255L7 9L0 1.71255L1.645 0Z" id="svg1" class="svg-fill" />
+            <a href="#" class="<%= (currentPage === 'aboutus') ? 'active1' : '' %>"  >About us <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" >
+                <path d="M1.645 0L7 5.56275L12.355 0L14 1.71255L7 9L0 1.71255L1.645 0Z" id="svg1" class="<%= (currentPage === 'aboutus') ? 'active2' : '' %> svg-fill"/>
               </svg></a>
             <ul class="xenter">
               <li><a  href="/ourstory">Our Story</a></li>
               <li><a href="/companyprofile">Company profile</a></li>
               <li>
-                <a href="/corporategovernance">Corporate Governance</a>
+                <a href="/corporategovernance">Corporate Governance<i style="padding-left: 15px; font-size: 12px;" class="fas fa-chevron-right"></i></a>
                 <ul>
                   <li><a href="/corporategovernance#director-1">Directors</a></li>
                   <li><a href="/corporategovernance#managment-1">Management</a></li>
@@ -153,8 +159,8 @@ nav ul li a:focus {
             </ul>
           </li>
           <li>
-            <a href="#">Sustainability <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" >
-                <path d="M1.645 0L7 5.56275L12.355 0L14 1.71255L7 9L0 1.71255L1.645 0Z" id="svg2"  class="svg-fill" />
+            <a href="#" class="<%= (currentPage === 'sustainability') ? 'active1' : '' %>">Sustainability <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" >
+                <path d="M1.645 0L7 5.56275L12.355 0L14 1.71255L7 9L0 1.71255L1.645 0Z" id="svg2"  class="<%= (currentPage === 'sustainability') ? 'active2' : '' %> svg-fill" />
               </svg></a>
             <ul>
               <li><a href="/sustainability">Sustainability at Care Group</a></li>
@@ -163,9 +169,9 @@ nav ul li a:focus {
             </ul>
           </li>
     
-          <li><a  href="/#brands">Group Companies</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
+          <li><a id="groupCompaniesLink" class="<%= (currentPage === 'home1') ? 'active1' : '' %>" href="/#groupcompani">Group Companies</a></li>
+          <li><a class="<%= (currentPage === 'careers') ? 'active1' : '' %>" href="/careers">Careers</a></li>
+          <li><a class="<%= (currentPage === 'contactus') ? 'active1' : '' %>" href="/contactus">Contact Us</a></li>
     
         </ul>
       </nav>
@@ -209,7 +215,29 @@ nav ul li a:focus {
     
     </div>
  
- <script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Get references to the "Home" and "Group Companies" links
+  const homeLink = document.getElementById('homeLink');
+  const groupCompaniesLink = document.getElementById('groupCompaniesLink');
+
+  // Add a click event listener to the "Group Companies" link
+  groupCompaniesLink.addEventListener('click', function (e) {
+    // Prevent the default behavior of the link
+    e.preventDefault();
+
+    // Remove the "active1" class from the "Home" link
+    homeLink.classList.remove('active1');
+
+    // Add the "active1" class to the "Group Companies" link
+    groupCompaniesLink.classList.add('active1');
+
+    // Navigate to the "Group Companies" section
+    window.location.href = "/#groupcompani";
+  });
+});
+</script>
+<script>
   const burgerMenu = document.getElementById("burdermenu");
   const mainMenu = document.querySelector(".main-menu");
 

@@ -13,6 +13,11 @@ html {
   src: url("/fonts/Lavolta.otf") format("truetype");
   font-weight: 400;
 }
+@font-face {
+  font-family: "Bookman";
+  src: url("/fonts/BOOKOS.TTF") format("truetype");
+  font-weight: 400;
+}
 
 @font-face {
   font-family: "Bond";
@@ -21,7 +26,7 @@ html {
 
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
 
@@ -194,6 +199,8 @@ nav ul li a {
   color: rgb(255, 255, 255);
   padding: 20px;
   align-items: center;
+  /* font-family: 'Playfair Display', serif;  */
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   font-size: 60px;
   font-weight: 600;
@@ -222,12 +229,21 @@ nav ul li a {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+.toGiveScroll p{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-align: justify !important;
+
+}
 
 .toGiveScroll {
-  height: 450px;
   overflow-y: hidden;
   transition: height 0.3s ease-in-out;
   margin-bottom: 50px;
+}
+.toGiveScroll235 {
+  padding-left: 40px;
+  width: 90%;
 }
 
 .toGiveScroll22 {
@@ -346,19 +362,26 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 200px;
+  padding: 0 100px;
+  height: 100vh;
 
 }
-
+#brands a:active,
+#brands a:focus {
+  outline: none !important; /* Remove the default focus outline */
+  border-bottom: 3px solid transparent !important; /* Remove the border on click */
+}
 .column2 {
-  
+  scale: 0.9;
+  padding: 50px 0;
   width: 50%;
   height: auto;
   overflow: hidden;
 }
 
 .column2 img {
-  scale: 0.8;
+  margin:67px 0 50px 0 ;
+  /* scale: 0.8;  */
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -366,18 +389,36 @@ nav ul li a {
 
 
 .hovereffect {
-  scale: 0.9;
+  scale: 0.8;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 234px;
+  
+  box-shadow: 1px 1px 10px black;
+}
+.hovereffect6 {
+  scale: 0.8;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 350px;
+  
+}
+.hovereffect5 {
+  scale: 0.8;
   width: 80%;
   height: auto;
   object-fit: cover;
   border-top-left-radius: 200px;
   border-bottom-right-radius: 300px;
   
-  box-shadow: 1px 1px 10px black;
 }
 
 .hovereffect:hover {
-  scale: 1;
+  /* scale: 0.9; */
   transition: all ease 1s;
 }
 
@@ -387,10 +428,13 @@ nav ul li a {
 } */
 
 .column2 h1 {
-  padding-top: 56px;
+  padding-top: 100px;
   padding-left: 25px;
   color: #CE994B;
-  font-size: 64px;
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+
+  /* font-family: bookman; */
   font-style: normal;
   font-weight: 600;
   line-height: 104.688%;
@@ -424,7 +468,7 @@ nav ul li a {
   width: 100%;
   flex-shrink: 0;
   color: #000;
-  font-size: 27px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 400;
   line-height: 195.833%;
@@ -701,15 +745,15 @@ nav ul li a {
 }
 
 .overlay {
+  font-family: bookman;
   position: relative;
-  bottom: 7rem;
+  bottom: 15.3rem;
   /* Black see-through */
-  color: #000000;
   width: 100%;
   transition: .5s ease;
   opacity: 0;
   color: white;
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 600;
   padding: 40px;
   text-align: center;
@@ -873,6 +917,9 @@ nav ul li a {
 }
 
 .break {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 55px !important;
+  
   height: 13vh;
 }
 
@@ -1775,6 +1822,7 @@ nav ul li a {
   }
 
   .toGiveScroll {
+    height: 300px !important;
     overflow-y: hidden;
   }
   .toGiveScroll22 {
@@ -2021,8 +2069,9 @@ nav ul li a {
 
 .topHeadText {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 3.75rem;
+  font-family: 'Raleway', sans-serif !important;
+
+  font-size: 3rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -2047,7 +2096,8 @@ nav ul li a {
 
 .secondHeading {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
+  
+  font-family: 'Raleway', sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 600;
@@ -2057,7 +2107,8 @@ nav ul li a {
 .secondHeadingText {
   color: #000;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  
+  font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -2094,7 +2145,7 @@ nav ul li a {
 .itemHeading {
   color: #000;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -2103,7 +2154,8 @@ nav ul li a {
 
 .itemText {
   color: #000;
-  font-family: 'Open Sans', sans-serif;
+  
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2289,10 +2341,11 @@ input:not(:focus):valid ~ .formLable{
 
 .GetinToucHeading {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
+  
+  font-family: 'Raleway', sans-serif;
   font-size: 32px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
 }
 
@@ -2353,6 +2406,8 @@ input:not(:focus):valid ~ .formLable{
 }
 
 .aboutUsSubmitBtn {
+  
+  font-family: 'Raleway', sans-serif;
   color: white;
   margin-top: -20px;
   margin-bottom: 40px;
@@ -2412,7 +2467,7 @@ input:not(:focus):valid ~ .formLable{
 
 .companyDiv1Head {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 66px;
   font-style: normal;
   font-weight: 600;
@@ -2439,8 +2494,9 @@ input:not(:focus):valid ~ .formLable{
 
   flex-shrink: 0;
   color: #000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  text-align: justify;
   font-style: normal;
   font-weight: 400;
   line-height: 38px;
@@ -2478,7 +2534,7 @@ input:not(:focus):valid ~ .formLable{
 
 .SecondDivHead {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 66px;
   font-style: normal;
   font-weight: 600;
@@ -2496,7 +2552,7 @@ input:not(:focus):valid ~ .formLable{
 .linktree{
   margin-top: 2.5rem;
   margin-left: 2.5rem;
-  width: 70%;
+  width: 60%;
 }
 .divCoreValues {
   width: 265.718px;
@@ -2564,10 +2620,7 @@ input:not(:focus):valid ~ .formLable{
 .organ-s {
   width: 251px;
   height: 104px;
-  border-radius: 5px;
-  border-bottom: 4px solid #ce994b;
-  position: relative;
-  left: 25%;
+
   padding-bottom: 150px;
   text-align: center;
   align-items: center;
@@ -2639,7 +2692,7 @@ input:not(:focus):valid ~ .formLable{
 }
 .sustanabilityHead {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 66px;
   font-style: normal;
   font-weight: 600;
@@ -2674,14 +2727,28 @@ input:not(:focus):valid ~ .formLable{
 }
 
 .radioDiv {
-  margin-right: 50px;
-  width: 340px;
-  height: 370px;
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20 0 50px 0;
+  margin-bottom: 20px;
+ 
+}
+.hellDiv{
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.myHorizental{
+  display: flex;
+  flex-direction: row;
 }
 
 .radioDiv label {
   color: #000;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 600;
@@ -2709,8 +2776,8 @@ input[type="radio"] {
 }
 
 .normalDivSus {
-  width: 340px;
-  height: 370px;
+  width: 436px;
+  height: 390px;
   flex-shrink: 0;
   border-radius: 20px;
   background: #FFF;
@@ -2722,10 +2789,17 @@ input[type="radio"] {
 .normalDivSusImg {
 
   margin-right: 0;
-  height: 137px;
+ margin-top: 10px;
   flex-shrink: 0;
   border-radius: 5px;
-  background: url("img/image\ 12.svg"), lightgray 50% / cover no-repeat;
+
+}
+.normalDivSusImg img{
+  padding-top: 10px;
+  border-radius: 20px ;
+  height: 137px;
+  width: 100%;
+
 }
 
 .setNormalMargins {
@@ -2736,9 +2810,13 @@ input[type="radio"] {
 }
 
 .normalDivSusText {
+  height: 200px;
+  overflow: hidden; /* Hide content when collapsed */
+  transition: height 0.3s ease; /* Add a smooth transition effect */
+
   color: #000;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -2747,8 +2825,8 @@ input[type="radio"] {
 
 .normalDivSusText h3 {
   color: #CE994B;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -3076,8 +3154,8 @@ a:focus {
 /* swiper */
 .swiper {
   width: 100%;
-  height: 500px;
-  ;
+  height: 800px;
+  
 }
 
 .swiper-slide {
@@ -3218,7 +3296,7 @@ a:focus {
     .subDivDiv1 P {
       width: 90%;
 
-      text-align: center;
+      text-align: justify;
 
 
     }
@@ -3300,7 +3378,7 @@ a:focus {
         }
 
         .topHeadText {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
 
         .radioDiv {
@@ -3371,6 +3449,16 @@ a:focus {
           border-top-left-radius: 103px;
           border-bottom-right-radius: 122px;
       }
+      .hovereffect {
+         
+        border-top-right-radius: 103px;
+        border-bottom-left-radius: 122px;
+    }
+      .hovereffect5 {
+         
+        border-top-left-radius: 103px;
+        border-bottom-right-radius: 122px;
+    }
 
           @media (max-width:300px) {
             .department:first-child,
@@ -3540,6 +3628,8 @@ a:focus {
 }
 
 .custom-footer .custom-col ul li:hover {
+  
+  font-family: 'Raleway', sans-serif;
   color: #CE994B;
   transition: .1s;
   -webkit-transition: .1s;

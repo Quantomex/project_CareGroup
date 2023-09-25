@@ -1,8 +1,92 @@
 <%- include('../partials/head.ejs') %>
 <div class="index-nav" id="index-navbar">
   
-<%- include('../partials/navbar.ejs') %>
+<%- include('../partials/navbar.ejs', { currentPage: 'home'}) %>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
 
+
+section {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  width: auto;
+  height: 400px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+
+
+
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.swiper-slide--one {
+  width: 265.718px;
+  height: 231.17px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: 30px;
+}
+
+.swiper-slide--one:hover .core-image {
+  display: none;
+}
+
+.swiper-slide--one:hover .coreValueLine {
+  display: none;
+}
+
+.swiper-slide--one:hover .coreValueTextMain {
+  display: none;
+}
+
+.swiper-slide--one:hover .core-discription {
+  display: block;
+  opacity: 1;
+
+}
+</style>
 </div>
 <!-- Navbar End  -->
 <div class="herosection">
@@ -13,14 +97,14 @@
   </div>
 
   <div class="textheader">
-    <p>Unveiling Your Inner Radiance, Naturally.</p>
+    <p>Designing a Future of Possibilities</p>
     <!-- <a class="button-discover" href="">Discover More!</a>  -->
   </div>
 
   <!--  -->
 </div>
 
-<div class="row">
+<div class="row rowtop">
   <% for (let image of ChairmanData) {  %>
   <div class="column2">
     <div class="box"><img  class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
@@ -30,14 +114,15 @@
   </div>
   <div class="column2">
     <% for (let image of ChairmanData) {  %>
-    <h1>Chairman's <br> Statement</h1>
+    <h1>Chairman's Statement</h1>
     <div id="toGiveScroll" class="toGiveScroll">
       <p>
         <%= image.description %>
-      </p>  <button id="hidebtn" onclick="hidedes()" class="hideme">Hide</button>
+      </p>  
+      <!-- <button id="hidebtn" onclick="hidedes()" class="hideme">Hide</button> -->
     
     </div>  
-    <button id="dis" onclick="showdes()" class="showdis1">Discover More</button>
+    <!-- <button id="dis" onclick="showdes()" class="showdis1">Discover More</button> -->
       <!-- <a class="dis" id="dis" onclick="showdes()" >Discover more</a> -->
       <% } %>
     <center>
@@ -48,18 +133,29 @@
 </div>
 <% if(visionSection.length) {%>
   <% for (let vision of visionSection) { %>
-<div class="row rowtop" >
+<div class="row rowtop" style="justify-content: center;">
 
-  <div class="column2">
-      <h1>OUR VISION</h1>
+  <div class="column2" style="margin-top: 30px;">
+      <h1>Our <span style="font-weight: 800;">Vision</span> & <span style="font-weight: 800;">Mission</span>  </h1>
 
 
 
-      <div id="toGiveScroll" class="toGiveScroll">
-        <p>
-          <%= vision.description %>
+      <div id="toGiveScroll toGiveScroll235" class="toGiveScroll">
+        <p style="padding-bottom: 10px; padding-top: 0; margin-top: 20PX; border-left: 3px solid black; font-weight: 500;">
+         <%= vision.description %>
       
-      </div>  
+        </p>
+        
+<% if(st.length) {%>
+  <% for (let description of st) { %>
+
+        <p style="color: rgba(128, 128, 128, 0.822); padding-top: 0; border-left: 1px solid #d2d2d2; font-weight: 500;">
+          <%= description.description %> 
+       
+        </p>
+        <% } %>
+        <% } %>
+      </div> 
       <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
           customer expectations. We
           are committed to cultivating a supportive and enriching work environment that empowers our employees.
@@ -68,40 +164,17 @@
 
 
   </div>
-  <div class="column2"><img src="<%=vision.imagePath %>" alt=""></div>
+  <div class="column2"><img  class="hovereffect6"  src="<%=vision.imagePath %>" alt=""></div>
 
 </div>
 <% } %>
 <% } %>
 
-<% if(st.length) {%>
-  <% for (let description of st) { %>
-<div class="row rowtop row-reverse" >
-
-  <div class="column2">
-      <h1>OUR Mission</h1>
-
-
-
-   
-      <div id="toGiveScroll" class="toGiveScroll22">
-        <p>
-          <%= description.description %> </p>
-      
-      </div>  
-
-
-  </div>
-  <div class="column2"><img src="/images/mission.png" alt=""></div>
-
+<div class="secondDivCompany">
+ 
+<div class="w" >
+  <h1 class="headingtop break">Core Values</h1>
 </div>
-<% } %>
-<% } %>
-<div class=secondDivCompany>
-  <span >
-  <h2 class="SecondDivHead">Core Values</h2>
-
-</span>
 <div class="divCoreMain">
 <% for (let images of ce) { %>
 
@@ -112,7 +185,7 @@
      </div>
      <img class="core-image" src="<%= images.imagePath %>" alt="">
       <div class="coreValueLine"></div>
-       <p class="coreValueTextMain">  <%= images.name %></p>
+       <p class="coreValueTextMain" id="groupcompani">  <%= images.name %></p>
     
   </div>
   <% } %>
@@ -120,7 +193,31 @@
 </div>
 </div>
 
-<div class="w">
+<section>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <% for (let images of ce) { %>
+      <div class="swiper-slide swiper-slide--one">
+    
+          <div class="core-discription">   <%= images.description %>
+           </div>
+           <img class="core-image" src="<%= images.imagePath %>" alt="">
+            <div class="coreValueLine"></div>
+            <p class="coreValueTextMain" id="groupcompani">  <%= images.name %></p>
+          
+        
+      </div>
+      <% } %>
+  
+  
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+<div class="w" >
     <h1 class="headingtop break">Group of Companies</h1>
 </div>
 <div id="brands">
@@ -138,6 +235,29 @@
 
 
 <%- include('../partials/footer.ejs') %>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+<script>
+  var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true
+  },
+  spaceBetween: 60,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});
+</script>
 
 <script>
   function showdes(){

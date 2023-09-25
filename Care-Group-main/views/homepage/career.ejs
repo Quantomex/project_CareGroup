@@ -1,5 +1,5 @@
 <%- include('../partials/head.ejs') %>
-<%- include('../partials/navbar.ejs') %>
+<%- include('../partials/navbar.ejs', { currentPage: 'careers' }) %>
 <style>
 
 .navbar{
@@ -63,7 +63,7 @@
   <div class="philosophyContainer">
     <div class="pilosophyTextContainer">
       <h3 class="philosophyHeading">Our Philosophy</h3>
-      <p class="subHeading">"Our People, Our Pride: The Heart of Our Success"</p>
+      <p class="subHeading">"We Care For Your Career"</p>
     </div>
     <div class="linesContainer">
       <div class="line"></div>
@@ -75,7 +75,7 @@
   <div id="apply" class="applyFormContainer">
     <h2 class="formHeading">Opportunities For You</h2>
     <form class="applyForm">
-      <p class="deatilsHeading">Enter your details</p>
+      <p class="deatilsHeading"></p>
       <div class="halfNHalf">
         <input type="text" name="firstName" class="inputStyles" placeholder="First name*" />
         <input type="text" name="lastName" class="inputStyles" placeholder="Last name*" />

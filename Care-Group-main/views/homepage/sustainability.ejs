@@ -1,5 +1,5 @@
 <%- include('../partials/head.ejs') %>
-<%- include('../partials/navbar.ejs') %>
+<%- include('../partials/navbar.ejs', { currentPage: 'sustainability' }) %>
 <style>
 
 .navbar{
@@ -12,6 +12,18 @@
   margin: 0 35px;
   list-style: disc !important;
 }
+.btndown{
+  background-color: transparent;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.rotate-icon {
+  transform: rotate(180deg); /* Rotate the icon 180 degrees */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
 </style>
 <body >
     <div class="topHeading" >
@@ -21,39 +33,53 @@
         <h1 class="topHeadText hori">Sustainability</h1>   </div>
        <div class="contentDivSus">
         <h2 class="sustanabilityHead">Sustainability at Care Group</h2>
-      
+      <div class="hellDiv">
+        <div class="radioDiv">
+          <div class="myHorizental">
+          <input type="radio" id="sus" name="what" value="sus" checked="checked">
+          <label for="sus">Sustainability at Care Group</label><br>
+        </div>
+        <div class="myHorizental">
+          <input type="radio" id="policy" name="what" value="policy">
+          <label for="policy">Policies</label><br>
+        </div>
+          <select class="sekector" name="policy1" id="policy1">
+            <% policies.forEach((policy, i)=> { %>
+                <option value="<%= i %>">
+                    <%= policy.name %>
+                </option>
+                <% }) %>
+        </select>
+      </div>
+    </div>
         <div class="sustanabilityDivs">
-            <div class="radioDiv">
-                <input type="radio" id="sus" name="what" value="sus" checked="checked">
-                <label for="sus">Sustainability at Care Group</label><br>
-                <input type="radio" id="policy" name="what" value="policy">
-                <label for="policy">Policies</label><br>
-                <select class="sekector" name="policy1" id="policy1">
-                  <% policies.forEach((policy, i)=> { %>
-                      <option value="<%= i %>">
-                          <%= policy.name %>
-                      </option>
-                      <% }) %>
-              </select>
-            </div>
+          
+        
             <% policies.forEach((policys, k)=> { %>
               <div class="policy" data-description="<%= policys.description %>"></div>
               <div style="width: 70%;" id="showtext<%=k %>" class="showtext"></div>
               <% }) %>
 
               
-                <%sustainabilities.map((j)=>{%>
+                <%sustainabilities.map((j, i)=>{%>
 
-               
-            <div class="normalDivSus" id="sustain">
+               <div class="normalDivSusRow">
+            <div class="normalDivSus" id="sustain<%=i%>">
                 <div class="setNormalMargins">
                 <div class="normalDivSusImg"><img src="<%-j.imagePath %>" alt=""></div>
-                <div class="normalDivSusText">
+                <div class="normalDivSusText" id="sustaintext1<%=i%>">
                     <h3><%=j.name%></h3>
                     <%=j.description %>
+                    <%=j.description %>
                 </div>
+                <button id="btndown<%= i %>" onclick="autoHeight('btndown<%= i %>', <%= i %>)" class="btndown">
+                  <i id="icon<%= i %>" style="padding-left: 15px; font-size: 15px;" class="fas fa-chevron-down"></i>
+                </button>
+                
+              
+              </div>
             </div>
-            </div>
+          </div>
             <% })%>
             
             
@@ -67,7 +93,25 @@
  
 
 
-<script>
+<script>function autoHeight(buttonId, i) {
+  const mainWraper = document.getElementById(`sustain${i}`);
+  const textWrapper = document.getElementById(`sustaintext1${i}`);
+  const icon = document.getElementById(`icon${i}`);
+  
+  if (mainWraper.style.height === "auto" || mainWraper.style.height === "390px") {
+    mainWraper.style.height = "390px"; // Collapse the main wrapper
+    textWrapper.style.height = "200px"; // Collapse the text wrapper
+    icon.classList.remove('rotate-icon'); // Remove rotation class
+  } else {
+    mainWraper.style.height = "auto"; // Expand the main wrapper
+    textWrapper.style.height = "auto"; // Expand the text wrapper
+    icon.classList.add('rotate-icon'); // Add rotation class
+  }
+}
+
+
+
+
   document.addEventListener("DOMContentLoaded", function () { 
     // Function to activate the "policy" tab and perform radio button change
     function activatePolicyTabAndChangeRadioButton() {

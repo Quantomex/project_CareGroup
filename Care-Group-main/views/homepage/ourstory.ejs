@@ -4,9 +4,9 @@
     position: relative;
 }
 </style>
-<%- include('../partials/navbar.ejs') %>
-<div class="topHeading">
-    <h1 class="topHeadText hori">Care Group</h1>
+<%- include('../partials/navbar.ejs', { currentPage: 'aboutus' }) %>
+<div class="topHeading" >
+    <h1 class="topHeadText hori">The Care Group</h1>
 </div>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,8 @@
     }
 
     body {
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-family: 'Raleway', sans-serif !important;
+
       font-size: 14px;
       color: #000;
       margin: 0;
@@ -65,7 +66,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 75%, rgba(206,153,75,1) 7
     }
     .mydiv1{
   position: relative !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Times New Roman', Times, serif !important;
   text-align: left !important;
 padding-left: 100px !important;
 padding-right: 110px;
@@ -97,12 +98,223 @@ align-items: center !important;
     border-radius: var(--swiper-pagination-bullet-border-radius,30%) !important;
     }
     .black-text{
+      
+      font-family: 'Times New Roman', Times, serif !important;
+
       color: #000;
     }
     .different-color-text{
+      font-family: 'Times New Roman', Times, serif !important;
+
       margin-left: -45px !important;
       color: rgba(206,153,75);
     }
+    .swiper-pagination{
+      padding-bottom: 50px !important; 
+      padding-right: 45rem !important;
+    }
+    @media (max-width:1353px){
+      .swiper-pagination{
+      padding-bottom: 80px !important; 
+      padding-right: 40rem !important;
+    }
+    }
+    @media (max-width:1081px){
+      .swiper-pagination{
+      padding-bottom: 60px !important; 
+      padding-right: 25rem !important;
+    }
+  }
+  @media (max-width:802px){
+    .swiper-slide .title { 
+      
+      font-size: 160px !important;
+      font-weight: 600 !important;
+    }
+ 
+      .swiper-pagination{
+      padding-bottom: 50px !important; 
+      padding-right: 20rem !important;
+    }
+    .swiper-slide .text {
+
+width: 80%;
+padding-top: 50px;
+font-size: 20px !important;
+font-weight: 500 !important;
+}
+  }
+   @media (max-width:702px){
+      .swiper-pagination{
+      padding-bottom: 10px !important; 
+      padding-right: 10rem !important;
+    }
+    .swiper-slide .text {
+
+width: 80%;
+padding-top: 30px;
+font-size: 17px !important;
+font-weight: 500 !important;
+}
+.swiper-slide .title { 
+      
+      font-size: 150px !important;
+      font-weight: 600 !important;
+    }
+ 
+
+    .swiper-slide .subtitle {
+      font-size: 40px !important;
+      font-weight: 500 !important;
+    }
+    .swiper {
+      height: 83%;
+    }
+  }
+  @media (max-width:649px){
+      .swiper-pagination{
+      padding-bottom: 10px !important; 
+      padding-right: 10rem !important;
+    }
+    .swiper-slide .text {
+
+width: 80%;
+padding-top: 30px;
+font-size: 17px !important;
+font-weight: 500 !important;
+}
+.swiper-slide .title { 
+      
+      font-size: 110px !important;
+      font-weight: 600 !important;
+    }
+ 
+
+    .swiper-slide .subtitle {
+      font-size: 40px !important;
+      font-weight: 500 !important;
+    }
+    .swiper {
+      height: 83%;
+    }
+  }
+  .different-color-text{
+      margin-left: -30px !important;
+      color: rgba(206,153,75);
+    }
+    @media (max-width:571px){
+      .swiper-pagination{
+      padding-bottom: 10px !important; 
+      padding-right: 10rem !important;
+    }
+    .swiper-slide .text {
+
+width: 90%;
+padding-top: 30px;
+font-size: 17px !important;
+font-weight: 500 !important;
+}
+.swiper-slide .title { 
+      
+      font-size: 80px !important;
+      font-weight: 600 !important;
+    }
+ 
+
+    .swiper-slide .subtitle {
+      font-size: 30px !important;
+      font-weight: 500 !important;
+    }
+    .swiper {
+      height: 70%;
+    }
+    .different-color-text{
+      margin-left: -20px !important;
+      color: rgba(206,153,75);
+    } .mydiv1{
+  position: relative !important;
+  font-family: 'Raleway', sans-serif !important;
+
+  text-align: left !important;
+padding-left: 20px !important;
+padding-right: 110px;
+justify-content: center !important;
+align-items: center !important;
+}
+
+  }
+  @media (max-width:498px){
+    .swiper-pagination-bullet{
+      width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,18px)) !important;
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,5px)) !important;
+    border-radius: var(--swiper-pagination-bullet-border-radius,30%) !important;
+    }
+    
+    .swiper-slide .text {
+
+width: 120%;
+padding-top: 30px;
+font-size: 16px !important;
+font-weight: 500 !important;
+}
+.swiper-slide .title { 
+      
+      font-size: 80px !important;
+      font-weight: 600 !important;
+    }
+ 
+
+    .swiper-slide .subtitle {
+      font-size: 20px !important;
+      font-weight: 500 !important;
+    }
+  }
+  @media (max-width:437px){
+    .swiper-slide .title { 
+      
+      font-size: 60px !important;
+      font-weight: 600 !important;
+    }
+    .different-color-text{
+      margin-left: -10px !important;
+      color: rgba(206,153,75);
+    }
+    .swiper-pagination{
+      padding-bottom: 0 !important; 
+      padding-right: 0 !important;
+    }
+  }
+  @media (max-width:385px){
+    .swiper-slide .title { 
+      
+      font-size: 45px !important;
+      font-weight: 600 !important;
+    }
+    .different-color-text{
+      margin-left: -10px !important;
+      color: rgba(206,153,75);
+    }
+    .swiper-slide .text {
+
+width: 140%;
+padding-top: 30px;
+font-size: 15px !important;
+font-weight: 500 !important;
+}
+.swiper-pagination-bullet{
+      width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,9px)) !important;
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,3px)) !important;
+    border-radius: var(--swiper-pagination-bullet-border-radius,30%) !important;
+    }
+    .swiper{
+      height: 85%;
+    }
+    .swiper-pagination{
+      padding-bottom: 0 !important; 
+      padding-right: 0 !important;
+    }
+
+  }
   </style>
 </head>
 
@@ -136,7 +348,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(206,153,75,1) 7
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination" style="padding-bottom: 50px; padding-right: 45rem;"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
   <!-- Swiper JS -->

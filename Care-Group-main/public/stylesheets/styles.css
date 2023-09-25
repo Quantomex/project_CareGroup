@@ -11,7 +11,8 @@
 }
 
 .headingText {
-    font-family: Open Sans;
+    font-family: 'Raleway', sans-serif !important;
+
     font-size: 60px;
     font-weight: 600;
     line-height: 82px;
@@ -33,7 +34,8 @@
 }
 
 .smallHeading {
-    font-family: Open Sans;
+    font-family: 'Raleway', sans-serif !important;
+
     font-size: 46px;
     font-weight: 600;
     line-height: 63px;
@@ -45,7 +47,8 @@
 .subTitle {
     width: 563px;
     height: 108px;
-    font-family: Open Sans;
+    font-family: 'Raleway', sans-serif !important;
+
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
@@ -141,7 +144,8 @@
 
 .philosophyHeading {
     color: #FFF;
-    font-family: Open Sans;
+    font-family: 'Raleway', sans-serif !important;
+
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -153,7 +157,9 @@
 
 .subHeading {
     color: #FFF;
-    font-family: Rubik;
+
+        font-family: 'Raleway', sans-serif !important;
+      
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -213,9 +219,11 @@
 }
 
 .formHeading {
+    padding-top: 20px;
     color: #CE994B;
-    font-family: Open Sans;
-    font-size: 66px;
+      font-family: 'Raleway', sans-serif !important;
+        font-size: 55px !important;
+      
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -256,6 +264,8 @@
     margin-bottom: 28px;
 }
 .halfNHalf input{
+    font-family: 'Raleway', sans-serif !important;
+
     margin-top: 20px;
 }
 

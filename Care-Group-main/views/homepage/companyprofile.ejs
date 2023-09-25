@@ -1,15 +1,16 @@
 <%- include('../partials/head.ejs') %>
-<%- include('../partials/navbar.ejs') %>
+<%- include('../partials/navbar.ejs', { currentPage: 'aboutus' }) %>
 <style>
 
 .navbar{
   position: relative;
 }
+
 </style>
 <html id="specialID">
-<div class="topHeading">
+<div class="topHeading" >
        
-        <h1 class="topHeadText hori">About Company</h1>
+        <h1 class="topHeadText hori">About Us</h1>
        
    
     </div>
@@ -30,9 +31,9 @@
               </div>
         </div>
 <% } %>
-        <div class=secondDivCompany>
+        <div class=secondDivCompany style="padding: 50px 0;">
             <span >
-            <h2 class="SecondDivHead">Core Values</h2>
+            <h2 class="SecondDivHead"></h2>
 
         </span>
       

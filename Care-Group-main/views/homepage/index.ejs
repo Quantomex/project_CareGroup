@@ -1,296 +1,248 @@
 <%- include('../partials/head.ejs') %>
-<div class="index-nav" id="index-navbar">
-  
-<%- include('../partials/navbar.ejs', { currentPage: 'home'}) %>
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+  <div class="index-nav" id="index-navbar">
 
+    <%- include('../partials/navbar.ejs', { currentPage: 'home' }) %>
+      <style>
+        section {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
 
-section {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+        .swiper-container {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 50px 0;
+        }
 
-.swiper {
-  box-sizing: border-box;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+        .swiper-slide {
+          box-sizing: border-box;
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+        }
 
-.swiper-slide {
-  box-sizing: border-box;
-  width: auto;
-  height: 400px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  filter: blur(1px);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: self-start;
-}
+        .swiper-3d .swiper-slide-shadow-left {
+          background-image: none;
+        }
 
-.swiper-slide-active {
-  filter: blur(0px);
-}
+        .swiper-3d .swiper-slide-shadow-right {
+          background-image: none;
+        }
+        .core-image{
+          height: 120px !important;
+          scale: 0.9;
+          width: 120px !important;
+          border-bottom-right-radius: 0 !important;
+          border-top-left-radius: 0 !important;
 
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-
-
-
-
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right {
-  background-image: none;
-}
-
-.swiper-slide--one {
-  width: 265.718px;
-  height: 231.17px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-  margin-right: 30px;
-}
-
-.swiper-slide--one:hover .core-image {
-  display: none;
-}
-
-.swiper-slide--one:hover .coreValueLine {
-  display: none;
-}
-
-.swiper-slide--one:hover .coreValueTextMain {
-  display: none;
-}
-
-.swiper-slide--one:hover .core-discription {
-  display: block;
-  opacity: 1;
-
-}
-</style>
-</div>
-<!-- Navbar End  -->
-<div class="herosection">
-  <div class="hearo-image">
-    <img src="/images/Untitled-5.png" class="css-selector" alt=""> 
-
-    <!-- <div class="responsive-image"></div> -->
+        }
+      </style>
   </div>
+  <!-- Navbar End  -->
+  <div class="herosection">
+    <div class="hearo-image">
+      <img src="/images/Untitled-5.png" class="css-selector" alt="">
 
-  <div class="textheader">
-    <p>Designing a Future of Possibilities</p>
-    <!-- <a class="button-discover" href="">Discover More!</a>  -->
-  </div>
-
-  <!--  -->
-</div>
-
-<div class="row rowtop">
-  <% for (let image of ChairmanData) {  %>
-  <div class="column2">
-    <div class="box"><img  class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
-      <div class="overlay"><%= image.name %></div>
-      <% } %>
+      <!-- <div class="responsive-image"></div> -->
     </div>
+
+    <div class="textheader">
+      <p>Designing a Future of Possibilities</p>
+      <!-- <a class="button-discover" href="">Discover More!</a>  -->
+    </div>
+
+    <!--  -->
   </div>
-  <div class="column2">
-    <% for (let image of ChairmanData) {  %>
-    <h1>Chairman's Statement</h1>
-    <div id="toGiveScroll111" class="toGiveScroll scrolleffect">
-      <p>
-        <%= image.description %>
-      </p>  
-      <!-- <button id="hidebtn" onclick="hidedes()" class="hideme">Hide</button> -->
-    
-    </div>  
-    <!-- <button id="dis" onclick="showdes()" class="showdis1">Discover More</button> -->
-      <!-- <a class="dis" id="dis" onclick="showdes()" >Discover more</a> -->
-      <% } %>
-    <center>
-      <button class="btnpostion" onclick="mobile_show()" id="linkId">Discover More!</button>
-      <button class="btnpostion" onclick="mobile_hide()" id="linkIdTwo">Hide!</button>
-    </center>
+
+  <div class="row rowtop">
+    <% for (let image of ChairmanData) { %>
+      <div class="column2">
+        <div class="box"><img class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
+          <div class="overlay">
+            <%= image.name %>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="column2">
+        <% for (let image of ChairmanData) { %>
+          <h1>Chairman's Statement</h1>
+          <div id="toGiveScroll111" class="toGiveScroll scrolleffect">
+            <p>
+              <%= image.description %>
+            </p>
+            <!-- <button id="hidebtn" onclick="hidedes()" class="hideme">Hide</button> -->
+
+          </div>
+          <!-- <button id="dis" onclick="showdes()" class="showdis1">Discover More</button> -->
+          <!-- <a class="dis" id="dis" onclick="showdes()" >Discover more</a> -->
+          <% } %>
+            <center>
+              <button class="btnpostion" onclick="mobile_show()" id="linkId">Discover More!</button>
+              <button class="btnpostion" onclick="mobile_hide()" id="linkIdTwo">Hide!</button>
+            </center>
+      </div>
   </div>
-</div>
-<% if(visionSection.length) {%>
-  <% for (let vision of visionSection) { %>
-<div class="row rowtop" style="justify-content: center;">
+  <% if(visionSection.length) {%>
+    <% for (let vision of visionSection) { %>
+      <div class="row rowtop" style="justify-content: center;">
 
-  <div class="column2" style="margin-top: 30px;">
-      <h1>Our <span style="font-weight: 800;">Vision</span> & <span style="font-weight: 800;">Mission</span>  </h1>
-
+        <div class="column2" style="margin-top: 30px;">
+          <h1>Our <span style="font-weight: 800;">Vision</span> & <span style="font-weight: 800;">Mission</span> </h1>
 
 
-      <div id="toGiveScroll toGiveScroll235" class="toGiveScroll togove">
-        <p style="padding-bottom: 10px; padding-top: 0; margin-top: 20PX; border-left: 3px solid black; font-weight: 500;">
-         <%= vision.description %>
-      
-        </p>
-        
-<% if(st.length) {%>
-  <% for (let description of st) { %>
 
-        <p style="color: rgba(128, 128, 128, 0.822); padding-top: 0; border-left: 1px solid #d2d2d2; font-weight: 500;">
-          <%= description.description %> 
-       
-        </p>
-        <% } %>
-        <% } %>
-      </div> 
-      <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
+          <div id="toGiveScroll toGiveScroll235" class="toGiveScroll togove">
+            <p
+              style="padding-bottom: 10px; padding-top: 0; margin-top: 20PX; border-left: 3px solid black; font-weight: 500;">
+              <%= vision.description %>
+
+            </p>
+
+            <% if(st.length) {%>
+              <% for (let description of st) { %>
+
+                <p
+                  style="color: rgba(128, 128, 128, 0.822); padding-top: 0; border-left: 1px solid #d2d2d2; font-weight: 500;">
+                  <%= description.description %>
+
+                </p>
+                <% } %>
+                  <% } %>
+          </div>
+          <!-- <p class="colorgrey">Our mission is to consistently offer superior products and services that exceed
           customer expectations. We
           are committed to cultivating a supportive and enriching work environment that empowers our employees.
           Upholding a strong ethical foundation, we conduct our business processes with integrity and
           transparency.</p> -->
 
 
-  </div>
-  <div class="column2"><img  class="hovereffect6"  src="<%=vision.imagePath %>" alt=""></div>
+        </div>
+        <div class="column2"><img class="hovereffect6" src="<%=vision.imagePath %>" alt=""></div>
 
-</div>
-<% } %>
-<% } %>
-
-<div class="secondDivCompany">
- 
-<div class="w" >
-  <h1 class="headingtop break">Core Values</h1>
-</div>
-<div class="divCoreMain">
-<% for (let images of ce) { %>
-
-  <div class="divCoreValues">
-    <div class="core-discription">
-   <%= images.description %>
-
-     </div>
-     <img class="core-image" src="<%= images.imagePath %>" alt="">
-      <div class="coreValueLine"></div>
-       <p class="coreValueTextMain" id="groupcompani">  <%= images.name %></p>
-    
-  </div>
-  <% } %>
-
-</div>
-</div>
-
-<section>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <% for (let images of ce) { %>
-      <div class="swiper-slide swiper-slide--one">
-    
-          <div class="core-discription">   <%= images.description %>
-           </div>
-           <img class="core-image" src="<%= images.imagePath %>" alt="">
-            <div class="coreValueLine"></div>
-            <p class="coreValueTextMain" id="groupcompani">  <%= images.name %></p>
-          
-        
       </div>
       <% } %>
+        <% } %>
+
+          <div class="secondDivCompany">
+
+            <div class="w">
+              <h1 class="headingtop break">Core Values</h1>
+            </div>
   
-  
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+          </div>
+          <section>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <% for (let images of ce) { %>
+                  <div class="swiper-slide">
+                    <!-- <div class="divCoreMain"> -->
 
 
-<div class="w" >
-    <h1 class="headingtop break">Group of Companies</h1>
-</div>
-<div id="brands">
+                      <div class="divCoreValues">
+                        <div class="core-discription">
+                          <%= images.description %>
 
-  <% if(logoImages.length) {%>
-  <% for (let image of logoImages) { %>
-  <a style="color: white;" href="<%= image.link %>" target="_blank">
-    <img class="img-width" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
-  </a>
-  <% } %>
-</div>
-<% } %>
-</div>
+                        </div>
+                        <img class="core-image" src="<%= images.imagePath %>" alt="">
+                        <div class="coreValueLine"></div>
+                        <p class="coreValueTextMain" id="groupcompani">
+                          <%= images.name %>
+                        </p>
+
+                      </div>
 
 
+                    <!-- </div> -->
+                  </div>
+                  <% } %>
+              </div>
+            </div>
 
-<%- include('../partials/footer.ejs') %>
+          </section>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
-<script>
-  var swiper = new Swiper(".swiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: true
-  },
-  spaceBetween: 60,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  }
-});
-</script>
 
-<script>
-  function showdes(){
-    let myshow = document.getElementById("toGiveScroll");
-    let showmy = document.getElementById("dis");
-    let hidemy = document.getElementById("hidebtn");
-    showmy.style.display="none";
-    hidemy.style.display="block";
-    myshow.style.height = "auto";
-  }
-  function hidedes(){
-    let myshow = document.getElementById("toGiveScroll");
-    let showmy = document.getElementById("dis");
-    let hidemy = document.getElementById("hidebtn");
-    showmy.style.display="block";
-    hidemy.style.display="none";
-    myshow.style.height = "450px";
-  }
-  
-  function mobile_show(){
-    let myshow = document.getElementById("toGiveScroll111");
-    let showmy = document.getElementById("linkId");
-    let hidemy = document.getElementById("linkIdTwo");
-    myshow.style.height = "auto"; 
-    hidemy.style.display = "block";
-    showmy.style.display = "none";
-}
-  function mobile_hide(){
-    let myshow = document.getElementById("toGiveScroll111");
-    let showmy = document.getElementById("linkId");
-    let hidemy = document.getElementById("linkIdTwo");
-    myshow.style.height = "450px"; 
-    hidemy.style.display = "none";
-    showmy.style.display = "block";
-}
-</script>
+          <div class="w">
+            <h1 class="headingtop break">Group of Companies</h1>
+          </div>
+          <div id="brands">
+
+            <% if(logoImages.length) {%>
+              <% for (let image of logoImages) { %>
+                <a style="color: white;" href="<%= image.link %>" target="_blank">
+                  <img class="img-width" src="<%= image.imagePath %>" alt="<%= image.imageFilename %>">
+                </a>
+                <% } %>
+          </div>
+          <% } %>
+            </div>
+
+
+
+            <%- include('../partials/footer.ejs') %>
+
+              <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+              <script>
+                var swiper = new Swiper(".swiper-container", {
+                  effect: "coverflow",
+                  grabCursor: true,
+                  centeredSlides: true,
+                  slidesPerView: "auto",
+                  coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true
+                  },
+                  loop: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+
+                  }
+                });
+              </script>
+
+              <script>
+                function showdes() {
+                  let myshow = document.getElementById("toGiveScroll");
+                  let showmy = document.getElementById("dis");
+                  let hidemy = document.getElementById("hidebtn");
+                  showmy.style.display = "none";
+                  hidemy.style.display = "block";
+                  myshow.style.height = "auto";
+                }
+                function hidedes() {
+                  let myshow = document.getElementById("toGiveScroll");
+                  let showmy = document.getElementById("dis");
+                  let hidemy = document.getElementById("hidebtn");
+                  showmy.style.display = "block";
+                  hidemy.style.display = "none";
+                  myshow.style.height = "450px";
+                }
+
+                function mobile_show() {
+                  let myshow = document.getElementById("toGiveScroll111");
+                  let showmy = document.getElementById("linkId");
+                  let hidemy = document.getElementById("linkIdTwo");
+                  myshow.style.height = "auto";
+                  hidemy.style.display = "block";
+                  showmy.style.display = "none";
+                }
+                function mobile_hide() {
+                  let myshow = document.getElementById("toGiveScroll111");
+                  let showmy = document.getElementById("linkId");
+                  let hidemy = document.getElementById("linkIdTwo");
+                  myshow.style.height = "450px";
+                  hidemy.style.display = "none";
+                  showmy.style.display = "block";
+                }
+              </script>

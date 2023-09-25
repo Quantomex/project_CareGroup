@@ -1855,7 +1855,7 @@ height: 350px !important;
 
   .break {
     font-size: 30px;
-    height: 6vh;
+    height: auto;
   }
 }
 
@@ -2575,8 +2575,8 @@ input:not(:focus):valid ~ .formLable{
   width: 60%;
 }
 .divCoreValues {
-  width: 265.718px;
-  height: 231.17px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   border-radius: 20px;
   background: #FFF;
@@ -2590,11 +2590,13 @@ input:not(:focus):valid ~ .formLable{
 }
 
 .divCoreMain {
-  margin-top: 60px;
-  display: flex;
+  width: 100%;
+  padding: 40px;
+  padding-top: 90px; 
+   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .coreValueTextMain {
@@ -3801,3 +3803,5 @@ a:focus {
   font-size: 2.2em;
   line-height: 1em;
 }
+
+/* INDEX SLIDER  */

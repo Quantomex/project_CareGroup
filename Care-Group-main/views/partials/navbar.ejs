@@ -98,14 +98,15 @@ nav ul li a:focus {
 }
 @media (max-width: 768px) {
   .main-menu{
-    text-align: center !important;
+    text-align: left !important;
   }
   .main-menu ul {
     
-    text-align: center !important;
+    text-align: left !important;
     background-color: transparent;
     width: auto;
     position: static;
+ 
     display: none;
   }
 
@@ -115,7 +116,8 @@ nav ul li a:focus {
 
   .main-menu ul li {
     
-    text-align: center !important;
+    text-align: left !important;
+    border-bottom: solid 1px black;
     width: 100%;
     text-align: left;
   }
@@ -180,23 +182,23 @@ nav ul li a:focus {
         <ul class="main-menu">
           <li><a href="/">Home</a></li>
           <li>
-            <a href="#">About us <i class="fas fa-chevron-down"></i></a>
-            <ul class="submenu2"> <!-- Add unique class -->
+            <a onclick="showabout()">About us <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></a>
+            <ul class="submenu2" id="submenu2"> <!-- Add unique class -->
               <li><a href="/ourstory">Our Story</a></li>
               <li><a href="/companyprofile">Company profile</a></li>
               <li>
-                <a href="/corporategovernance">Corporate Governance <i class="fas fa-chevron-down"></i></a>
-                <ul class="submenu3"> <!-- Add unique class -->
+                <a  href="/corporategovernance">Corporate Governance</a><a style="margin-left: 10px;"><i onclick="copabout()" class="fas fa-chevron-down"></i></a>
+                <ul class="submenu3" id="submenu3"> <!-- Add unique class -->
                   <li><a href="/corporategovernance#director-1">Directors</a></li>
-                  <li><a href="/corporategovernance#managment-1">Management</a></li>
+                  <li style="border-bottom: none;"><a href="/corporategovernance#managment-1">Management</a></li>
                 </ul>
               </li>
             </ul>
           
           </li>
           <li>
-            <a href="#">Sustainability <i class="fas fa-chevron-down"></i></a>
-            <ul class="submenu1"> <!-- Add unique class -->
+            <a onclick="susabout()">Sustainability <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></a>
+            <ul class="submenu1" id="submenu1"> <!-- Add unique class -->
               <li><a href="/sustainability">Sustainability at Care Group</a></li>
               <li><a href="/sustainability#policy">Policies</a></li>
         
@@ -204,7 +206,6 @@ nav ul li a:focus {
           </li>
           <li><a href="/#brands">Group Companies</a></li>
           <li><a href="/careers">Careers</a></li>
-      
           <li><a href="/contactus">Contact Us</a></li>
         </ul>
       </div>
@@ -238,24 +239,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <script>
-  const burgerMenu = document.getElementById("burdermenu");
-  const mainMenu = document.querySelector(".main-menu");
+function showabout() {
+  let v = document.getElementById("submenu2");
+  
+  // Check the current display property
+  if (v.style.display === "block") {
+    v.style.display = "none";
+  } else {
+    v.style.display = "block";
+  }
+}
+function susabout() {
+  let c = document.getElementById("submenu1");
+  
+  // Check the current display property
+  if (c.style.display === "block") {
+    c.style.display = "none";
+  } else {
+    c.style.display = "block";
+  }
+}
+function copabout() {
+  let z = document.getElementById("submenu3");
+  
+  // Check the current display property
+  if (z.style.display === "block") {
+    z.style.display = "none";
+  } else {
+    z.style.display = "block";
+  }
+}
 
-  burgerMenu.addEventListener("click", () => {
-    mainMenu.classList.toggle("active");
-  });
 
-  const submenuItems = document.querySelectorAll(".main-menu li");
 
-  submenuItems.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      const submenu = e.currentTarget.querySelector("ul"); // Use e.currentTarget
-      if (submenu) {
-        submenu.classList.toggle("active");
-        e.stopPropagation(); // Prevent parent links from navigating
-      }
-    });
-  });
 
 </script>
 

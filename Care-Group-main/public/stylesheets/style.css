@@ -1105,10 +1105,11 @@ nav ul li a {
 
 
 .dropDownBurger {
+      padding-left: 20px;
   position: absolute;
   left: 0;
   right: 2rem;
-  top: -100px;
+  top: -110px;
   width: 100%;
   background: #ce994b;
   backdrop-filter: blur(15px);
@@ -1127,7 +1128,7 @@ nav ul li a {
 }
 
 .dropDownBurger.appear {
-  top: 94px;
+  top: 60px;
   /* Final position at the top */
   opacity: 1;
   /* Fade in */

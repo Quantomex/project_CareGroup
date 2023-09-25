@@ -1543,6 +1543,7 @@ nav ul li a {
 }
 
 @media (max-width: 450px) {
+
   .linktree{
     margin-top: 0;
     margin-left: 0 !important;
@@ -1611,13 +1612,14 @@ nav ul li a {
 }
   .row {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column !important;
     padding: 0 0;
+    height: auto;
 
   }
 
   .textheader {
-    top: 85%;
+    top: 50%;
   }
 
   .logo-img-burder {
@@ -1639,10 +1641,11 @@ nav ul li a {
 
   .column2 {
     width: 100%;
+    padding: 0;
   }
 
   .textheader p {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -1674,9 +1677,12 @@ nav ul li a {
     text-align: center;
     padding: 10px 0 0 0;
   }
+.box{
+height: 350px !important;
+}
 
   .column2 img {
-    margin-top: 20px;
+    margin: 0;
   }
 
   .column2 p {
@@ -1824,6 +1830,20 @@ nav ul li a {
   .toGiveScroll {
     height: 300px !important;
     overflow-y: hidden;
+  }
+  .togove {
+    height: auto !important;
+  }
+  #logo_image{
+    width: 150px !important;
+  }
+  .hovereffect6{
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 110px;
+
+  }
+  .secondDivCompany{
+    margin-top: 0 !important;
   }
   .toGiveScroll22 {
     overflow-y: hidden;

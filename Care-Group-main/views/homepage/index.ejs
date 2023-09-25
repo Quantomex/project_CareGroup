@@ -115,7 +115,7 @@ section {
   <div class="column2">
     <% for (let image of ChairmanData) {  %>
     <h1>Chairman's Statement</h1>
-    <div id="toGiveScroll" class="toGiveScroll">
+    <div id="toGiveScroll111" class="toGiveScroll scrolleffect">
       <p>
         <%= image.description %>
       </p>  
@@ -140,7 +140,7 @@ section {
 
 
 
-      <div id="toGiveScroll toGiveScroll235" class="toGiveScroll">
+      <div id="toGiveScroll toGiveScroll235" class="toGiveScroll togove">
         <p style="padding-bottom: 10px; padding-top: 0; margin-top: 20PX; border-left: 3px solid black; font-weight: 500;">
          <%= vision.description %>
       
@@ -278,7 +278,7 @@ section {
   }
   
   function mobile_show(){
-    let myshow = document.getElementById("toGiveScroll");
+    let myshow = document.getElementById("toGiveScroll111");
     let showmy = document.getElementById("linkId");
     let hidemy = document.getElementById("linkIdTwo");
     myshow.style.height = "auto"; 
@@ -286,7 +286,7 @@ section {
     showmy.style.display = "none";
 }
   function mobile_hide(){
-    let myshow = document.getElementById("toGiveScroll");
+    let myshow = document.getElementById("toGiveScroll111");
     let showmy = document.getElementById("linkId");
     let hidemy = document.getElementById("linkIdTwo");
     myshow.style.height = "450px"; 

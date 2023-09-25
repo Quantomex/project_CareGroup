@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Chairman Content</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+
+</head>
+<body>
+<div class="container"> 
+  
+  <form action="/editChairman/<%= chairman._id %>" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= chairman.name %>" required>
+    
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4" required><%= chairman.description %></textarea>
+    
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image">
+    
+    <input type="submit" value="Update Chairman Content">
+  </form>
+</div>  
+  
+</body>
+</html>

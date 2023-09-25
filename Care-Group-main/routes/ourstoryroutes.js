@@ -24,6 +24,48 @@ router.post('/uploadourstory', isAdmin, async (req, res) => {
     res.status(500).json({message: 'Error Uploading Our Story content', error: error.message});
     }
 });
+// Edit Our Story Content Form Route
+router.get('/editOurStory/:id', isAdmin, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const story = await OurStory.findById(id);
+  
+      if (!story) {
+        req.flash('error', 'Our Story content not found');
+        return res.redirect('/addOurStory');
+      }
+  
+      res.render('./admin/editOurStoryForm', { story });
+    } catch (error) {
+      console.error('Error retrieving Our Story content:', error);
+      res.status(500).json({ message: 'Error retrieving Our Story content', error: error.message });
+    }
+  });
+// Update Our Story Content Route
+router.post('/editOurStory/:id', isAdmin, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const story = await OurStory.findById(id);
+  
+      if (!story) {
+        req.flash('error', 'Our Story content not found');
+        return res.redirect('/addOurStory');
+      }
+  
+      story.date = req.body.date;
+      story.description = req.body.description;
+  
+      await story.save();
+  
+      req.flash('success', 'Our Story content updated successfully');
+      res.redirect('/addOurStory');
+    } catch (error) {
+      console.error('Error updating Our Story content:', error);
+      res.status(500).json({ message: 'Error updating Our Story content', error: error.message });
+    }
+  });
+  
+  
 router.post('/deleteOurStory/:id', isAdmin, async (req, res) => {
     try{
         const delstory= await OurStory.findByIdAndDelete(req.params.id);

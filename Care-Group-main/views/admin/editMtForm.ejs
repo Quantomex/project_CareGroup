@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Management Team Content</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+</head>
+<body>
+
+  <div class="container"> 
+  <form action="/editMt/<%= mt._id %>" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= mt.name %>" required>
+    
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4" required><%= mt.description %></textarea>
+    
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link" value="<%= mt.link %>">
+    
+    <label for="image">Image:</label>
+    <input type="file" name="image" id="image">
+    
+    <input type="submit" value="Update Management Team Content">
+  </form>
+</div>
+</body>
+</html>

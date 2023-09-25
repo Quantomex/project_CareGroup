@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Mission Statement</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+
+</head>
+<body>
+  
+<div class="container">
+  <form action="/editStatement/<%= statement._id %>" method="POST">
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4"><%= statement.description %></textarea>
+    
+    <input type="submit" value="Update Mission Statement">
+  </form>
+</div>
+ 
+</body>
+</html>

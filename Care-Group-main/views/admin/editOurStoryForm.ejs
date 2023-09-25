@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Our Story Content</title>
+  <link href="/stylesheets/editForms.css" rel="stylesheet" type=" text/css">
+
+</head>
+<body>
+<div class="container">
+  
+  <form action="/editOurStory/<%= story._id %>" method="POST">
+    <label for="date">Date:</label>
+    <input type="text" name="date" id="date" value="<%= story.date %>" required>
+    
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4" required><%= story.description %></textarea>
+    
+    <input type="submit" value="Update Our Story Content">
+  </form>
+</div>
+  
+</body>
+</html>

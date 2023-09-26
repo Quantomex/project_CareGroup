@@ -19,6 +19,7 @@ require('./models/Sustain');
 require('./models/organizationStructure');
 require('./models/contactus');
 require('./models/opportunitiesForm');
+require('./models/contactInfo');
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
@@ -45,7 +46,7 @@ const policyRoutes = require('./routes/policyRoutes');
 const missionRoutes = require('./routes/missionRoutes');
 const ourstoryroutes = require('./routes/ourstoryroutes');
 const aboutuspage = require('./routes/aboutuspage');
-const contactuspage = require('./routes/contactuspage');
+
 const contactUsRoutes = require('./routes/contactusRoutes');
 const corevalues = require('./routes/corevalues');
 const baRoute = require('./routes/baRoute');

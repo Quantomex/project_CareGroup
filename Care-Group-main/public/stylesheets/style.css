@@ -2822,8 +2822,8 @@ input[type="radio"] {
 }
 
 .normalDivSus {
-  width: 436px;
-  height: 390px;
+  width: 536px;
+  height: 590px;
   flex-shrink: 0;
   border-radius: 20px;
   background: #FFF;
@@ -2843,7 +2843,7 @@ input[type="radio"] {
 .normalDivSusImg img{
   padding-top: 10px;
   border-radius: 20px ;
-  height: 137px;
+  height: 257px;
   width: 100%;
 
 }
@@ -2856,7 +2856,7 @@ input[type="radio"] {
 }
 
 .normalDivSusText {
-  height: 200px;
+  height: 590px;
   overflow: hidden; /* Hide content when collapsed */
   transition: height 0.3s ease; /* Add a smooth transition effect */
 
@@ -3024,6 +3024,61 @@ a:focus {
     left: 10%;
     margin-left: 2px;
   }
+}
+@media (max-width:1024px){
+  nav ul  {
+    display: none;
+  
+  }
+  
+  /* .dropDownBurger{
+    display: block;
+  } */
+  .burgerbtn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    z-index: 20;
+  }
+  
+  .closebtn {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    z-index: 20;
+  
+  }
+}
+@media (max-width:830px) {
+  nav ul  {
+  display: none;
+
+}
+
+/* .dropDownBurger{
+  display: block;
+} */
+.burgerbtn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  z-index: 20;
+}
+
+.closebtn {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  z-index: 20;
+
+}
+  
 }
 
 .departments>li:first-child a {
@@ -3408,9 +3463,13 @@ a:focus {
       }
 
       @media (max-width:455px) {
+        .normalDivSusText{
+          height: auto;
+        }
         .normalDivSus{
           width: 90%;
           margin-right: 0;
+          height: auto;
         }
         .sustanabilityHead {
           font-size: 30px;

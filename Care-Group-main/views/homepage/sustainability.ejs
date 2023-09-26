@@ -61,27 +61,83 @@
               <% }) %>
 
               
-                <%sustainabilities.map((j, i)=>{%>
+                <!-- <%sustainabilities.map((j, i)=>{%> -->
 
                <div class="normalDivSusRow">
-            <div class="normalDivSus" id="sustain<%=i%>">
+            <div class="normalDivSus" id="">
                 <div class="setNormalMargins">
-                <div class="normalDivSusImg"><img src="<%-j.imagePath %>" alt=""></div>
-                <div class="normalDivSusText" id="sustaintext1<%=i%>">
-                    <h3><%=j.name%></h3>
-                    <%=j.description %>
-                    <%=j.description %>
+                <div class="normalDivSusImg"><img src="/images/environment.jpg" alt=""></div>
+                <div class="normalDivSusText" id="">
+                    <h3>Mission and commitment to sustainability</h3>
+                    <span>
+                     <p> We at Care Group are deeply committed to sustainability and environmental responsibility. Our mission 
+is to make a positive impact on the planet and society by incorporating sustainable practises into every 
+aspect of our business. We firmly believe that businesses have a critical role to play in preserving our 
+planet for future generations, and we are committed to being a part of the solution.</p>
+<br><p>We  understand  that  true  sustainability  calls  for  ongoing  effort  and  collaboration.  We  relish  the 
+opportunity  to  collaborate  with  our  employees,  customers,  suppliers,  and  partners  to  bring  about 
+positive change in the communities we serve. We can make a significant difference in creating a more 
+sustainable and equitable future if we work together.</p>
+                    </span>
+                    <!-- <%=j.description %>
+                    <%=j.description %> -->
                 </div>
-                <button id="btndown<%= i %>" onclick="autoHeight('btndown<%= i %>', <%= i %>)" class="btndown">
+                <!-- <button id="btndown<%= i %>" onclick="autoHeight('btndown<%= i %>',)" class="btndown">
                   <i id="icon<%= i %>" style="padding-left: 15px; font-size: 15px;" class="fas fa-chevron-down"></i>
-                </button>
+                </button> -->
                 
               
               </div>
             </div>
           </div>
-            <% })%>
-            
+          <div class="normalDivSusRow">
+            <div class="normalDivSus" id="">
+                <div class="setNormalMargins">
+                <div class="normalDivSusImg"><img src="/images/img2.jpg" alt=""></div>
+                <div class="normalDivSusText" id="">
+                    <h3>Sustainability in Energy consumption</h3>
+                    <span>
+                     <p>At  Care  Group,  we  are  dedicated  to  minimizing  our  environmental  footprint  in  every  aspect  of  our 
+                      operations,  and  this  extends  to  our  manufacturing  processes.  One  of  our  proudest  achievements  in 
+                      environmental  sustainability  is  the  fact  that  our  manufacturing  facility  is  powered  by  clean  and 
+                      renewable solar energy.  Our factory and offices are covered in 600+ solar panels, which generate a 
+                      significant portion of our energy consumption. This transition to solar power has a positive impact on 
+                      our local community by reducing air pollution and supporting a cleaner and healthier environment for 
+                      everyone.</p>
+
+                    </span>
+                    <!-- <%=j.description %>
+                    <%=j.description %> -->
+                </div>
+                <!-- <button id="btndown<%= i %>" onclick="autoHeight('btndown<%= i %>',)" class="btndown">
+                  <i id="icon<%= i %>" style="padding-left: 15px; font-size: 15px;" class="fas fa-chevron-down"></i>
+                </button> -->
+                
+              
+              </div>
+            </div>
+          </div>
+            <!-- <% })%> -->
+            <!-- <%sustainabilities.map((j, i)=>{%>
+
+              <div class="normalDivSusRow">
+           <div class="normalDivSus" id="sustain<%=i%>">
+               <div class="setNormalMargins">
+               <div class="normalDivSusImg"><img src="<%-j.imagePath %>" alt=""></div>
+               <div class="normalDivSusText" id="sustaintext1<%=i%>">
+                   <h3><%=j.name%></h3>
+                   <%=j.description %>
+                   <%=j.description %>
+               </div>
+               <button id="btndown<%= i %>" onclick="autoHeight('btndown<%= i %>', <%= i %>)" class="btndown">
+                 <i id="icon<%= i %>" style="padding-left: 15px; font-size: 15px;" class="fas fa-chevron-down"></i>
+               </button>
+               
+             
+             </div>
+           </div>
+         </div>
+           <% })%> -->
             
        
         </div>

@@ -389,22 +389,27 @@ nav ul li a {
 
 
 .hovereffect {
-  scale: 0.8;
-  width: 80%;
+  scale: 1;
+  width: 100%;
+  
+  padding-top: 135px;
   height: auto;
   object-fit: cover;
-  border-top-left-radius: 200px;
-  border-bottom-right-radius: 234px;
+  border-bottom-right-radius: 200px;
   
-  box-shadow: 1px 1px 10px black;
+  /* box-shadow: 1px 1px 10px black; */
+}
+.scale1{
+  scale: 1.0 !important;
 }
 .hovereffect6 {
-  scale: 0.8;
-  width: 80%;
+  scale: 1;
+  width: 100%;
+  padding-top: 80px;
   height: auto;
   object-fit: cover;
-  border-top-right-radius: 200px;
-  border-bottom-left-radius: 350px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 200px;
   
 }
 .hovereffect5 {
@@ -429,9 +434,9 @@ nav ul li a {
 
 .column2 h1 {
   padding-top: 100px;
-  padding-left: 25px;
+  text-align: center;
   color: #CE994B;
-  font-size: 60px;
+  font-size: 50px;
   font-family: 'Raleway', sans-serif;
 
   /* font-family: bookman; */
@@ -468,7 +473,7 @@ nav ul li a {
   width: 100%;
   flex-shrink: 0;
   color: #000;
-  font-size: 21px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 195.833%;
@@ -747,13 +752,14 @@ nav ul li a {
 .overlay {
   font-family: bookman;
   position: relative;
-  bottom: 15.3rem;
+  bottom: 11.3rem;
   /* Black see-through */
   width: 100%;
   transition: .5s ease;
   opacity: 0;
-  color: white;
-  font-size: 26px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+  font-size: 30px;
   font-weight: 600;
   padding: 40px;
   text-align: center;
@@ -1544,9 +1550,18 @@ nav ul li a {
 }
 
 @media (max-width: 450px) {
+  .hovereffect6{
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .hovereffect {
+    border-radius: 50px !important;
+    padding-top: 0;
+  }
   .overlay{
-  bottom: 7.5rem;
-  font-size: 16px;
+  bottom: 5.5rem;
+  font-size: 14px;
 
   }
 
@@ -1684,6 +1699,9 @@ nav ul li a {
     padding: 10px 0 0 0;
   }
 .box{
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
 height: 350px !important;
 }
 
@@ -1693,7 +1711,7 @@ height: 350px !important;
 
   .column2 p {
     text-align: center;
-    font-size: 15px;
+    font-size: 15px !important;
     padding: 10px 20px 0 20px;
   }
 
@@ -1844,8 +1862,8 @@ height: 350px !important;
     width: 150px !important;
   }
   .hovereffect6{
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 110px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
 
   }
   .secondDivCompany{
@@ -1860,7 +1878,7 @@ height: 350px !important;
   }
 
   .break {
-    font-size: 30px;
+    font-size: 35px !important;
     height: auto;
   }
 }
@@ -2097,7 +2115,7 @@ height: 350px !important;
   color: #CE994B;
   font-family: 'Raleway', sans-serif !important;
 
-  font-size: 3rem;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -2124,7 +2142,7 @@ height: 350px !important;
   color: #CE994B;
   
   font-family: 'Raleway', sans-serif;
-  font-size: 3rem;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -2494,7 +2512,7 @@ input:not(:focus):valid ~ .formLable{
 .companyDiv1Head {
   color: #CE994B;
   font-family: 'Raleway', sans-serif;
-  font-size: 66px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -2521,7 +2539,7 @@ input:not(:focus):valid ~ .formLable{
   flex-shrink: 0;
   color: #000;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   text-align: justify;
   font-style: normal;
   font-weight: 400;
@@ -2721,7 +2739,7 @@ input:not(:focus):valid ~ .formLable{
 .sustanabilityHead {
   color: #CE994B;
   font-family: 'Raleway', sans-serif;
-  font-size: 66px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -3213,13 +3231,13 @@ a:focus {
 .swiperHeading {
   color: #CE994B;
   font-family: 'Open Sans', sans-serif;
-  font-size: 66px;
+  font-size: 55px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-align: center;
   margin-top: 75px;
-  margin-bottom: -45px;
+  margin-bottom: -5px;
 }
 
 /* swiper end */
@@ -3484,11 +3502,7 @@ a:focus {
             height: auto;
            
         }
-        .hovereffect {
-         
-          border-top-left-radius: 103px;
-          border-bottom-right-radius: 122px;
-      }
+        
       .hovereffect {
          
         border-top-right-radius: 103px;

@@ -66,9 +66,9 @@
     <!--  -->
   </div>
 
-  <div class="row rowtop">
+  <div class="row rowtop" style="justify-content: center;padding-left: 0;">
     <% for (let image of ChairmanData) { %>
-      <div class="column2">
+      <div class="column2 scale1">
         <div class="box"><img class="hovereffect" src="<%= image.imagePath %>" alt="<%= image.name %>">
           <div class="overlay">
             <%= image.name %>
@@ -97,9 +97,9 @@
   </div>
   <% if(visionSection.length) {%>
     <% for (let vision of visionSection) { %>
-      <div class="row rowtop" style="justify-content: center;">
+      <div class="row rowtop" style="justify-content: center;padding-right: 0;">
 
-        <div class="column2" style="margin-top: 30px;">
+        <div class="column2 " style="margin-top: 30px;">
           <h1>Our <span style="font-weight: 800;">Vision</span> & <span style="font-weight: 800;">Mission</span> </h1>
 
 
@@ -130,7 +130,7 @@
 
 
         </div>
-        <div class="column2"><img class="hovereffect6" src="<%=vision.imagePath %>" alt=""></div>
+        <div class="column2 scale1"><img class="hovereffect6" src="<%=vision.imagePath %>" alt=""></div>
 
       </div>
       <% } %>

@@ -37,11 +37,10 @@
         <h2 class="itemHeading">Our Mailbox</h2>
         <!-- <p class="itemText">info@caregroup.com.pk</p> -->
         <p class="itemText"><%=c.mailbox%></p>
-        <!-- <p class="itemText"><%=c.maplocation%></p> -->
       </div>
     </div>
   </div>
-  <div class="mapDiv"><iframe class="map" src="https://maps.google.com/maps?q=Care%20Cosmetics&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no">
+  <div class="mapDiv"><iframe class="map" src="<%=c.maplocation%>" frameborder="0" scrolling="no">
     </iframe>
   </div>
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us Submissions</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/ContactUsForm.css">
+
+</head>
+
+<body>
+  <h1>Contact Us Submissions</h1>
+
+  <% if (submissions.length > 0) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Submission</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Message</th>
+        <th>Date and Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% submissions.forEach((submission, index) => { %>
+      <tr>
+        <td><%= index + 1 %></td> <!-- Display submission index -->
+        <td><%= submission.firstname %></td>
+        <td><%= submission.lastname %></td>
+        <td><%= submission.email %></td>
+        <td><%= submission.contactnumber %></td>
+        <td><%= submission.message %></td>
+        <td><%= submission.submissionDate.toLocaleString() %></td> <!-- Display date and time -->
+        <td>
+          <form action="/admin/contactus/delete/<%= submission._id %>" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <% } else { %>
+  <p>No Contact Us submissions available.</p>
+  <% } %>
+
+</body>
+
+</html>

@@ -1,97 +1,81 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/navbar.ejs', { currentPage: 'contactus' }) %>
 <style>
-    .navbar{
-        position: relative;
-    }
-    </style>
-    <div class="topHeading">
-        <h1 class="topHeadText">Contact Us</h1>
-    </div>
+  .navbar {
+    position: relative;
+  }
+</style>
+<div class="topHeading">
+  <h1 class="topHeadText">Contact Us</h1>
+</div>
 
-    <div class="secondDiv">
-        <h2 class="secondHeading">Get in touch with Us</h2>
-    </div>
+<div class="secondDiv">
+  <h2 class="secondHeading">Get in touch with Us</h2>
+</div>
 
-    <div class="infoContainer">
-        <div class="heythere">
-            <div class="infoItem">
-                <img src="/images/location.svg" alt="">
-                  <div class="infoItemText">
-                    <h2 class="itemHeading">Our location</h2>
-                    <p class="itemText">Care Group 11-km Bosan Road, Multan, Pakistan.</p>
-                  </div>
-            </div>
-            <div class="infoItem">
-                <img src="/images/Call.svg" alt="">
-                  <div class="infoItemText">
-                    <h2 class="itemHeading">Our Contact</h2>
-                    <p class="itemText">+92 343 2889985</p>
-                  </div>
-            </div>
-            <div class="infoItem">
-                <img src="/images/mail.svg" alt="">
-                  <div  class="infoItemText">
-                    <h2 class="itemHeading">Our Mailbox</h2>
-                    <p class="itemText">info@caregroup.com.pk</p>
-                  </div>
-            </div>
-        </div>
-       <div class="mapDiv"><iframe class="map" src="https://maps.google.com/maps?q=Care%20Cosmetics&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no">
+<div class="infoContainer">
+  <div class="heythere">
+    <div class="infoItem">
+      <img src="/images/location.svg" alt="">
+      <div class="infoItemText">
+        <h2 class="itemHeading">Our location</h2>
+        <p class="itemText">Care Group 11-km Bosan Road, Multan, Pakistan.</p>
+      </div>
+    </div>
+    <div class="infoItem">
+      <img src="/images/Call.svg" alt="">
+      <div class="infoItemText">
+        <h2 class="itemHeading">Our Contact</h2>
+        <p class="itemText">+92 343 2889985</p>
+      </div>
+    </div>
+    <div class="infoItem">
+      <img src="/images/mail.svg" alt="">
+      <div class="infoItemText">
+        <h2 class="itemHeading">Our Mailbox</h2>
+        <p class="itemText">info@caregroup.com.pk</p>
+      </div>
+    </div>
+  </div>
+  <div class="mapDiv"><iframe class="map" src="https://maps.google.com/maps?q=Care%20Cosmetics&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no">
     </iframe>
-    </div>
-      
-    </div>
-    <div class="GetInTouch">
-        <div class="GetInTouchText">
+  </div>
 
-            <h2 class="GetinToucHeading">Get in touch</h2>
-            <p class="GetinToucText"></p>
+</div>
+<div class="GetInTouch">
+  <div class="GetInTouchText">
 
-        </div>
-        <div class="inputSection">
-            <div class="group">
-                <input class="input" type="text" name="firstname" id="firstname" required>
-                <!-- <span class="highlight"></span> -->
-                <label for="firstname" class="formLable">First Name</label>
-            </div>
-          
-            <div class="group">
-                <input class="input" type="text" name="lastname" id="lastname"  required>
-                <!-- <span class="highlight"></span> -->
-                <label for="lastname" class="formLable">Last Name</label>
-            </div>
-     
-    
-            <div class="group">
-                <input class="input" type="email" name="emailk" id="emailk"  required>
-                <!-- <span class="highlight"></span> -->
-                <label for="emailk" class="formLable">Email</label>
-            </div>
-           
-            <div class="group">
-                <input class="input" type="text" name="contactnumber" id="contactnumber"  required>
-                <!-- <span class="highlight"></span> -->
-                <label for="contactnumber" class="formLable">Phone Number</label>
-            </div>
-        
-            <div class="group">
-                <textarea class="input" name="message" id="message" required></textarea>
-                <!-- <span class="highlight"></span> -->
-                <label for="message" class="formLable">Message/query</label>
-            </div>
-           
-           
-           
-           
+    <h2 class="GetinToucHeading">Get in touch</h2>
+    <p class="GetinToucText"></p>
+  </div>
+  <form action="/savecontactus" method="post">
+    <div class="inputSection">
+      <div class="group">
+        <input class="input" type="text" name="firstname" id="firstname" required>
+        <label for="firstname" class="formLable">First Name</label>
+      </div>
 
-         
-            
-           
-        </div>
-        <div class="buttonWraper">
-            <button type="submit" class="aboutUsSubmitBtn"><i class='bx bxl-telegram'></i>Submit</button>
-        </div>
+      <div class="group">
+        <input class="input" type="text" name="lastname" id="lastname" required>
+        <label for="lastname" class="formLable">Last Name</label>
+      </div>
+      <div class="group">
+        <input class="input" type="email" name="email" id="email" required>
+        <label for="email" class="formLable">Email</label>
+      </div>
+      <div class="group">
+        <input class="input" type="text" name="contactnumber" id="contactnumber" required>
+        <label for="contactnumber" class="formLable">Phone Number</label>
+      </div>
+      <div class="group">
+        <textarea class="input" name="message" id="message" required></textarea>
+        <label for="message" class="formLable">Message/query</label>
+      </div>
     </div>
-    
-    <%- include('../partials/footer.ejs') %>
+    <div class="buttonWraper">
+      <button type="submit" class="aboutUsSubmitBtn"><i class='bx bxl-telegram'></i>Submit</button>
+    </div>
+  </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>

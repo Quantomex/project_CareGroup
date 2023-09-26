@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpportunitiesForm Submissions</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/OpForm.css">
+</head>
+<body>
+<div class="container">
+  <% if (submissions.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Submissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% submissions.forEach((submission, index) => { %>
+        <tr>
+          <td><strong>Submission <%= index + 1 %></strong></td>
+        </tr>
+        <tr>
+          <td><strong>First Name:</strong> <%= submission.firstName %></td>
+        </tr>
+        <tr>
+          <td><strong>Last Name:</strong> <%= submission.lastName %></td>
+        </tr>
+        <tr>
+          <td><strong>Department:</strong> <%= submission.department %></td>
+        </tr>
+        <tr>
+          <td><strong>Gender:</strong> <%= submission.gender %></td>
+        </tr>
+        <tr>
+          <td><strong>Email:</strong> <%= submission.email %></td>
+        </tr>
+        <tr>
+          <td><strong>Contact Number:</strong> <%= submission.contact %></td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn:</strong> <%= submission.linkedIn %></td>
+        </tr>
+        <tr>
+          <td><strong>Current Employer:</strong> <%= submission.currentEmployer %></td>
+        </tr>
+        <tr>
+          <td><strong>Current Position:</strong> <%= submission.currentPosition %></td>
+        </tr>
+        <tr>
+          <td><strong>Experience:</strong> <%= submission.experience %></td>
+        </tr>
+        <tr>
+          <td><strong>Notice Period:</strong> <%= submission.noticePeriod %></td>
+        </tr>
+        <tr>
+          <td><strong>Date and Time:</strong> <%= submission.submissionDate.toLocaleString() %></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Resume:</strong> 
+            <% if (submission.resume) { %>
+              <a href="/admin/opportunitiesform/download/<%= submission._id %>"><button>Download Resume</button></a>
+            <% } else { %>
+              N/A
+            <% } %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <form action="/admin/opportunitiesform/delete/<%= submission._id %>" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+  <p>No OpportunitiesForm submissions available.</p>
+  <% } %>
+</div>
+</body>
+</html>

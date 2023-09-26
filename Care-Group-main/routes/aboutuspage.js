@@ -12,9 +12,7 @@ const router = express.Router();
 router.get('/aboutus', (req, res) => {
     res.render('./homepage/aboutus');
 });
-router.get('/career', (req, res) => {
-    res.render('./homepage/career');
-});
+
 router.get('/ourstory', async (req, res) => {
     const story = await OurStory.find();
     res.render('./homepage/ourstory',{story});
@@ -30,9 +28,7 @@ router.get('/corporategovernance', async (req, res) => {
     const structures = await OrganizationStructure.find({})
     res.render('./homepage/corporategovernance', { directors, teams, structures });
 });
-router.get('/careers', (req, res) => {
-    res.render('./homepage/career');
-});
+
 router.get('/sustainability', async (req, res) => {
     const policies = await Policy.find({});
     const sustainabilities = await Sustain.find({})

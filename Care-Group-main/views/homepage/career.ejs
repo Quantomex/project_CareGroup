@@ -74,7 +74,7 @@
   </div>
   <div id="apply" class="applyFormContainer">
     <h2 class="formHeading">Opportunities For You</h2>
-    <form class="applyForm">
+    <form class="applyForm" action="/opportunitiesform" method="post" enctype="multipart/form-data">
       <p class="deatilsHeading"></p>
       <div class="halfNHalf">
         <input type="text" name="firstName" class="inputStyles" placeholder="First name*" />
@@ -101,10 +101,11 @@
       </div>
       <div class="attachmentContainer">
         <label class="labelStyles" for="resume">Attach resume<i class='bx bx-paperclip'></i></label>
-        <input type="file" id="resume" class="fileInput">
+        <input type="file" id="resume" name="resume" class="fileInput">
       </div>
       <button class="submitBtn" type="submit">Submit</button>
     </form>
+    
   </div>
 </body>
 

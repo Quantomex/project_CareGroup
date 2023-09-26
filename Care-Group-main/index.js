@@ -17,6 +17,8 @@ require('./models/CoreValues');
 require('./models/BusinessActivity');
 require('./models/Sustain');
 require('./models/organizationStructure');
+require('./models/contactus');
+require('./models/opportunitiesForm');
 const express = require('express');
 const MongoDBStore = require('connect-mongo');
 const mongoose = require('mongoose');
@@ -25,6 +27,7 @@ const Admin = mongoose.model('Admin')
 const passport = require('passport');
 const localStrategy = require('passport-local');
 const path = require('path');
+
 const flash = require('connect-flash');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
@@ -43,10 +46,12 @@ const missionRoutes = require('./routes/missionRoutes');
 const ourstoryroutes = require('./routes/ourstoryroutes');
 const aboutuspage = require('./routes/aboutuspage');
 const contactuspage = require('./routes/contactuspage');
+const contactUsRoutes = require('./routes/contactusRoutes');
 const corevalues = require('./routes/corevalues');
 const baRoute = require('./routes/baRoute');
 const sustainRoutes = require('./routes/sustainRoutes');
 const organizationStructure = require('./routes/organizationStructure');
+const oppRoutes = require('./routes/oppRoutes');
 const { isAdmin } = require('./middleware/isAdmin');
 const app = express();
 const PORT = 3000;
@@ -69,16 +74,29 @@ const sessionConfig = {
 
 // Setting up the app
 app.engine('ejs', ejsMate);
+
 app.use(express.static(__dirname + '/public'));
+
 app.set('view engine', 'ejs');
+
 app.set(path.join(__dirname, 'views'));
+
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
+
 app.use(session(sessionConfig));
+
 app.use(passport.initialize());
+
 app.use(passport.session());
+
 app.use(flash());
+
 app.use((req, res, next) => {
+
   res.locals.success = req.flash('success');
   res.locals.error = req.flash('error');
   next();
@@ -134,13 +152,15 @@ app.use(policyRoutes);
 app.use(missionRoutes);
 app.use(ourstoryroutes);
 app.use(aboutuspage);
-app.use(contactuspage);
+// app.use(contactuspage);
+app.use(contactUsRoutes);
 app.use(corevalues);
 app.use(baRoute);
 app.use(sustainRoutes);
 app.use(organizationStructure);
+app.use(oppRoutes);
 // Listen for the port Number
 app.listen(PORT, () => {
-  console.log(`App is listening onnnn http://localhost:${PORT}`);
+  console.log(`App is listening on http://localhost:${PORT}`);
 });
 

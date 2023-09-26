@@ -2622,6 +2622,16 @@ input:not(:focus):valid ~ .formLable{
   align-items: center;
   justify-content: center; 
 }
+.divCoreMain12 {
+  width: 400px;
+  height: 350px;
+  padding: 40px;
+  padding-top: 90px; 
+   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+}
 
 .coreValueTextMain {
   width: auto;
@@ -3424,6 +3434,13 @@ a:focus {
       align-items: center;
       justify-content: center;
     }
+    .divCoreMain12 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+    }
+
 
     .divCoreValues {
       margin-right: 15px;

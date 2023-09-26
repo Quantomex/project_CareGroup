@@ -98,24 +98,28 @@
         </nav>
 
         <form action="/contactinfo" method="post">
+          
+          <div class="form-group">
+            <label for="maplocation">Google Map Location:</label>
+            <input type="text" class="form-control"  id="maplocation" placeholder="URL" name="maplocation" required>
+          </div>
           <div class="form-group">
             <label for="location">Location:</label>
-            <input type="text" id="location" placeholder="Enter Google Map Address" name="location" required>
+            <input type="text" class="form-control"  id="location" placeholder="Enter Physical Address" name="location" required>
           </div>
           <div class="form-group">
             <label for="contactNumber">Contact Number:</label>
-            <input type="text" id="contactNumber" name="contactNumber" required>
+            <input type="text" class="form-control"  id="contactNumber" name="contactNumber" required>
           </div>
           <div class="form-group">
             <label for="mailbox">Mailbox:</label>
-            <input type="email" id="mailbox" name="mailbox" required>
+            <input type="email" class="form-control"  id="mailbox" name="mailbox" required>
           </div>
           <div class="form-group">
-            <button type="submit">Save Contact Information</button>
+            <button type="submit" class="btn btn-primary btn_sub  bt-cat">Save Contact Information</button>
           </div>
         </form>
 
-        </form>
       </div>
     </div>
   </div>

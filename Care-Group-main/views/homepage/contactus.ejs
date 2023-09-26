@@ -12,28 +12,32 @@
 <div class="secondDiv">
   <h2 class="secondHeading">Get in touch with Us</h2>
 </div>
-
+<% for (let c of contact1) { %>
 <div class="infoContainer">
   <div class="heythere">
     <div class="infoItem">
       <img src="/images/location.svg" alt="">
       <div class="infoItemText">
         <h2 class="itemHeading">Our location</h2>
-        <p class="itemText">Care Group 11-km Bosan Road, Multan, Pakistan.</p>
+        <!-- <p class="itemText">Care Group 11-km Bosan Road, Multan, Pakistan.</p> -->
+        <p class="itemText"><%=c.location %></p>
       </div>
     </div>
     <div class="infoItem">
       <img src="/images/Call.svg" alt="">
       <div class="infoItemText">
         <h2 class="itemHeading">Our Contact</h2>
-        <p class="itemText">+92 343 2889985</p>
+        <p class="itemText"><%=c.contactNumber%></p>
+        <!-- <p class="itemText">+92 343 2889985</p> -->
       </div>
     </div>
     <div class="infoItem">
       <img src="/images/mail.svg" alt="">
       <div class="infoItemText">
         <h2 class="itemHeading">Our Mailbox</h2>
-        <p class="itemText">info@caregroup.com.pk</p>
+        <!-- <p class="itemText">info@caregroup.com.pk</p> -->
+        <p class="itemText"><%=c.mailbox%></p>
+        <!-- <p class="itemText"><%=c.maplocation%></p> -->
       </div>
     </div>
   </div>
@@ -42,6 +46,7 @@
   </div>
 
 </div>
+<% } %>
 <div class="GetInTouch">
   <div class="GetInTouchText">
 

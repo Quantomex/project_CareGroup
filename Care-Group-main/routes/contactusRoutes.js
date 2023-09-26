@@ -4,18 +4,18 @@ const ContactUs = require("../models/contactus");
 const ContactInfo = require('../models/contactInfo');
 
 router.get("/contactus", async (req, res) => {
-  const c = await ContactInfo.find(); 
-  res.render("./homepage/contactus", {c});
+  const contact1 = await ContactInfo.find(); 
+  res.render("./homepage/contactus", {contact1});
 });
 
 
 // Create contact information
 router.post('/contactinfo', async (req, res) => {
   try {
-    const { location, contactNumber, mailbox } = req.body;
+    const { location, contactNumber, mailbox, maplocation } = req.body;
 
     // Create a new ContactInfo instance
-    const newContactInfo = new ContactInfo({ location, contactNumber, mailbox });
+    const newContactInfo = new ContactInfo({ location, contactNumber, mailbox, maplocation });
 
     await newContactInfo.save();
     req.flash('success', 'Contact information added successfully');
@@ -66,12 +66,13 @@ router.post('/editcontactinfo/:id', async (req, res) => {
       return res.redirect('/admin/contactinfo'); // Adjust the redirect path as needed
     }
 
-    const { location, contactNumber, mailbox } = req.body;
+    const { location, contactNumber, mailbox, maplocation } = req.body;
 
     // Update contact information fields
     contactInfo.location = location;
     contactInfo.contactNumber = contactNumber;
     contactInfo.mailbox = mailbox;
+    contactInfo.maplocation = maplocation;
 
     await contactInfo.save();
 

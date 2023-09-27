@@ -97,6 +97,8 @@
           </div>
         </nav>
         <form action="/editOurStory/<%= story._id %>" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required><br>
           <label for="description">Enter Date</label>
           <input type="text" placeholder="1970" class="form-control" value="<%= story.date %>" id="date" name="date" required></input>
           <label for="description">Enter Description</label>

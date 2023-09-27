@@ -23,6 +23,9 @@
   transform: rotate(180deg); /* Rotate the icon 180 degrees */
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
+.myClass{
+  display: none !important;
+}
 
 </style>
 <body >
@@ -57,7 +60,7 @@
         
             <% policies.forEach((policys, k)=> { %>
               <div class="policy" data-description="<%= policys.description %>"></div>
-              <div style="width: 70%;" id="showtext<%=k %>" class="showtext"></div>
+              <div style="width: 70%;" id="showtext<%=k %>" class="showtext myClass"></div>
               <% }) %>
 
               
@@ -137,6 +140,8 @@ sustainable and equitable future if we work together.</p>
 
 
   document.addEventListener("DOMContentLoaded", function () { 
+  
+ 
     // Function to activate the "policy" tab and perform radio button change
     function activatePolicyTabAndChangeRadioButton() {
      
@@ -179,7 +184,8 @@ sustainable and equitable future if we work together.</p>
                   // Hide the previous policy description, don't remove it
                   lastShowtext.innerHTML="";
                   lastShowtext.style.display = "none";
-                  
+                  lastShowtext.classList.add('myClass');
+                  showtext.classList.remove('myClass');
                   showtext.style.display = "block";
               }
       
@@ -248,6 +254,8 @@ for (var i = 0; i < elements.length; i++) {
           if (policyRadioButton.checked) {
             // Hide the "sustain" div if "Policy" is selected
             let e1=document.getElementById("policy1");
+            let show0 = document.getElementById("showtext0");
+    show0.classList.remove('myClass');
      e1.style.display = "block";
      var elements1 = document.querySelectorAll('.showtext');
      

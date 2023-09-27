@@ -14,6 +14,7 @@ router.post('/uploadourstory', isAdmin, async (req, res) => {
         const newstory= new OurStory ({
             date:req.body.date,
             description:req.body.description,
+            name:req.body.name,
         })
         await newstory.save();
         req.flash('success', 'Our Story content added successfully');
@@ -55,6 +56,7 @@ router.post('/editOurStory/:id', isAdmin, async (req, res) => {
   
       story.date = req.body.date;
       story.description = req.body.description;
+      story.name = req.body.name;
   
       await story.save();
   

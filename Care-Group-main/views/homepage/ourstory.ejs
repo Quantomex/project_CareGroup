@@ -37,7 +37,7 @@
 
     .swiper {
       width: 100%;
-      height: 100%;
+      height: 90%;
       background: rgb(255,255,255) !important;
 background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(206,153,75,1) 70%) !important;
     }
@@ -334,7 +334,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(206,153,75,1) 7
           <div class="title" data-swiper-parallax="-300"><span class="black-text"><%=image.date.slice(0,2)%></span>
             <span class="different-color-text"><%=image.date.slice(2)%></span>
         </div>
-          <div class="subtitle" data-swiper-parallax="-200">Company Founded</div>
+          <div class="subtitle" data-swiper-parallax="-200"><%=image.name%></div>
           <div class="text" data-swiper-parallax="-100">
             <p>
               <%=image.description %>

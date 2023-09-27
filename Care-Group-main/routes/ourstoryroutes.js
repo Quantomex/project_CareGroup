@@ -41,6 +41,7 @@ router.get('/editOurStory/:id', isAdmin, async (req, res) => {
       res.status(500).json({ message: 'Error retrieving Our Story content', error: error.message });
     }
   });
+
 // Update Our Story Content Route
 router.post('/editOurStory/:id', isAdmin, async (req, res) => {
     try {

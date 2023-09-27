@@ -392,9 +392,10 @@ nav ul li a {
   scale: 1;
   width: 100%;
   
-  padding-top: 135px;
+  /* padding-top: 135px; */
   height: auto;
   object-fit: cover;
+  border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
   
   /* box-shadow: 1px 1px 10px black; */
@@ -405,9 +406,10 @@ nav ul li a {
 .hovereffect6 {
   scale: 1;
   width: 100%;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   height: auto;
   object-fit: cover;
+  border-top-left-radius: 200px;
   border-top-right-radius: 0;
   border-bottom-left-radius: 200px;
   
@@ -433,7 +435,7 @@ nav ul li a {
 } */
 
 .column2 h1 {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   text-align: center;
   color: #CE994B;
   font-size: 50px;
@@ -1863,6 +1865,7 @@ height: 350px !important;
   }
   .hovereffect6{
     border-top-right-radius: 0;
+    border-top-left-radius: 0px;
     border-bottom-left-radius: 0;
 
   }
@@ -2579,7 +2582,7 @@ input:not(:focus):valid ~ .formLable{
 .SecondDivHead {
   color: #CE994B;
   font-family: 'Raleway', sans-serif;
-  font-size: 66px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -2590,7 +2593,7 @@ input:not(:focus):valid ~ .formLable{
   line-height: 21px;
   padding: 0px 12px;
   font-weight: 400;
-  font-family: open sans;
+  font-family: 'Raleway', sans-serif;
   display: none;
 }
 .linktree{

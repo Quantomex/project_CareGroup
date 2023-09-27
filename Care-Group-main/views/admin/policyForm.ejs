@@ -107,13 +107,11 @@
   </form>
   <% for (let p of policy) { %>
 	<p><strong>Policy Name:</strong><%= p.name  %></p>
-	<p><strong>Policy Description:</strong><%= p.description  %></p>
+	
   <form action="/deletePolicy/<%= p._id %>" method="post">
 	<button type="submit" class="btn btn-danger">Delete Policy</button>
   </form>
-  <form action="/editPolicy/<%= p._id  %>" method="get">
-	<button type="submit" class="btn btn-sm text-dark p-0"><i class="fas fa-pen pencolor mr-1 fa-1x"></i>Edit</button>
-  </form>
+ 
 <% } %>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

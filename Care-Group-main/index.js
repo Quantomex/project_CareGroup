@@ -28,7 +28,7 @@ const Admin = mongoose.model('Admin')
 const passport = require('passport');
 const localStrategy = require('passport-local');
 const path = require('path');
-
+const mailjet = require('node-mailjet');
 const flash = require('connect-flash');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');

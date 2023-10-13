@@ -4,7 +4,10 @@ const OpportunitiesForm = require('../models/opportunitiesForm');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
-
+const mailjetApiKey = '9466657aba028891f2be915ff6e7682e'; // Replace with your Mailjet API key
+const mailjetApiSecret = 'bfd20b215e66c55da5583032aa4f3d19';
+const Mailjet = require('node-mailjet');
+const mailjet = Mailjet.apiConnect(mailjetApiKey, mailjetApiSecret);
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/'); // Specify the upload folder
@@ -37,9 +40,9 @@ router.post('/opportunitiesform', upload.single('resume'), async (req, res) => {
       noticePeriod,
     } = req.body;
 
-    const resume = req.file ? req.file.filename : ''; // Get the uploaded filename
+    const resume = req.file ? req.file.filename : ''; 
 
-    // Create a new OpportunitiesForm instance with the resume filename
+  
     const newOpportunitiesForm = new OpportunitiesForm({
       firstName,
       lastName,
@@ -57,7 +60,36 @@ router.post('/opportunitiesform', upload.single('resume'), async (req, res) => {
 
     // Save the form submission to the database
     await newOpportunitiesForm.save();
-
+    // Email Integration 
+    const emailData = {
+      FromEmail: 'mustafa12azhar@gmail.com', // Set your email as the sender
+      FromName: 'Mustafa Azhar',
+      Recipients: [
+        {
+          Email: 'shaanemustafa8@gmail.com', // Set the admin's email address
+          Name: 'Admin',
+        },
+      ],
+      Subject: 'New Job Opportunity Submission',
+      TextPart: `A new job opportunity submission has been received.`,
+      HTMLPart: `
+        <h3>New Job Opportunity Submission</h3>
+        <p>A new job opportunity submission has been receive.</p>
+        <!-- Add more content here as needed -->
+      `,
+    };
+    
+    // Send the email
+    mailjet
+      .post('send', { version: 'v3' })
+      .request(emailData)
+      .then((result) => {
+        // No need for console.log
+      })
+      .catch((err) => {
+        // No need for console.log
+      });
+    
     // Redirect to a success page or display a success message
     req.flash('success', 'Your form submission has been received.');
     res.redirect('/career');

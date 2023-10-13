@@ -55,7 +55,7 @@ router.post('/opportunitiesform', upload.single('resume'), async (req, res) => {
       currentPosition,
       experience,
       noticePeriod,
-      resume, // Assign the filename to the resume field
+      resume, 
     });
 
     // Save the form submission to the database
@@ -66,15 +66,15 @@ router.post('/opportunitiesform', upload.single('resume'), async (req, res) => {
       FromName: 'Mustafa Azhar',
       Recipients: [
         {
-          Email: 'shaanemustafa8@gmail.com', // Set the admin's email address
+          Email: 'info@caregroup.com.pk', // Set the admin's email address
           Name: 'Admin',
         },
       ],
       Subject: 'New Job Opportunity Submission',
-      TextPart: `A new job opportunity submission has been received.`,
+      TextPart: 'A new job opportunity submission has been received.',
       HTMLPart: `
         <h3>New Job Opportunity Submission</h3>
-        <p>A new job opportunity submission has been receive.</p>
+        <p>A new job opportunity submission has been received.</p>
         <!-- Add more content here as needed -->
       `,
     };
@@ -89,6 +89,7 @@ router.post('/opportunitiesform', upload.single('resume'), async (req, res) => {
       .catch((err) => {
         // No need for console.log
       });
+    
     
     // Redirect to a success page or display a success message
     req.flash('success', 'Your form submission has been received.');
